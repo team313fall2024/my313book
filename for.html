@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 For | SDS 313 R Markdown</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 For | SDS 313 R Markdown" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 For | SDS 313 R Markdown" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="My name" />
+
+
+<meta name="date" content="2024-12-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="more-visualizing-and-describing-data.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html"><i class="fa fa-check"></i><b>2</b> Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#import-dataset"><i class="fa fa-check"></i><b>2.1</b> 0. Import Dataset</a></li>
+<li class="chapter" data-level="2.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#summarizing-one-variable"><i class="fa fa-check"></i><b>2.2</b> 1. Summarizing one variable</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#a.-one-categorical-variable"><i class="fa fa-check"></i><b>2.2.1</b> a. One Categorical Variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#b.-one-numeric-variable"><i class="fa fa-check"></i><b>2.2.2</b> b. One Numeric Variable</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#group-practice"><i class="fa fa-check"></i><b>2.3</b> Group Practice</a></li>
+<li class="chapter" data-level="2.4" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#summarizing-two-variables-bivariate-relationship"><i class="fa fa-check"></i><b>2.4</b> 2. Summarizing two variables (bivariate relationship)</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#a.-two-numeric-variables"><i class="fa fa-check"></i><b>2.4.1</b> a. Two Numeric Variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#b.-one-numeric-and-one-categorical-variable"><i class="fa fa-check"></i><b>2.4.2</b> b. One Numeric and One Categorical Variable</a></li>
+<li class="chapter" data-level="2.4.3" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#c.-two-categorical-variables"><i class="fa fa-check"></i><b>2.4.3</b> c. Two Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#group-practice-1"><i class="fa fa-check"></i><b>2.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html"><i class="fa fa-check"></i><b>3</b> More Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#import-dataset-1"><i class="fa fa-check"></i><b>3.1</b> 0. Import Dataset</a></li>
+<li class="chapter" data-level="3.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#creating-plots-with-ggplot"><i class="fa fa-check"></i><b>3.2</b> 1. Creating plots with <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#a.-define-a-plot"><i class="fa fa-check"></i><b>3.2.1</b> a. Define a plot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#b.-more-on-histograms"><i class="fa fa-check"></i><b>3.2.2</b> b. More on histograms</a></li>
+<li class="chapter" data-level="3.2.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#c.-map-to-color-shape-size"><i class="fa fa-check"></i><b>3.2.3</b> c. Map to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#group-practice-2"><i class="fa fa-check"></i><b>3.3</b> Group Practice</a></li>
+<li class="chapter" data-level="3.4" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#layering"><i class="fa fa-check"></i><b>3.4</b> 2. Layering</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#a.-adding-labels"><i class="fa fa-check"></i><b>3.4.1</b> a. Adding labels</a></li>
+<li class="chapter" data-level="3.4.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#b.-controlling-scales"><i class="fa fa-check"></i><b>3.4.2</b> b. Controlling scales</a></li>
+<li class="chapter" data-level="3.4.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#c.-faceting"><i class="fa fa-check"></i><b>3.4.3</b> c. Faceting</a></li>
+<li class="chapter" data-level="3.4.4" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#d.-looking-for-trends"><i class="fa fa-check"></i><b>3.4.4</b> d. Looking for trends</a></li>
+<li class="chapter" data-level="3.4.5" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#e.-palettes-and-themes"><i class="fa fa-check"></i><b>3.4.5</b> e. Palettes and themes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#group-practice-3"><i class="fa fa-check"></i><b>3.5</b> Group Practice</a></li>
+<li class="chapter" data-level="3.6" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#exporting-a-graph"><i class="fa fa-check"></i><b>3.6</b> 3. Exporting a graph</a></li>
+<li class="chapter" data-level="3.7" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#yaml-metadata"><i class="fa fa-check"></i><b>3.7</b> 1. YAML metadata</a></li>
+<li class="chapter" data-level="3.8" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#text-editing"><i class="fa fa-check"></i><b>3.8</b> 2. Text editing</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#a.-headers"><i class="fa fa-check"></i><b>3.8.1</b> a. Headers</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="for.html"><a href="for.html"><i class="fa fa-check"></i><b>4</b> For</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="for.html"><a href="for.html#example"><i class="fa fa-check"></i><b>4.1</b> Example</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="for.html"><a href="for.html#these"><i class="fa fa-check"></i><b>4.1.1</b> These</a></li>
+<li class="chapter" data-level="4.1.2" data-path="for.html"><a href="for.html#b.-text-formatting"><i class="fa fa-check"></i><b>4.1.2</b> b. Text formatting</a></li>
+<li class="chapter" data-level="4.1.3" data-path="for.html"><a href="for.html#c.-lists-and-bullet-points"><i class="fa fa-check"></i><b>4.1.3</b> c. Lists and bullet points</a></li>
+<li class="chapter" data-level="4.1.4" data-path="for.html"><a href="for.html#d.-html-hyperlinks-images-tables-formulas-etc."><i class="fa fa-check"></i><b>4.1.4</b> d. HTML hyperlinks, images, tables, formulas, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="for.html"><a href="for.html#embedded-r-code"><i class="fa fa-check"></i><b>4.2</b> 2. Embedded R code</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="for.html"><a href="for.html#a.-packages-and-r-objects"><i class="fa fa-check"></i><b>4.2.1</b> a. Packages and R objects</a></li>
+<li class="chapter" data-level="4.2.2" data-path="for.html"><a href="for.html#b.-options-for-code-chunks"><i class="fa fa-check"></i><b>4.2.2</b> b. Options for code chunks</a></li>
+<li class="chapter" data-level="4.2.3" data-path="for.html"><a href="for.html#c.-inline-code"><i class="fa fa-check"></i><b>4.2.3</b> c. Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="for.html"><a href="for.html#group-practice-4"><i class="fa fa-check"></i><b>4.3</b> Group Practice</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SDS 313 R Markdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="for" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> For<a href="for.html#for" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="example" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Example<a href="for.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="these" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> These<a href="for.html#these" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="are" class="section level4 hasAnchor" number="4.1.1.1">
+<h4><span class="header-section-number">4.1.1.1</span> Are<a href="for.html#are" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="different" class="section level5 hasAnchor" number="4.1.1.1.1">
+<h5><span class="header-section-number">4.1.1.1.1</span> Different<a href="for.html#different" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="headers" class="section level6 hasAnchor" number="4.1.1.1.1.1">
+<h6><span class="header-section-number">4.1.1.1.1.1</span> Headers<a href="for.html#headers" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>######Does not knit as a header</p>
+<p>Make sure to leave a space after #’s so that they are interpreted as headers. Similarly, leave a blank line between sections.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="b.-text-formatting" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> b. Text formatting<a href="for.html#b.-text-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can use some basic formatting to highlight some part of the text:</p>
+<p><strong>bold</strong>, <em>italic</em>, or <strong><em>bold and italic</em></strong></p>
+<p><del>strikethrough text</del></p>
+<blockquote>
+<p>Create a blockquote</p>
+</blockquote>
+<p>To refer to R objects (variables, datasets, functions, …) within the text, we usually use the slanted quotes. Remember the <code>ggplot()</code> function?</p>
+</div>
+<div id="c.-lists-and-bullet-points" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> c. Lists and bullet points<a href="for.html#c.-lists-and-bullet-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create a list:</p>
+<ol style="list-style-type: decimal">
+<li>Here</li>
+<li>Are</li>
+<li>Four</li>
+<li>Things</li>
+</ol>
+<p>Or some bullet points:</p>
+<ul>
+<li><p>bullet 1</p>
+<ul>
+<li>sub-bullet 1</li>
+</ul></li>
+<li><p>bullet 2</p>
+<ul>
+<li>sub-bullet 2</li>
+</ul></li>
+<li><p>bullet 3</p>
+<ul>
+<li>sub-bullet 3</li>
+</ul></li>
+</ul>
+</div>
+<div id="d.-html-hyperlinks-images-tables-formulas-etc." class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> d. HTML hyperlinks, images, tables, formulas, etc.<a href="for.html#d.-html-hyperlinks-images-tables-formulas-etc." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can include external links and images:</p>
+<p><a href="https://canvas.utexas.edu">Here is a hyperlink to Canvas</a></p>
+<p>Below is an image from a URL (for local images, just specify the file path in place of the URL):</p>
+<p><img src="https://news.utexas.edu/wp-content/uploads/2021/10/bevo-9841-2100x1398-e2000d2b-a7a1-448c-83d5-281310430e66-1024x682.jpg" /></p>
+<p>We can format tables:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tuesday</th>
+<th>Thursday</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Introduce R Markdown</td>
+<td>Create your own R Markdown</td>
+</tr>
+</tbody>
+</table>
+<p>And here is a math formula:</p>
+<p><span class="math display">\[mean(X) = \frac{\sum x_i}{n}\]</span></p>
+<blockquote>
+<p>Note: text editing is fairly easy to do with the <code>Visual</code> mode: it works more like a standard text editor.</p>
+</blockquote>
+</div>
+</div>
+<div id="embedded-r-code" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> 2. Embedded R code<a href="for.html#embedded-r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The advantage of a R Markdown document is that it incorporates R code in chunks within the text.</p>
+<p>Code chunks will be executed when knitting and the output will be shown in the output file (usually a <em>html</em> output in this course).</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="for.html#cb105-1" tabindex="-1"></a><span class="co"># We already tried this!</span></span>
+<span id="cb105-2"><a href="for.html#cb105-2" tabindex="-1"></a><span class="dv">5</span><span class="sc">+</span><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div id="a.-packages-and-r-objects" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> a. Packages and R objects<a href="for.html#a.-packages-and-r-objects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R Markdown is designed to be independent of the R workspace and each time you knit, it acts like it starts with a clean R session. All packages should be loaded and all objects used in the code should be created <strong>within the document</strong>.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="for.html#cb107-1" tabindex="-1"></a><span class="co"># Load functions from the ggplot2 package</span></span>
+<span id="cb107-2"><a href="for.html#cb107-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
+<p>When importing a dataset, make sure it is in the same folder as the R Markdown file so you do not have to worry about specifying a path:</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="for.html#cb109-1" tabindex="-1"></a><span class="co"># Import a dataset</span></span>
+<span id="cb109-2"><a href="for.html#cb109-2" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code></pre></div>
+<pre><code>## Warning: package &#39;readr&#39; was built under R version 4.3.3</code></pre>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="for.html#cb111-1" tabindex="-1"></a>films <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;films.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Rows: 151 Columns: 11
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (4): Title, Studio, Genre, Rating
+## dbl (7): Year, Gross, PercentDomestic, Rotten, IMDB, Days, Budget
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>Take a quick look at the dataset:</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="for.html#cb113-1" tabindex="-1"></a><span class="fu">head</span>(films)</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 11
+##   Title      Studio Genre  Year  Gross PercentDomestic Rotten  IMDB Rating  Days
+##   &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt; &lt;dbl&gt;  &lt;dbl&gt;           &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
+## 1 Avatar     Fox    Acti…  2009 2.78e9           0.273     83   8   PG-13    238
+## 2 Titanic    Par.   Drama  1997 2.19e9           0.301     88   7.6 PG-13    219
+## 3 Harry Pot… WB     Acti…  2011 1.34e9           0.284     96   8.1 PG-13    133
+## 4 Skyfall    Sony   Acti…  2012 1.11e9           0.275     92   7.8 PG-13    122
+## 5 The Dark … WB     Acti…  2012 1.08e9           0.413     87   8.6 PG-13    147
+## 6 Star Wars… Fox    Acti…  1999 1.03e9           0.462     57   6.5 PG       261
+## # ℹ 1 more variable: Budget &lt;dbl&gt;</code></pre>
+</div>
+<div id="b.-options-for-code-chunks" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> b. Options for code chunks<a href="for.html#b.-options-for-code-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can choose to evaluate, or not, a code chunk when knitting with <code>eval =</code>:</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="for.html#cb115-1" tabindex="-1"></a><span class="co"># There is an error in this code, can you fix it? </span></span>
+<span id="cb115-2"><a href="for.html#cb115-2" tabindex="-1"></a><span class="fu">hist</span>(films<span class="sc">$</span>Rotten)</span></code></pre></div>
+<p><em>Note: R Markdown does not knit if there is an error in any code chunk.</em></p>
+<p>We can also choose to hide, or not, a code chunk when knitting with <code>echo =</code>:</p>
+<p><img src="RMarkdown_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="c.-inline-code" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> c. Inline code<a href="for.html#c.-inline-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can also execute code within text! For example, in the <code>films</code> dataset, the mean value of IMDB is 7.0350993 or 7.04 when rounded by 2 decimals.</p>
+<hr />
+</div>
+</div>
+<div id="group-practice-4" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Group Practice<a href="for.html#group-practice-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Within your group, pick one of the following question to investigate:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Is there a difference in review ratings across the different genres?</p></li>
+<li><p>Is there a relationship between the two types of review ratings?</p></li>
+<li><p>Is there a difference in review ratings across the different studios?</p></li>
+<li><p><em>Come up with your own!</em></p></li>
+</ol>
+<p>Then investigate the question by:</p>
+<ol style="list-style-type: decimal">
+<li>Making an appropriate plot</li>
+<li>Reporting appropriate statistics formatted in a table</li>
+<li>Writing a sentence in bold to interpret your findings</li>
+</ol>
+<p>Finally, knit this R Markdown file and take a screenshot including the plot, table, and sentence to post it on your group’s slide <a href="https://docs.google.com/presentation/d/1Ty6tcYxFG_iABj5zfzZQ65gLuVL3wiloD52QVS7XPG0/edit?usp=sharing">here</a>.</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="for.html#cb116-1" tabindex="-1"></a><span class="co"># Group practice code:</span></span></code></pre></div>
+<hr />
+<p>Check out the <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">RMarkdown Cheat sheet</a> for more practice!</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="more-visualizing-and-describing-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/RMarkdown.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

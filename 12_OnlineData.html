@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12 Online Data | Fall 2024 Semester</title>
+  <meta name="description" content="12 Online Data | Fall 2024 Semester" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="12 Online Data | Fall 2024 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12 Online Data | Fall 2024 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr Layla Guyot" />
+
+
+<meta name="date" content="2024-12-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="11_Reproducibility.html"/>
+<link rel="next" href="13_StringsRegEx.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 313 Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to SDS 313</a></li>
+<li class="chapter" data-level="2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html"><i class="fa fa-check"></i><b>2</b> Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#import-dataset"><i class="fa fa-check"></i><b>2.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="2.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#summarizing-one-variable"><i class="fa fa-check"></i><b>2.2</b> Summarizing one variable</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-categorical-variable"><i class="fa fa-check"></i><b>2.2.1</b> One Categorical Variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-numeric-variable"><i class="fa fa-check"></i><b>2.2.2</b> One Numeric Variable</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#group-practice"><i class="fa fa-check"></i><b>2.3</b> Group Practice</a></li>
+<li class="chapter" data-level="2.4" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#summarizing-two-variables-bivariate-relationship"><i class="fa fa-check"></i><b>2.4</b> Summarizing two variables (bivariate relationship)</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#two-numeric-variables"><i class="fa fa-check"></i><b>2.4.1</b> Two Numeric Variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-numeric-and-one-categorical-variable"><i class="fa fa-check"></i><b>2.4.2</b> One Numeric and One Categorical Variable</a></li>
+<li class="chapter" data-level="2.4.3" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#two-categorical-variables"><i class="fa fa-check"></i><b>2.4.3</b> Two Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#group-practice-1"><i class="fa fa-check"></i><b>2.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html"><i class="fa fa-check"></i><b>3</b> More Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#import-dataset-1"><i class="fa fa-check"></i><b>3.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="3.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#creating-plots-with-ggplot"><i class="fa fa-check"></i><b>3.2</b> Creating plots with <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#define-a-plot"><i class="fa fa-check"></i><b>3.2.1</b> Define a plot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#more-on-histograms"><i class="fa fa-check"></i><b>3.2.2</b> More on histograms</a></li>
+<li class="chapter" data-level="3.2.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#map-to-color-shape-size"><i class="fa fa-check"></i><b>3.2.3</b> Map to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#group-practice-2"><i class="fa fa-check"></i><b>3.3</b> Group Practice</a></li>
+<li class="chapter" data-level="3.4" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#layering"><i class="fa fa-check"></i><b>3.4</b> Layering</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#adding-labels"><i class="fa fa-check"></i><b>3.4.1</b> Adding labels</a></li>
+<li class="chapter" data-level="3.4.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#controlling-scales"><i class="fa fa-check"></i><b>3.4.2</b> Controlling scales</a></li>
+<li class="chapter" data-level="3.4.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#faceting"><i class="fa fa-check"></i><b>3.4.3</b> Faceting</a></li>
+<li class="chapter" data-level="3.4.4" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#looking-for-trends"><i class="fa fa-check"></i><b>3.4.4</b> Looking for trends</a></li>
+<li class="chapter" data-level="3.4.5" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#palettes-and-themes"><i class="fa fa-check"></i><b>3.4.5</b> Palettes and themes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#group-practice-3"><i class="fa fa-check"></i><b>3.5</b> Group Practice</a></li>
+<li class="chapter" data-level="3.6" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#exporting-a-graph"><i class="fa fa-check"></i><b>3.6</b> Exporting a graph</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#yaml-metadata"><i class="fa fa-check"></i><b>4.1</b> YAML metadata</a></li>
+<li class="chapter" data-level="4.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#text-editing"><i class="fa fa-check"></i><b>4.2</b> Text editing</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#a.-headers"><i class="fa fa-check"></i><b>4.2.1</b> a. Headers</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#for"><i class="fa fa-check"></i><b>4.2.2</b> For</a></li>
+<li class="chapter" data-level="4.2.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#example"><i class="fa fa-check"></i><b>4.2.3</b> Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#these"><i class="fa fa-check"></i><b>4.2.4</b> These</a></li>
+<li class="chapter" data-level="4.2.5" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#text-formatting"><i class="fa fa-check"></i><b>4.2.5</b> Text formatting</a></li>
+<li class="chapter" data-level="4.2.6" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#lists-and-bullet-points"><i class="fa fa-check"></i><b>4.2.6</b> Lists and bullet points</a></li>
+<li class="chapter" data-level="4.2.7" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#html-hyperlinks-images-tables-formulas-etc."><i class="fa fa-check"></i><b>4.2.7</b> HTML hyperlinks, images, tables, formulas, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#embedded-r-code"><i class="fa fa-check"></i><b>4.3</b> Embedded R code</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#packages-and-r-objects"><i class="fa fa-check"></i><b>4.3.1</b> Packages and R objects</a></li>
+<li class="chapter" data-level="4.3.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#options-for-code-chunks"><i class="fa fa-check"></i><b>4.3.2</b> Options for code chunks</a></li>
+<li class="chapter" data-level="4.3.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#inline-code"><i class="fa fa-check"></i><b>4.3.3</b> Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#group-practice-4"><i class="fa fa-check"></i><b>4.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html"><i class="fa fa-check"></i><b>5</b> More R Markdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#more-yaml-metadata"><i class="fa fa-check"></i><b>5.1</b> More YAML metadata</a></li>
+<li class="chapter" data-level="5.2" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#more-code-chunk-options"><i class="fa fa-check"></i><b>5.2</b> More code chunk options</a></li>
+<li class="chapter" data-level="5.3" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#format-tables"><i class="fa fa-check"></i><b>5.3</b> Format tables</a></li>
+<li class="chapter" data-level="5.4" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#knitting-into-different-formats"><i class="fa fa-check"></i><b>5.4</b> Knitting into different formats</a></li>
+<li class="chapter" data-level="5.5" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#group-practice-5"><i class="fa fa-check"></i><b>5.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html"><i class="fa fa-check"></i><b>6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#dataset-and-library"><i class="fa fa-check"></i><b>6.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="6.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#the-pipe"><i class="fa fa-check"></i><b>6.2</b> The pipe</a></li>
+<li class="chapter" data-level="6.3" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#operations-on-rowsobservations"><i class="fa fa-check"></i><b>6.3</b> Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#filter"><i class="fa fa-check"></i><b>6.3.1</b> Filter</a></li>
+<li class="chapter" data-level="6.3.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#arrange"><i class="fa fa-check"></i><b>6.3.2</b> Arrange</a></li>
+<li class="chapter" data-level="6.3.3" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#minimummaximum-values"><i class="fa fa-check"></i><b>6.3.3</b> Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#operations-on-columns"><i class="fa fa-check"></i><b>6.4</b> Operations on columns</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#select"><i class="fa fa-check"></i><b>6.4.1</b> Select</a></li>
+<li class="chapter" data-level="6.4.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#mutate"><i class="fa fa-check"></i><b>6.4.2</b> Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#create-summaries"><i class="fa fa-check"></i><b>6.5</b> Create summaries</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#summarize"><i class="fa fa-check"></i><b>6.5.1</b> Summarize</a></li>
+<li class="chapter" data-level="6.5.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#group-by"><i class="fa fa-check"></i><b>6.5.2</b> Group by</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html"><i class="fa fa-check"></i><b>7</b> More Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#dataset-and-library-1"><i class="fa fa-check"></i><b>7.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="7.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#recoding-variables"><i class="fa fa-check"></i><b>7.2</b> Recoding variables</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#log-transformation"><i class="fa fa-check"></i><b>7.2.1</b> Log-transformation</a></li>
+<li class="chapter" data-level="7.2.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#numeric-variable-considered-as-a-categorical-variable"><i class="fa fa-check"></i><b>7.2.2</b> Numeric variable considered as a categorical variable</a></li>
+<li class="chapter" data-level="7.2.3" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#recoding-values-based-on-conditions"><i class="fa fa-check"></i><b>7.2.3</b> Recoding values based on conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#handling-missing-values"><i class="fa fa-check"></i><b>7.3</b> Handling missing values</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#missing-values-never-go-unnoticed"><i class="fa fa-check"></i><b>7.3.1</b> Missing values never go unnoticed</a></li>
+<li class="chapter" data-level="7.3.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#values-that-were-omitted"><i class="fa fa-check"></i><b>7.3.2</b> Values that were omitted</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08_RelationalData.html"><a href="08_RelationalData.html"><i class="fa fa-check"></i><b>8</b> Relational Data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#datasets-and-library"><i class="fa fa-check"></i><b>8.1</b> Datasets and Library</a></li>
+<li class="chapter" data-level="8.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#different-types-of-joining-functions"><i class="fa fa-check"></i><b>8.2</b> Different types of joining functions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#inner-join"><i class="fa fa-check"></i><b>8.2.1</b> Inner join</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#left-join"><i class="fa fa-check"></i><b>8.2.2</b> Left join</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#right-join"><i class="fa fa-check"></i><b>8.2.3</b> Right join</a></li>
+<li class="chapter" data-level="8.2.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#full-join"><i class="fa fa-check"></i><b>8.2.4</b> Full join</a></li>
+<li class="chapter" data-level="8.2.5" data-path="08_RelationalData.html"><a href="08_RelationalData.html#anti-join"><i class="fa fa-check"></i><b>8.2.5</b> Anti join</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#common-issues-with-joining"><i class="fa fa-check"></i><b>8.3</b> Common issues with joining</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#no-matching-key"><i class="fa fa-check"></i><b>8.3.1</b> No matching key</a></li>
+<li class="chapter" data-level="8.3.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#auto-suffixing"><i class="fa fa-check"></i><b>8.3.2</b> Auto-suffixing</a></li>
+<li class="chapter" data-level="8.3.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#duplicates"><i class="fa fa-check"></i><b>8.3.3</b> Duplicates</a></li>
+<li class="chapter" data-level="8.3.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#several-key-variables"><i class="fa fa-check"></i><b>8.3.4</b> Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#group-practice-6"><i class="fa fa-check"></i><b>8.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html"><i class="fa fa-check"></i><b>9</b> Dates and Times</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#datasets-and-libraries"><i class="fa fa-check"></i><b>9.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#parsing-dates-and-times"><i class="fa fa-check"></i><b>9.2</b> Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#r-formats"><i class="fa fa-check"></i><b>9.2.1</b> R formats</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#combining-datetime-components"><i class="fa fa-check"></i><b>9.2.2</b> Combining date/time components</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#extracting-parts-of-the-date"><i class="fa fa-check"></i><b>9.2.3</b> Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#manipulating-dates-and-times"><i class="fa fa-check"></i><b>9.3</b> Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#finding-differences-between-dates-and-times"><i class="fa fa-check"></i><b>9.3.1</b> Finding differences between dates and times</a></li>
+<li class="chapter" data-level="9.3.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#summarizing-datetime-data"><i class="fa fa-check"></i><b>9.3.2</b> Summarizing date/time data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#a-few-remarks"><i class="fa fa-check"></i><b>9.3.3</b> A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#group-practice-7"><i class="fa fa-check"></i><b>9.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html"><i class="fa fa-check"></i><b>10</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#datasets-and-libraries-1"><i class="fa fa-check"></i><b>10.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#pivoting"><i class="fa fa-check"></i><b>10.2</b> Pivoting</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#wide-to-long"><i class="fa fa-check"></i><b>10.2.1</b> Wide to long</a></li>
+<li class="chapter" data-level="10.2.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#long-to-wide"><i class="fa fa-check"></i><b>10.2.2</b> Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#separating-and-uniting"><i class="fa fa-check"></i><b>10.3</b> Separating and uniting</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#separate"><i class="fa fa-check"></i><b>10.3.1</b> Separate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#unite"><i class="fa fa-check"></i><b>10.3.2</b> Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#group-practice-8"><i class="fa fa-check"></i><b>10.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html"><i class="fa fa-check"></i><b>11</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#coding-practices"><i class="fa fa-check"></i><b>11.1</b> Coding practices</a></li>
+<li class="chapter" data-level="11.2" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#reproducibility-1"><i class="fa fa-check"></i><b>11.2</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#group-practice-9"><i class="fa fa-check"></i><b>11.2.1</b> Group Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12_OnlineData.html"><a href="12_OnlineData.html"><i class="fa fa-check"></i><b>12</b> Online Data</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#online-data-resource"><i class="fa fa-check"></i><b>12.1</b> Online data resource</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#data-portal"><i class="fa fa-check"></i><b>12.1.1</b> Data portal</a></li>
+<li class="chapter" data-level="12.1.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#downloading-datasets"><i class="fa fa-check"></i><b>12.1.2</b> Downloading datasets</a></li>
+<li class="chapter" data-level="12.1.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#websites-with-special-permissions"><i class="fa fa-check"></i><b>12.1.3</b> Websites with special permissions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#web-scraping"><i class="fa fa-check"></i><b>12.2</b> Web scraping</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#manually-from-the-web"><i class="fa fa-check"></i><b>12.2.1</b> Manually from the web</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#with-code"><i class="fa fa-check"></i><b>12.2.2</b> With code</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#more-examples-of-scraping"><i class="fa fa-check"></i><b>12.2.3</b> More examples of scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#datasets-formats"><i class="fa fa-check"></i><b>12.3</b> Datasets formats</a></li>
+<li class="chapter" data-level="12.4" data-path="12_OnlineData.html"><a href="12_OnlineData.html#export-into-csv"><i class="fa fa-check"></i><b>12.4</b> Export into csv</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html"><i class="fa fa-check"></i><b>13</b> Strings and Regular expressions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#set-up"><i class="fa fa-check"></i><b>13.1</b> Set up</a></li>
+<li class="chapter" data-level="13.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#strings"><i class="fa fa-check"></i><b>13.2</b> Strings</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#calculating-length"><i class="fa fa-check"></i><b>13.2.1</b> Calculating length</a></li>
+<li class="chapter" data-level="13.2.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#combining-strings"><i class="fa fa-check"></i><b>13.2.2</b> Combining strings</a></li>
+<li class="chapter" data-level="13.2.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#changing-cases"><i class="fa fa-check"></i><b>13.2.3</b> Changing cases</a></li>
+<li class="chapter" data-level="13.2.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#subsetting-strings"><i class="fa fa-check"></i><b>13.2.4</b> Subsetting strings</a></li>
+<li class="chapter" data-level="13.2.5" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#finding-exact-matches-in-strings"><i class="fa fa-check"></i><b>13.2.5</b> Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#regular-expressions-regex"><i class="fa fa-check"></i><b>13.3</b> Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#wildcards"><i class="fa fa-check"></i><b>13.3.1</b> Wildcards</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#anchors"><i class="fa fa-check"></i><b>13.3.2</b> Anchors</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#flexible-patterns"><i class="fa fa-check"></i><b>13.3.3</b> Flexible patterns</a></li>
+<li class="chapter" data-level="13.3.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#special-characters"><i class="fa fa-check"></i><b>13.3.4</b> Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#group-practice-10"><i class="fa fa-check"></i><b>13.4</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html"><i class="fa fa-check"></i><b>14</b> Loops and Functions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#loops"><i class="fa fa-check"></i><b>14.1</b> Loops</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#basic-for-loops"><i class="fa fa-check"></i><b>14.1.1</b> Basic for-loops</a></li>
+<li class="chapter" data-level="14.1.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#conditional-statements"><i class="fa fa-check"></i><b>14.1.2</b> Conditional Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#group-practice-11"><i class="fa fa-check"></i><b>14.2</b> Group Practice</a></li>
+<li class="chapter" data-level="14.3" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#functions"><i class="fa fa-check"></i><b>14.3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#r-functions"><i class="fa fa-check"></i><b>14.3.1</b> R functions</a></li>
+<li class="chapter" data-level="14.3.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#our-own-functions"><i class="fa fa-check"></i><b>14.3.2</b> Our own functions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#dont-reinvent-the-wheel"><i class="fa fa-check"></i><b>14.4</b> Don’t reinvent the wheel</a></li>
+<li class="chapter" data-level="14.5" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#group-practice-12"><i class="fa fa-check"></i><b>14.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="15_Halloween.html"><a href="15_Halloween.html"><i class="fa fa-check"></i><b>15</b> Halloween candy</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15_Halloween.html"><a href="15_Halloween.html#set-up-1"><i class="fa fa-check"></i><b>15.1</b> Set up</a></li>
+<li class="chapter" data-level="15.2" data-path="15_Halloween.html"><a href="15_Halloween.html#exploring-relationships"><i class="fa fa-check"></i><b>15.2</b> Exploring relationships</a></li>
+<li class="chapter" data-level="15.3" data-path="15_Halloween.html"><a href="15_Halloween.html#group-practice-13"><i class="fa fa-check"></i><b>15.3</b> Group Practice</a></li>
+<li class="chapter" data-level="15.4" data-path="15_Halloween.html"><a href="15_Halloween.html#machine-learning"><i class="fa fa-check"></i><b>15.4</b> Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="16_Simulation.html"><a href="16_Simulation.html"><i class="fa fa-check"></i><b>16</b> Simulations</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="16_Simulation.html"><a href="16_Simulation.html#generating-random-numbers"><i class="fa fa-check"></i><b>16.1</b> Generating random numbers</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="16_Simulation.html"><a href="16_Simulation.html#random-numbers-among-some-values"><i class="fa fa-check"></i><b>16.1.1</b> Random numbers among some values</a></li>
+<li class="chapter" data-level="16.1.2" data-path="16_Simulation.html"><a href="16_Simulation.html#random-numbers-from-a-probability-distribution"><i class="fa fa-check"></i><b>16.1.2</b> Random numbers from a probability distribution</a></li>
+<li class="chapter" data-level="16.1.3" data-path="16_Simulation.html"><a href="16_Simulation.html#group-practice-14"><i class="fa fa-check"></i><b>16.1.3</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="16_Simulation.html"><a href="16_Simulation.html#some-applications-of-simulations"><i class="fa fa-check"></i><b>16.2</b> Some applications of simulations</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="16_Simulation.html"><a href="16_Simulation.html#rolling-dice"><i class="fa fa-check"></i><b>16.2.1</b> Rolling dice</a></li>
+<li class="chapter" data-level="16.2.2" data-path="16_Simulation.html"><a href="16_Simulation.html#birthday-problem"><i class="fa fa-check"></i><b>16.2.2</b> Birthday problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html"><i class="fa fa-check"></i><b>17</b> Shiny Basics</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#shiny-app-gallery"><i class="fa fa-check"></i><b>17.1</b> Shiny App Gallery</a></li>
+<li class="chapter" data-level="17.2" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#basic-structure-of-a-shiny-app"><i class="fa fa-check"></i><b>17.2</b> Basic Structure of a Shiny App</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#components"><i class="fa fa-check"></i><b>17.2.1</b> Components</a></li>
+<li class="chapter" data-level="17.2.2" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#group-practice-15"><i class="fa fa-check"></i><b>17.2.2</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.3" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#reactive-output"><i class="fa fa-check"></i><b>17.2.3</b> Reactive output</a></li>
+<li class="chapter" data-level="17.2.4" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#group-practice-16"><i class="fa fa-check"></i><b>17.2.4</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.5" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#project-3"><i class="fa fa-check"></i><b>17.2.5</b> Project 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html"><i class="fa fa-check"></i><b>18</b> Shiny with Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#more-on-the-shiny-structure"><i class="fa fa-check"></i><b>18.1</b> More on the Shiny structure</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#user-interface"><i class="fa fa-check"></i><b>18.1.1</b> User interface</a></li>
+<li class="chapter" data-level="18.1.2" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#server"><i class="fa fa-check"></i><b>18.1.2</b> Server</a></li>
+<li class="chapter" data-level="18.1.3" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#run-the-app"><i class="fa fa-check"></i><b>18.1.3</b> Run the app</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#interact-with-a-dataset"><i class="fa fa-check"></i><b>18.2</b> Interact with a dataset</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#group-practice-17"><i class="fa fa-check"></i><b>18.2.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#adding-a-choice-for-selecting-variables"><i class="fa fa-check"></i><b>18.3</b> Adding a choice for selecting variables</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#group-practice-18"><i class="fa fa-check"></i><b>18.3.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#hosting-your-app-on-the-web"><i class="fa fa-check"></i><b>18.4</b> Hosting your app on the web</a></li>
+<li class="chapter" data-level="18.5" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#summary"><i class="fa fa-check"></i><b>18.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="Bookdown.html"><a href="Bookdown.html"><i class="fa fa-check"></i><b>19</b> Bookdown</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="Bookdown.html"><a href="Bookdown.html#set-up-bookdown"><i class="fa fa-check"></i><b>19.1</b> Set up bookdown</a></li>
+<li class="chapter" data-level="19.2" data-path="Bookdown.html"><a href="Bookdown.html#organize-your-files"><i class="fa fa-check"></i><b>19.2</b> Organize your files</a></li>
+<li class="chapter" data-level="19.3" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-index"><i class="fa fa-check"></i><b>19.3</b> Edit the index</a></li>
+<li class="chapter" data-level="19.4" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-bookdown"><i class="fa fa-check"></i><b>19.4</b> Edit the bookdown</a></li>
+<li class="chapter" data-level="19.5" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-output"><i class="fa fa-check"></i><b>19.5</b> Edit the output</a></li>
+<li class="chapter" data-level="19.6" data-path="Bookdown.html"><a href="Bookdown.html#build-the-book"><i class="fa fa-check"></i><b>19.6</b> Build the book!</a></li>
+<li class="chapter" data-level="19.7" data-path="Bookdown.html"><a href="Bookdown.html#resources"><i class="fa fa-check"></i><b>19.7</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fall 2024 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="online-data" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">12</span> Online Data<a href="12_OnlineData.html#online-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Data we have been analyzing in the class so far has been in a .csv format and mostly ready for analysis. But it won’t always be so easy to access…</p>
+<p>In this worksheet, we will:</p>
+<ul>
+<li>Explore different sources to find datasets</li>
+<li>Scrape data from the web “manually” and with code</li>
+<li>Import datasets with a different format</li>
+<li>Export datasets manipulated in R into csv files</li>
+</ul>
+<div id="online-data-resource" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Online data resource<a href="12_OnlineData.html#online-data-resource" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Datasets posted online are sometimes easy to access and download but always look for a <strong>data dictionary</strong> or documentation to help you make sense of the variables.</p>
+<div id="data-portal" class="section level3 hasAnchor" number="12.1.1">
+<h3><span class="header-section-number">12.1.1</span> Data portal<a href="12_OnlineData.html#data-portal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s retrieve data from the <a href="https://data.austintexas.gov/">City of Austin Open Data Portal</a> about the quality of the water in Austin. Search for Data with the keywords <em>watershed scores</em>. Then we can import the dataset directly to RStudio with API endpoint:</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="12_OnlineData.html#cb290-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb290-2"><a href="12_OnlineData.html#cb290-2" tabindex="-1"></a>water_quality <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.austintexas.gov/resource/vk3r-6prc.csv&quot;</span>)</span></code></pre></div>
+<hr />
+<div id="try-it-represent-the-distribution-of-index_water_quality-and-problem_water_quality-separately.-what-is-the-difference-between-these-two-variables" class="section level4 hasAnchor" number="12.1.1.1">
+<h4><span class="header-section-number">12.1.1.1</span> <strong>Try it! Represent the distribution of <code>index_water_quality</code> and <code>problem_water_quality</code> separately. What is the difference between these two variables?</strong><a href="12_OnlineData.html#try-it-represent-the-distribution-of-index_water_quality-and-problem_water_quality-separately.-what-is-the-difference-between-these-two-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="12_OnlineData.html#cb291-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb291-2"><a href="12_OnlineData.html#cb291-2" tabindex="-1"></a><span class="fu">hist</span>(water_quality<span class="sc">$</span>index_water_quality)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-171-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="12_OnlineData.html#cb292-1" tabindex="-1"></a><span class="fu">hist</span>(water_quality<span class="sc">$</span>problem_water_quality)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-171-2.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Different way to assess water quality on different scales (100 is best or worst).</strong></p>
+<hr />
+<p>Be aware that if you get data directly from the web like that it might:</p>
+<ul>
+<li>No longer be available at some point.</li>
+<li>Be updated.</li>
+</ul>
+<p>It might be a better idea to export and save the file locally.</p>
+</div>
+</div>
+<div id="downloading-datasets" class="section level3 hasAnchor" number="12.1.2">
+<h3><span class="header-section-number">12.1.2</span> Downloading datasets<a href="12_OnlineData.html#downloading-datasets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Only download files from trusted websites! To assess whether a website can be trusted or not, consider the following factors:</p>
+<ul>
+<li>Check the source of the website: Websites of universities, government agencies, or well-known platforms (e.g., GitHub, Kaggle, and Data.gov…).</li>
+<li>Look for HTTPS and security</li>
+<li>Examine the quality of the website: Trustworthy websites often look polished and contain clearly written content, whereas scam sites may look poorly designed or filled with ads.</li>
+</ul>
+<p>Also be aware that the dataset you download might not be in a usable format in R! See section 3.</p>
+</div>
+<div id="websites-with-special-permissions" class="section level3 hasAnchor" number="12.1.3">
+<h3><span class="header-section-number">12.1.3</span> Websites with special permissions<a href="12_OnlineData.html#websites-with-special-permissions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Other times, you’ll need approval to access the file, like <a href="https://repository.niddk.nih.gov/studies/dpp/">here</a>.</p>
+<p>Depending on the source, before you can get the data you might need to:</p>
+<ul>
+<li>Explain your purpose for using the data.</li>
+<li>Explain what security measures you will follow to protect the data.</li>
+<li>Get IRB (Instructional Review Board) approval before collecting data.</li>
+<li>Sign a data use agreement.</li>
+<li>Pay money.</li>
+</ul>
+<p>Refer to the <a href="https://utexas.instructure.com/courses/1399995/pages/data-resources">Data Resources page</a> for a list of common data resources.</p>
+</div>
+</div>
+<div id="web-scraping" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Web scraping<a href="12_OnlineData.html#web-scraping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="manually-from-the-web" class="section level3 hasAnchor" number="12.2.1">
+<h3><span class="header-section-number">12.2.1</span> Manually from the web<a href="12_OnlineData.html#manually-from-the-web" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the data you want isn’t already compiled in a file, you will need to pull the information yourself. Sometimes, it’s as easy as a “manual scrape”, and simply copy/paste the values into Excel. This is not always perfect but usually follow these steps:</p>
+<ul>
+<li><p>Step 1: Select the data you want with your mouse and copy it.</p></li>
+<li><p>Step 2: Open a blank Excel or Google Sheets file. Paste the selection into your file.</p></li>
+<li><p>Step 3: Go to (Excel) File&gt;Save As&gt;Name it and choose the <em>.csv</em> format from the dropdown; or (Sheets) Name your file, then go to File&gt;Download&gt;csv</p></li>
+</ul>
+<hr />
+<div id="try-it-manually-scrape-the-state-table-describing-the-legal-abortion-limits-by-state.-create-a-.csv-file-and-read-it-into-r.-find-in-how-many-states-abortion-is-banned." class="section level4 hasAnchor" number="12.2.1.1">
+<h4><span class="header-section-number">12.2.1.1</span> <strong>Try it! Manually scrape <a href="https://en.wikipedia.org/wiki/Abortion_law_in_the_United_States_by_state">the state table describing the legal abortion limits by state</a>. Create a .csv file and read it into R. Find in how many states abortion is banned.</strong><a href="12_OnlineData.html#try-it-manually-scrape-the-state-table-describing-the-legal-abortion-limits-by-state.-create-a-.csv-file-and-read-it-into-r.-find-in-how-many-states-abortion-is-banned." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="12_OnlineData.html#cb293-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb293-2"><a href="12_OnlineData.html#cb293-2" tabindex="-1"></a>wikipedia <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;wikipedia.csv&quot;</span>)</span>
+<span id="cb293-3"><a href="12_OnlineData.html#cb293-3" tabindex="-1"></a></span>
+<span id="cb293-4"><a href="12_OnlineData.html#cb293-4" tabindex="-1"></a><span class="fu">table</span>(wikipedia<span class="sc">$</span><span class="st">`</span><span class="at">Waiting period</span><span class="st">`</span>)</span></code></pre></div>
+<pre><code>## 
+## N/A; abortion is banned here.                            No 
+##                            13                             2 
+##                      No [240]                       No[238] 
+##                             1                             1 
+##                          None                           Yes 
+##                            24                             9</code></pre>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="12_OnlineData.html#cb295-1" tabindex="-1"></a>wikipedia <span class="sc">|&gt;</span> </span>
+<span id="cb295-2"><a href="12_OnlineData.html#cb295-2" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">On-demand gestational limit</span><span class="st">`</span> <span class="sc">==</span> <span class="st">&quot;Fertilization&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb295-3"><a href="12_OnlineData.html#cb295-3" tabindex="-1"></a>  <span class="fu">count</span>()</span></code></pre></div>
+<p><strong>Some challenges: extra row when copy/pasting, variable names long and with special characters.</strong></p>
+<hr />
+</div>
+</div>
+<div id="with-code" class="section level3 hasAnchor" number="12.2.2">
+<h3><span class="header-section-number">12.2.2</span> With code<a href="12_OnlineData.html#with-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are many (paid) programs/software out there to scrape data from the web - some legal, some not. We will talk about scraping with code, for free with the <em>rvest</em> package. We can:</p>
+<ul>
+<li>Read HTML source code from a website.</li>
+<li>Break it into a nice structure.</li>
+<li>Extract the specific elements we want to analyze.</li>
+</ul>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="12_OnlineData.html#cb296-1" tabindex="-1"></a><span class="fu">library</span>(rvest)</span></code></pre></div>
+<p>Let’s work with a simple example first, the <a href="https://www.scrapethissite.com/pages/simple/">countries of the world</a> and read the HTML content of this page in R:</p>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="12_OnlineData.html#cb297-1" tabindex="-1"></a><span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>)</span></code></pre></div>
+<pre><code>## {html_document}
+## &lt;html lang=&quot;en&quot;&gt;
+##  [1] &lt;head&gt;\n&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; ch ...
+##  [2] &lt;body&gt;\n    &lt;nav id=&quot;site-nav&quot;&gt;&lt;div class=&quot;container&quot;&gt;\n       ...
+##  [3] &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11 ...
+##  [4] &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/j ...
+##  [5] &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/pnotify/2. ...
+##  [6] &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/pnotify/2.1 ...
+##  [7] &lt;script type=&quot;text/javascript&quot;&gt;\n    \n    PNotify.prototype.o ...
+##  [8] &lt;script type=&quot;text/javascript&quot;&gt;\n    $(&quot;video&quot;).hover(function ...
+##  [9] &lt;script&gt;\n    (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObjec ...
+## [10] &lt;script&gt;\n  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=f ...
+## [11] &lt;noscript&gt;&lt;img height=&quot;1&quot; width=&quot;1&quot; style=&quot;display:none&quot; src=&quot; ...
+## [12] &lt;script type=&quot;text/javascript&quot;&gt;\n    /* &lt;![CDATA[ */\n    var  ...
+## [13] &lt;script type=&quot;text/javascript&quot; src=&quot;//www.googleadservices.com ...
+## [14] &lt;noscript&gt;\n    &lt;div style=&quot;display:inline;&quot;&gt;\n    &lt;img height ...
+## [15] &lt;script async src=&quot;https://www.googletagmanager.com/gtag/js?id ...
+## [16] &lt;script&gt;\n   window.dataLayer = window.dataLayer || [];\n   fu ...</code></pre>
+<p>We can select some elements of this page. Without a deep knowledge of HMTL, we can use a simple tool to differentiate between all the different elements:</p>
+<ol style="list-style-type: decimal">
+<li>Download <a href="https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb">Chrome’s Selector Gadget extension</a>, which lets you easily identify the HTML “tag” for a pattern of elements that you want to scrape.</li>
+<li>Open the webpage you want to scrape from and click on the “Developer Tools”, the puzzle piece to the right of the address bar.</li>
+<li>Click on an element you want to scrape. If anything is highlighted yellow that you <em>don’t</em> want, click it to remove it from your selection.</li>
+</ol>
+<p>Once you see the <strong>element tag</strong> in the bar at the bottom, we can now scrape those with code:</p>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="12_OnlineData.html#cb299-1" tabindex="-1"></a><span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb299-2"><a href="12_OnlineData.html#cb299-2" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-name&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb299-3"><a href="12_OnlineData.html#cb299-3" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>##  [1] &quot;Andorra&quot;                         
+##  [2] &quot;United Arab Emirates&quot;            
+##  [3] &quot;Afghanistan&quot;                     
+##  [4] &quot;Antigua and Barbuda&quot;             
+##  [5] &quot;Anguilla&quot;                        
+##  [6] &quot;Albania&quot;                         
+##  [7] &quot;Armenia&quot;                         
+##  [8] &quot;Angola&quot;                          
+##  [9] &quot;Antarctica&quot;                      
+## [10] &quot;Argentina&quot;                       
+## [11] &quot;American Samoa&quot;                  
+## [12] &quot;Austria&quot;                         
+## [13] &quot;Australia&quot;                       
+## [14] &quot;Aruba&quot;                           
+## [15] &quot;Åland&quot;                           
+## [16] &quot;Azerbaijan&quot;                      
+## [17] &quot;Bosnia and Herzegovina&quot;          
+## [18] &quot;Barbados&quot;                        
+## [19] &quot;Bangladesh&quot;                      
+## [20] &quot;Belgium&quot;                         
+## [21] &quot;Burkina Faso&quot;                    
+## [22] &quot;Bulgaria&quot;                        
+## [23] &quot;Bahrain&quot;                         
+## [24] &quot;Burundi&quot;                         
+## [25] &quot;Benin&quot;                           
+## [26] &quot;Saint Barthélemy&quot;                
+## [27] &quot;Bermuda&quot;                         
+## [28] &quot;Brunei&quot;                          
+## [29] &quot;Bolivia&quot;                         
+## [30] &quot;Bonaire&quot;                         
+## [31] &quot;Brazil&quot;                          
+## [32] &quot;Bahamas&quot;                         
+## [33] &quot;Bhutan&quot;                          
+## [34] &quot;Bouvet Island&quot;                   
+## [35] &quot;Botswana&quot;                        
+## [36] &quot;Belarus&quot;                         
+## [37] &quot;Belize&quot;                          
+## [38] &quot;Canada&quot;                          
+## [39] &quot;Cocos [Keeling] Islands&quot;         
+## [40] &quot;Democratic Republic of the Congo&quot;
+## [41] &quot;Central African Republic&quot;        
+## [42] &quot;Republic of the Congo&quot;           
+## [43] &quot;Switzerland&quot;                     
+## [44] &quot;Ivory Coast&quot;                     
+## [45] &quot;Cook Islands&quot;                    
+## [46] &quot;Chile&quot;                           
+## [47] &quot;Cameroon&quot;                        
+## [48] &quot;China&quot;                           
+## [49] &quot;Colombia&quot;                        
+## [50] &quot;Costa Rica&quot;                      
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 200 entries ]</code></pre>
+<p>Similarly, let’s scrape the capitals:</p>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="12_OnlineData.html#cb301-1" tabindex="-1"></a><span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb301-2"><a href="12_OnlineData.html#cb301-2" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-capital&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb301-3"><a href="12_OnlineData.html#cb301-3" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>##  [1] &quot;Andorra la Vella&quot;    &quot;Abu Dhabi&quot;           &quot;Kabul&quot;              
+##  [4] &quot;St. John&#39;s&quot;          &quot;The Valley&quot;          &quot;Tirana&quot;             
+##  [7] &quot;Yerevan&quot;             &quot;Luanda&quot;              &quot;None&quot;               
+## [10] &quot;Buenos Aires&quot;        &quot;Pago Pago&quot;           &quot;Vienna&quot;             
+## [13] &quot;Canberra&quot;            &quot;Oranjestad&quot;          &quot;Mariehamn&quot;          
+## [16] &quot;Baku&quot;                &quot;Sarajevo&quot;            &quot;Bridgetown&quot;         
+## [19] &quot;Dhaka&quot;               &quot;Brussels&quot;            &quot;Ouagadougou&quot;        
+## [22] &quot;Sofia&quot;               &quot;Manama&quot;              &quot;Bujumbura&quot;          
+## [25] &quot;Porto-Novo&quot;          &quot;Gustavia&quot;            &quot;Hamilton&quot;           
+## [28] &quot;Bandar Seri Begawan&quot; &quot;Sucre&quot;               &quot;Kralendijk&quot;         
+## [31] &quot;Brasília&quot;            &quot;Nassau&quot;              &quot;Thimphu&quot;            
+## [34] &quot;None&quot;                &quot;Gaborone&quot;            &quot;Minsk&quot;              
+## [37] &quot;Belmopan&quot;            &quot;Ottawa&quot;              &quot;West Island&quot;        
+## [40] &quot;Kinshasa&quot;            &quot;Bangui&quot;              &quot;Brazzaville&quot;        
+## [43] &quot;Bern&quot;                &quot;Yamoussoukro&quot;        &quot;Avarua&quot;             
+## [46] &quot;Santiago&quot;            &quot;Yaoundé&quot;             &quot;Beijing&quot;            
+## [49] &quot;Bogotá&quot;              &quot;San José&quot;           
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 200 entries ]</code></pre>
+<p>Now we can put all the information about the countries and their capitals in the same dataset:</p>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="12_OnlineData.html#cb303-1" tabindex="-1"></a><span class="co"># Put it all in a dataframe</span></span>
+<span id="cb303-2"><a href="12_OnlineData.html#cb303-2" tabindex="-1"></a>countries_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb303-3"><a href="12_OnlineData.html#cb303-3" tabindex="-1"></a>  <span class="st">&quot;names&quot;</span> <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb303-4"><a href="12_OnlineData.html#cb303-4" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-name&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb303-5"><a href="12_OnlineData.html#cb303-5" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb303-6"><a href="12_OnlineData.html#cb303-6" tabindex="-1"></a>  </span>
+<span id="cb303-7"><a href="12_OnlineData.html#cb303-7" tabindex="-1"></a>  <span class="st">&quot;capitals&quot;</span> <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb303-8"><a href="12_OnlineData.html#cb303-8" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-capital&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb303-9"><a href="12_OnlineData.html#cb303-9" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb303-10"><a href="12_OnlineData.html#cb303-10" tabindex="-1"></a>countries_data</span></code></pre></div>
+<hr />
+<div id="try-it-scrape-the-population-and-area-for-each-country-then-calculate-the-population-density.-which-countries-have-the-highest-population-density-in-the-world" class="section level4 hasAnchor" number="12.2.2.1">
+<h4><span class="header-section-number">12.2.2.1</span> <strong>Try it! Scrape the population and area for each country then calculate the population density. Which countries have the highest population density in the world?</strong><a href="12_OnlineData.html#try-it-scrape-the-population-and-area-for-each-country-then-calculate-the-population-density.-which-countries-have-the-highest-population-density-in-the-world" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="12_OnlineData.html#cb304-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb304-2"><a href="12_OnlineData.html#cb304-2" tabindex="-1"></a><span class="co"># Put it all in a dataframe</span></span>
+<span id="cb304-3"><a href="12_OnlineData.html#cb304-3" tabindex="-1"></a>countries_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb304-4"><a href="12_OnlineData.html#cb304-4" tabindex="-1"></a>  <span class="st">&quot;names&quot;</span> <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb304-5"><a href="12_OnlineData.html#cb304-5" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-name&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb304-6"><a href="12_OnlineData.html#cb304-6" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb304-7"><a href="12_OnlineData.html#cb304-7" tabindex="-1"></a>  </span>
+<span id="cb304-8"><a href="12_OnlineData.html#cb304-8" tabindex="-1"></a>  <span class="st">&quot;population&quot;</span> <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb304-9"><a href="12_OnlineData.html#cb304-9" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-population&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb304-10"><a href="12_OnlineData.html#cb304-10" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb304-11"><a href="12_OnlineData.html#cb304-11" tabindex="-1"></a>  </span>
+<span id="cb304-12"><a href="12_OnlineData.html#cb304-12" tabindex="-1"></a>  <span class="st">&quot;area&quot;</span> <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">&quot;https://www.scrapethissite.com/pages/simple/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb304-13"><a href="12_OnlineData.html#cb304-13" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.country-area&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb304-14"><a href="12_OnlineData.html#cb304-14" tabindex="-1"></a>  <span class="fu">html_text</span>(<span class="at">trim =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb304-15"><a href="12_OnlineData.html#cb304-15" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">density =</span> <span class="fu">round</span>(<span class="fu">as.numeric</span>(population)<span class="sc">/</span><span class="fu">as.numeric</span>(area), <span class="dv">0</span>))</span>
+<span id="cb304-16"><a href="12_OnlineData.html#cb304-16" tabindex="-1"></a>countries_data <span class="sc">|&gt;</span></span>
+<span id="cb304-17"><a href="12_OnlineData.html#cb304-17" tabindex="-1"></a>  <span class="fu">slice_max</span>(density, <span class="at">n =</span> <span class="dv">10</span>)</span></code></pre></div>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+</div>
+</div>
+<div id="more-examples-of-scraping" class="section level3 hasAnchor" number="12.2.3">
+<h3><span class="header-section-number">12.2.3</span> More examples of scraping<a href="12_OnlineData.html#more-examples-of-scraping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Try scraping these:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://mycurlyadventures.com/fun-austin-date-night-ideas/">Austin Date Ideas</a></li>
+<li><a href="https://www.forbes.com/sites/laurabegleybloom/2019/09/04/bucket-list-travel-the-top-50-places-in-the-world/?sh=248d064820cf">Travel destinations</a></li>
+</ol>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="12_OnlineData.html#cb305-1" tabindex="-1"></a><span class="co"># Austin date ideas</span></span>
+<span id="cb305-2"><a href="12_OnlineData.html#cb305-2" tabindex="-1"></a><span class="fu">read_html</span>(<span class="st">&quot;https://mycurlyadventures.com/fun-austin-date-night-ideas/&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb305-3"><a href="12_OnlineData.html#cb305-3" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;.adhesion_desktop , h3&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb305-4"><a href="12_OnlineData.html#cb305-4" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;Grab a Margarita with a View&quot;                                             
+##  [2] &quot;Stroll Through Zilker Botanical Gardens&quot;                                  
+##  [3] &quot;Book a Sunset River Cruise&quot;                                               
+##  [4] &quot;Enjoy a Spa Day&quot;                                                          
+##  [5] &quot;Learn to Give a Good Massage&quot;                                             
+##  [6] &quot;Visit the Symphony&quot;                                                       
+##  [7] &quot;Catch a Dance Show&quot;                                                       
+##  [8] &quot;Visit NYC&quot;                                                                
+##  [9] &quot;Go Sailing&quot;                                                               
+## [10] &quot;See Austin from the Sky&quot;                                                  
+## [11] &quot;Go Back in Time &quot;                                                         
+## [12] &quot;Listen to Live Jazz&quot;                                                      
+## [13] &quot;Visit the Opera &quot;                                                         
+## [14] &quot;Check Out The Austin Aquarium&quot;                                            
+## [15] &quot;Try a Chef’s Tasting&quot;                                                     
+## [16] &quot;Or Go For a 20-course Omakase&quot;                                            
+## [17] &quot;Cruise in a Cool Car&quot;                                                     
+## [18] &quot;Relax in a Cave&quot;                                                          
+## [19] &quot;Go for a Picnic&quot;                                                          
+## [20] &quot;Go on a Wellness Retreat&quot;                                                 
+## [21] &quot;Go for a Brunch or Dinner Cruise&quot;                                         
+## [22] &quot;Take a Friday Moonlight Cruise&quot;                                           
+## [23] &quot;Enjoy a Romantic Meal&quot;                                                    
+## [24] &quot;Book More Spa Time&quot;                                                       
+## [25] &quot;Plan a Staycation&quot;                                                        
+## [26] &quot;Go on a Wine Tour&quot;                                                        
+## [27] &quot;Visit the Umlauf Sculpture Garden &amp; Museum&quot;                               
+## [28] &quot;Plan a Day Trip/Weekend Getaway&quot;                                          
+## [29] &quot;Escape the Box&quot;                                                           
+## [30] &quot;Best Date Ideas: Things to Do in Austin on the Water&quot;                     
+## [31] &quot;Best Date Ideas: Active Things to Do in Austin&quot;                           
+## [32] &quot;Best Date Ideas: Fun Things to Do in Austin&quot;                              
+## [33] &quot;Best Date Ideas: Romantic Things to Do in Austin for Art &amp; History Lovers&quot;
+## [34] &quot;Best Date Ideas: Things to Do for Foodies in Austin&quot;                      
+## [35] &quot;Best Date Ideas: Unique Things to Do in Austin&quot;                           
+## [36] &quot;Best Date Ideas: Free Things to Do in Austin&quot;                             
+## [37] &quot;Where should I go on a date in Austin?&quot;                                   
+## [38] &quot;Is Austin Texas good for dating?&quot;</code></pre>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="12_OnlineData.html#cb307-1" tabindex="-1"></a><span class="co"># Travel destinations</span></span>
+<span id="cb307-2"><a href="12_OnlineData.html#cb307-2" tabindex="-1"></a><span class="fu">read_html</span>(<span class="st">&quot;https://www.forbes.com/sites/laurabegleybloom/2019/09/04/bucket-list-travel-the-top-50-places-in-the-world/?sh=248d064820cf&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb307-3"><a href="12_OnlineData.html#cb307-3" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">&quot;strong&quot;</span>) <span class="sc">|&gt;</span></span>
+<span id="cb307-4"><a href="12_OnlineData.html#cb307-4" tabindex="-1"></a>  <span class="fu">html_text</span>()</span></code></pre></div>
+<pre><code>##  [1] &quot;1. Bali, Indonesia: &quot;                                    
+##  [2] &quot;2. New Orleans:&quot;                                         
+##  [3] &quot;3. Kerry, Ireland:&quot;                                      
+##  [4] &quot;4. Marrakesh, Morocco: &quot;                                 
+##  [5] &quot;5. Sydney:&quot;                                              
+##  [6] &quot;6. The Maldives:&quot;                                        
+##  [7] &quot;7. Paris, France:&quot;                                       
+##  [8] &quot;8. Cape Town, South Africa:&quot;                             
+##  [9] &quot;9. Dubai, U.A.E.:&quot;                                       
+## [10] &quot;10. Bora Bora, French Polynesia:&quot;                        
+## [11] &quot;11. New York: &quot;                                          
+## [12] &quot;12. Dubrovnik, Croatia:&quot;                                 
+## [13] &quot;13. Edinburgh, Scotland:&quot;                                
+## [14] &quot;14. Rome, Italy:&quot;                                        
+## [15] &quot;15. Paro Valley, Bhutan:&quot;                                
+## [16] &quot;16. Jaipur, India:&quot;                                      
+## [17] &quot;17. Waikato, New Zealand:&quot;                               
+## [18] &quot;18. Havana, Cuba:&quot;                                       
+## [19] &quot;19. Tokyo, Japan: &quot;                                      
+## [20] &quot;20. Antarctica: &quot;                                        
+## [21] &quot;21. Vancouver, Canada: &quot;                                 
+## [22] &quot;22. Los Angeles:&quot;                                        
+## [23] &quot;23. Kruger National Park, South Africa:&quot;                 
+## [24] &quot;24. Santorini, Greece:&quot;                                  
+## [25] &quot;25. Moscow, Russia:&quot;                                     
+## [26] &quot;26. Singapore&quot;                                           
+## [27] &quot;27. London, England:&quot;                                    
+## [28] &quot;28. Rio de Janeiro, Brazil:&quot;                             
+## [29] &quot;29. Petra, Jordan:&quot;                                      
+## [30] &quot;30. Hong Kong:&quot;                                          
+## [31] &quot;31. Barbados:&quot;                                           
+## [32] &quot;32. Amsterdam:&quot;                                          
+## [33] &quot;33. Santiago, Chile:&quot;                                    
+## [34] &quot;34. Cairo, Egypt:&quot;                                       
+## [35] &quot;35. Copenhagen, Denmark:&quot;                                
+## [36] &quot;36. Seoul, Korea: &quot;                                      
+## [37] &quot;37. Laucala Island Resort, Fiji:&quot;                        
+## [38] &quot;38. Providencia, Colombia:&quot;                              
+## [39] &quot;39. Machu Picchu, Peru:&quot;                                 
+## [40] &quot;40. Virunga National Park, Democratic Republic of Congo:&quot;
+## [41] &quot;41. Lisbon, Portugal:&quot;                                   
+## [42] &quot;42. Hanoi, Vietnam:&quot;                                     
+## [43] &quot;43. Hawaii:&quot;                                             
+## [44] &quot;44. Ibiza, Spain:&quot;                                       
+## [45] &quot;45. Beijing, China:&quot;                                     
+## [46] &quot;46. Budapest, Hungary:&quot;                                  
+## [47] &quot;47. Cinque Terre, Italy:&quot;                                
+## [48] &quot;48. Buenos Aires, Argentina:&quot;                            
+## [49] &quot;49. Las Vegas:&quot;                                          
+## [50] &quot;50: Matterhorn, Switzerland:&quot;</code></pre>
+</div>
+</div>
+<div id="datasets-formats" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Datasets formats<a href="12_OnlineData.html#datasets-formats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Other researchers might use different software with their own file extensions. For common ones, there’s likely already a package that can be used to import them into R.</p>
+<p>Download the <em>tamu_scholarships.sas7bdat</em> file from this <a href="https://github.com/snehapnaik/SAS-TAMU-scholarship/blob/main/tamu_scholarships.sas7bdat">GitHub</a>. This file is from SAS (a popular statistical analysis software) and can be imported easily:</p>
+<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="12_OnlineData.html#cb309-1" tabindex="-1"></a><span class="co"># Submit this code only once:</span></span>
+<span id="cb309-2"><a href="12_OnlineData.html#cb309-2" tabindex="-1"></a><span class="co">#install.packages(&#39;sas7bdat&#39;)</span></span>
+<span id="cb309-3"><a href="12_OnlineData.html#cb309-3" tabindex="-1"></a></span>
+<span id="cb309-4"><a href="12_OnlineData.html#cb309-4" tabindex="-1"></a><span class="co"># Upload library</span></span>
+<span id="cb309-5"><a href="12_OnlineData.html#cb309-5" tabindex="-1"></a><span class="fu">library</span>(sas7bdat)</span>
+<span id="cb309-6"><a href="12_OnlineData.html#cb309-6" tabindex="-1"></a></span>
+<span id="cb309-7"><a href="12_OnlineData.html#cb309-7" tabindex="-1"></a><span class="co"># Import SAS dataset</span></span>
+<span id="cb309-8"><a href="12_OnlineData.html#cb309-8" tabindex="-1"></a>tamu <span class="ot">&lt;-</span> <span class="fu">read.sas7bdat</span>(<span class="st">&#39;tamu_scholarships.sas7bdat&#39;</span>)</span>
+<span id="cb309-9"><a href="12_OnlineData.html#cb309-9" tabindex="-1"></a><span class="fu">head</span>(tamu)</span></code></pre></div>
+<hr />
+<div id="try-it-find-the-top-10-majors-in-terms-of-the-number-of-students-who-got-a-scholarship." class="section level4 hasAnchor" number="12.3.0.1">
+<h4><span class="header-section-number">12.3.0.1</span> <strong>Try it! Find the top 10 majors in terms of the number of students who got a scholarship.</strong><a href="12_OnlineData.html#try-it-find-the-top-10-majors-in-terms-of-the-number-of-students-who-got-a-scholarship." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="12_OnlineData.html#cb310-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+<p>If you encounter a file with a weird extension, look up if there is an existing import function into R. If not, you might need to convert the file using another program before working with it in R.</p>
+</div>
+</div>
+<div id="export-into-csv" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Export into csv<a href="12_OnlineData.html#export-into-csv" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once we manipulate our dataset in R, we might be interested in exporting it into a <code>csv</code> file:</p>
+<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="12_OnlineData.html#cb311-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb311-2"><a href="12_OnlineData.html#cb311-2" tabindex="-1"></a><span class="fu">write_csv</span>(tamu, <span class="st">&quot;tamu.csv&quot;</span>)</span></code></pre></div>
+<hr />
+<div id="try-it-reshape-the-tamu-dataset-so-that-we-can-find-the-total-amount-of-the-scholarships-for-each-major.-find-the-top-10-majors-in-terms-of-the-amount-of-money-awarded-by-the-scholarships.-then-export-this-dataset-into-a-csv-file." class="section level4 hasAnchor" number="12.4.0.1">
+<h4><span class="header-section-number">12.4.0.1</span> <strong>Try it! Reshape the <code>tamu</code> dataset so that we can find the total amount of the scholarships for each major. Find the top 10 majors in terms of the amount of money awarded by the scholarships. Then export this dataset into a <code>csv</code> file.</strong><a href="12_OnlineData.html#try-it-reshape-the-tamu-dataset-so-that-we-can-find-the-total-amount-of-the-scholarships-for-each-major.-find-the-top-10-majors-in-terms-of-the-amount-of-money-awarded-by-the-scholarships.-then-export-this-dataset-into-a-csv-file." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="12_OnlineData.html#cb312-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="11_Reproducibility.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="13_StringsRegEx.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

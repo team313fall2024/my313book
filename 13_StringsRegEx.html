@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>13 Strings and Regular expressions | Fall 2024 Semester</title>
+  <meta name="description" content="13 Strings and Regular expressions | Fall 2024 Semester" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="13 Strings and Regular expressions | Fall 2024 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="13 Strings and Regular expressions | Fall 2024 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr Layla Guyot" />
+
+
+<meta name="date" content="2024-12-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="12_OnlineData.html"/>
+<link rel="next" href="14_LoopsFunctions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 313 Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to SDS 313</a></li>
+<li class="chapter" data-level="2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html"><i class="fa fa-check"></i><b>2</b> Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#import-dataset"><i class="fa fa-check"></i><b>2.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="2.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#summarizing-one-variable"><i class="fa fa-check"></i><b>2.2</b> Summarizing one variable</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-categorical-variable"><i class="fa fa-check"></i><b>2.2.1</b> One Categorical Variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-numeric-variable"><i class="fa fa-check"></i><b>2.2.2</b> One Numeric Variable</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#group-practice"><i class="fa fa-check"></i><b>2.3</b> Group Practice</a></li>
+<li class="chapter" data-level="2.4" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#summarizing-two-variables-bivariate-relationship"><i class="fa fa-check"></i><b>2.4</b> Summarizing two variables (bivariate relationship)</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#two-numeric-variables"><i class="fa fa-check"></i><b>2.4.1</b> Two Numeric Variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-numeric-and-one-categorical-variable"><i class="fa fa-check"></i><b>2.4.2</b> One Numeric and One Categorical Variable</a></li>
+<li class="chapter" data-level="2.4.3" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#two-categorical-variables"><i class="fa fa-check"></i><b>2.4.3</b> Two Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#group-practice-1"><i class="fa fa-check"></i><b>2.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html"><i class="fa fa-check"></i><b>3</b> More Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#import-dataset-1"><i class="fa fa-check"></i><b>3.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="3.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#creating-plots-with-ggplot"><i class="fa fa-check"></i><b>3.2</b> Creating plots with <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#define-a-plot"><i class="fa fa-check"></i><b>3.2.1</b> Define a plot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#more-on-histograms"><i class="fa fa-check"></i><b>3.2.2</b> More on histograms</a></li>
+<li class="chapter" data-level="3.2.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#map-to-color-shape-size"><i class="fa fa-check"></i><b>3.2.3</b> Map to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#group-practice-2"><i class="fa fa-check"></i><b>3.3</b> Group Practice</a></li>
+<li class="chapter" data-level="3.4" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#layering"><i class="fa fa-check"></i><b>3.4</b> Layering</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#adding-labels"><i class="fa fa-check"></i><b>3.4.1</b> Adding labels</a></li>
+<li class="chapter" data-level="3.4.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#controlling-scales"><i class="fa fa-check"></i><b>3.4.2</b> Controlling scales</a></li>
+<li class="chapter" data-level="3.4.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#faceting"><i class="fa fa-check"></i><b>3.4.3</b> Faceting</a></li>
+<li class="chapter" data-level="3.4.4" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#looking-for-trends"><i class="fa fa-check"></i><b>3.4.4</b> Looking for trends</a></li>
+<li class="chapter" data-level="3.4.5" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#palettes-and-themes"><i class="fa fa-check"></i><b>3.4.5</b> Palettes and themes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#group-practice-3"><i class="fa fa-check"></i><b>3.5</b> Group Practice</a></li>
+<li class="chapter" data-level="3.6" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#exporting-a-graph"><i class="fa fa-check"></i><b>3.6</b> Exporting a graph</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#yaml-metadata"><i class="fa fa-check"></i><b>4.1</b> YAML metadata</a></li>
+<li class="chapter" data-level="4.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#text-editing"><i class="fa fa-check"></i><b>4.2</b> Text editing</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#a.-headers"><i class="fa fa-check"></i><b>4.2.1</b> a. Headers</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#for"><i class="fa fa-check"></i><b>4.2.2</b> For</a></li>
+<li class="chapter" data-level="4.2.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#example"><i class="fa fa-check"></i><b>4.2.3</b> Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#these"><i class="fa fa-check"></i><b>4.2.4</b> These</a></li>
+<li class="chapter" data-level="4.2.5" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#text-formatting"><i class="fa fa-check"></i><b>4.2.5</b> Text formatting</a></li>
+<li class="chapter" data-level="4.2.6" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#lists-and-bullet-points"><i class="fa fa-check"></i><b>4.2.6</b> Lists and bullet points</a></li>
+<li class="chapter" data-level="4.2.7" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#html-hyperlinks-images-tables-formulas-etc."><i class="fa fa-check"></i><b>4.2.7</b> HTML hyperlinks, images, tables, formulas, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#embedded-r-code"><i class="fa fa-check"></i><b>4.3</b> Embedded R code</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#packages-and-r-objects"><i class="fa fa-check"></i><b>4.3.1</b> Packages and R objects</a></li>
+<li class="chapter" data-level="4.3.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#options-for-code-chunks"><i class="fa fa-check"></i><b>4.3.2</b> Options for code chunks</a></li>
+<li class="chapter" data-level="4.3.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#inline-code"><i class="fa fa-check"></i><b>4.3.3</b> Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#group-practice-4"><i class="fa fa-check"></i><b>4.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html"><i class="fa fa-check"></i><b>5</b> More R Markdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#more-yaml-metadata"><i class="fa fa-check"></i><b>5.1</b> More YAML metadata</a></li>
+<li class="chapter" data-level="5.2" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#more-code-chunk-options"><i class="fa fa-check"></i><b>5.2</b> More code chunk options</a></li>
+<li class="chapter" data-level="5.3" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#format-tables"><i class="fa fa-check"></i><b>5.3</b> Format tables</a></li>
+<li class="chapter" data-level="5.4" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#knitting-into-different-formats"><i class="fa fa-check"></i><b>5.4</b> Knitting into different formats</a></li>
+<li class="chapter" data-level="5.5" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#group-practice-5"><i class="fa fa-check"></i><b>5.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html"><i class="fa fa-check"></i><b>6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#dataset-and-library"><i class="fa fa-check"></i><b>6.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="6.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#the-pipe"><i class="fa fa-check"></i><b>6.2</b> The pipe</a></li>
+<li class="chapter" data-level="6.3" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#operations-on-rowsobservations"><i class="fa fa-check"></i><b>6.3</b> Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#filter"><i class="fa fa-check"></i><b>6.3.1</b> Filter</a></li>
+<li class="chapter" data-level="6.3.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#arrange"><i class="fa fa-check"></i><b>6.3.2</b> Arrange</a></li>
+<li class="chapter" data-level="6.3.3" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#minimummaximum-values"><i class="fa fa-check"></i><b>6.3.3</b> Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#operations-on-columns"><i class="fa fa-check"></i><b>6.4</b> Operations on columns</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#select"><i class="fa fa-check"></i><b>6.4.1</b> Select</a></li>
+<li class="chapter" data-level="6.4.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#mutate"><i class="fa fa-check"></i><b>6.4.2</b> Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#create-summaries"><i class="fa fa-check"></i><b>6.5</b> Create summaries</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#summarize"><i class="fa fa-check"></i><b>6.5.1</b> Summarize</a></li>
+<li class="chapter" data-level="6.5.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#group-by"><i class="fa fa-check"></i><b>6.5.2</b> Group by</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html"><i class="fa fa-check"></i><b>7</b> More Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#dataset-and-library-1"><i class="fa fa-check"></i><b>7.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="7.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#recoding-variables"><i class="fa fa-check"></i><b>7.2</b> Recoding variables</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#log-transformation"><i class="fa fa-check"></i><b>7.2.1</b> Log-transformation</a></li>
+<li class="chapter" data-level="7.2.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#numeric-variable-considered-as-a-categorical-variable"><i class="fa fa-check"></i><b>7.2.2</b> Numeric variable considered as a categorical variable</a></li>
+<li class="chapter" data-level="7.2.3" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#recoding-values-based-on-conditions"><i class="fa fa-check"></i><b>7.2.3</b> Recoding values based on conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#handling-missing-values"><i class="fa fa-check"></i><b>7.3</b> Handling missing values</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#missing-values-never-go-unnoticed"><i class="fa fa-check"></i><b>7.3.1</b> Missing values never go unnoticed</a></li>
+<li class="chapter" data-level="7.3.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#values-that-were-omitted"><i class="fa fa-check"></i><b>7.3.2</b> Values that were omitted</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08_RelationalData.html"><a href="08_RelationalData.html"><i class="fa fa-check"></i><b>8</b> Relational Data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#datasets-and-library"><i class="fa fa-check"></i><b>8.1</b> Datasets and Library</a></li>
+<li class="chapter" data-level="8.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#different-types-of-joining-functions"><i class="fa fa-check"></i><b>8.2</b> Different types of joining functions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#inner-join"><i class="fa fa-check"></i><b>8.2.1</b> Inner join</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#left-join"><i class="fa fa-check"></i><b>8.2.2</b> Left join</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#right-join"><i class="fa fa-check"></i><b>8.2.3</b> Right join</a></li>
+<li class="chapter" data-level="8.2.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#full-join"><i class="fa fa-check"></i><b>8.2.4</b> Full join</a></li>
+<li class="chapter" data-level="8.2.5" data-path="08_RelationalData.html"><a href="08_RelationalData.html#anti-join"><i class="fa fa-check"></i><b>8.2.5</b> Anti join</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#common-issues-with-joining"><i class="fa fa-check"></i><b>8.3</b> Common issues with joining</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#no-matching-key"><i class="fa fa-check"></i><b>8.3.1</b> No matching key</a></li>
+<li class="chapter" data-level="8.3.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#auto-suffixing"><i class="fa fa-check"></i><b>8.3.2</b> Auto-suffixing</a></li>
+<li class="chapter" data-level="8.3.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#duplicates"><i class="fa fa-check"></i><b>8.3.3</b> Duplicates</a></li>
+<li class="chapter" data-level="8.3.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#several-key-variables"><i class="fa fa-check"></i><b>8.3.4</b> Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#group-practice-6"><i class="fa fa-check"></i><b>8.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html"><i class="fa fa-check"></i><b>9</b> Dates and Times</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#datasets-and-libraries"><i class="fa fa-check"></i><b>9.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#parsing-dates-and-times"><i class="fa fa-check"></i><b>9.2</b> Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#r-formats"><i class="fa fa-check"></i><b>9.2.1</b> R formats</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#combining-datetime-components"><i class="fa fa-check"></i><b>9.2.2</b> Combining date/time components</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#extracting-parts-of-the-date"><i class="fa fa-check"></i><b>9.2.3</b> Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#manipulating-dates-and-times"><i class="fa fa-check"></i><b>9.3</b> Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#finding-differences-between-dates-and-times"><i class="fa fa-check"></i><b>9.3.1</b> Finding differences between dates and times</a></li>
+<li class="chapter" data-level="9.3.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#summarizing-datetime-data"><i class="fa fa-check"></i><b>9.3.2</b> Summarizing date/time data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#a-few-remarks"><i class="fa fa-check"></i><b>9.3.3</b> A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#group-practice-7"><i class="fa fa-check"></i><b>9.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html"><i class="fa fa-check"></i><b>10</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#datasets-and-libraries-1"><i class="fa fa-check"></i><b>10.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#pivoting"><i class="fa fa-check"></i><b>10.2</b> Pivoting</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#wide-to-long"><i class="fa fa-check"></i><b>10.2.1</b> Wide to long</a></li>
+<li class="chapter" data-level="10.2.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#long-to-wide"><i class="fa fa-check"></i><b>10.2.2</b> Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#separating-and-uniting"><i class="fa fa-check"></i><b>10.3</b> Separating and uniting</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#separate"><i class="fa fa-check"></i><b>10.3.1</b> Separate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#unite"><i class="fa fa-check"></i><b>10.3.2</b> Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#group-practice-8"><i class="fa fa-check"></i><b>10.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html"><i class="fa fa-check"></i><b>11</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#coding-practices"><i class="fa fa-check"></i><b>11.1</b> Coding practices</a></li>
+<li class="chapter" data-level="11.2" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#reproducibility-1"><i class="fa fa-check"></i><b>11.2</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#group-practice-9"><i class="fa fa-check"></i><b>11.2.1</b> Group Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12_OnlineData.html"><a href="12_OnlineData.html"><i class="fa fa-check"></i><b>12</b> Online Data</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#online-data-resource"><i class="fa fa-check"></i><b>12.1</b> Online data resource</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#data-portal"><i class="fa fa-check"></i><b>12.1.1</b> Data portal</a></li>
+<li class="chapter" data-level="12.1.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#downloading-datasets"><i class="fa fa-check"></i><b>12.1.2</b> Downloading datasets</a></li>
+<li class="chapter" data-level="12.1.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#websites-with-special-permissions"><i class="fa fa-check"></i><b>12.1.3</b> Websites with special permissions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#web-scraping"><i class="fa fa-check"></i><b>12.2</b> Web scraping</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#manually-from-the-web"><i class="fa fa-check"></i><b>12.2.1</b> Manually from the web</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#with-code"><i class="fa fa-check"></i><b>12.2.2</b> With code</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#more-examples-of-scraping"><i class="fa fa-check"></i><b>12.2.3</b> More examples of scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#datasets-formats"><i class="fa fa-check"></i><b>12.3</b> Datasets formats</a></li>
+<li class="chapter" data-level="12.4" data-path="12_OnlineData.html"><a href="12_OnlineData.html#export-into-csv"><i class="fa fa-check"></i><b>12.4</b> Export into csv</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html"><i class="fa fa-check"></i><b>13</b> Strings and Regular expressions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#set-up"><i class="fa fa-check"></i><b>13.1</b> Set up</a></li>
+<li class="chapter" data-level="13.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#strings"><i class="fa fa-check"></i><b>13.2</b> Strings</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#calculating-length"><i class="fa fa-check"></i><b>13.2.1</b> Calculating length</a></li>
+<li class="chapter" data-level="13.2.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#combining-strings"><i class="fa fa-check"></i><b>13.2.2</b> Combining strings</a></li>
+<li class="chapter" data-level="13.2.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#changing-cases"><i class="fa fa-check"></i><b>13.2.3</b> Changing cases</a></li>
+<li class="chapter" data-level="13.2.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#subsetting-strings"><i class="fa fa-check"></i><b>13.2.4</b> Subsetting strings</a></li>
+<li class="chapter" data-level="13.2.5" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#finding-exact-matches-in-strings"><i class="fa fa-check"></i><b>13.2.5</b> Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#regular-expressions-regex"><i class="fa fa-check"></i><b>13.3</b> Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#wildcards"><i class="fa fa-check"></i><b>13.3.1</b> Wildcards</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#anchors"><i class="fa fa-check"></i><b>13.3.2</b> Anchors</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#flexible-patterns"><i class="fa fa-check"></i><b>13.3.3</b> Flexible patterns</a></li>
+<li class="chapter" data-level="13.3.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#special-characters"><i class="fa fa-check"></i><b>13.3.4</b> Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#group-practice-10"><i class="fa fa-check"></i><b>13.4</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html"><i class="fa fa-check"></i><b>14</b> Loops and Functions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#loops"><i class="fa fa-check"></i><b>14.1</b> Loops</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#basic-for-loops"><i class="fa fa-check"></i><b>14.1.1</b> Basic for-loops</a></li>
+<li class="chapter" data-level="14.1.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#conditional-statements"><i class="fa fa-check"></i><b>14.1.2</b> Conditional Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#group-practice-11"><i class="fa fa-check"></i><b>14.2</b> Group Practice</a></li>
+<li class="chapter" data-level="14.3" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#functions"><i class="fa fa-check"></i><b>14.3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#r-functions"><i class="fa fa-check"></i><b>14.3.1</b> R functions</a></li>
+<li class="chapter" data-level="14.3.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#our-own-functions"><i class="fa fa-check"></i><b>14.3.2</b> Our own functions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#dont-reinvent-the-wheel"><i class="fa fa-check"></i><b>14.4</b> Don’t reinvent the wheel</a></li>
+<li class="chapter" data-level="14.5" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#group-practice-12"><i class="fa fa-check"></i><b>14.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="15_Halloween.html"><a href="15_Halloween.html"><i class="fa fa-check"></i><b>15</b> Halloween candy</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15_Halloween.html"><a href="15_Halloween.html#set-up-1"><i class="fa fa-check"></i><b>15.1</b> Set up</a></li>
+<li class="chapter" data-level="15.2" data-path="15_Halloween.html"><a href="15_Halloween.html#exploring-relationships"><i class="fa fa-check"></i><b>15.2</b> Exploring relationships</a></li>
+<li class="chapter" data-level="15.3" data-path="15_Halloween.html"><a href="15_Halloween.html#group-practice-13"><i class="fa fa-check"></i><b>15.3</b> Group Practice</a></li>
+<li class="chapter" data-level="15.4" data-path="15_Halloween.html"><a href="15_Halloween.html#machine-learning"><i class="fa fa-check"></i><b>15.4</b> Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="16_Simulation.html"><a href="16_Simulation.html"><i class="fa fa-check"></i><b>16</b> Simulations</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="16_Simulation.html"><a href="16_Simulation.html#generating-random-numbers"><i class="fa fa-check"></i><b>16.1</b> Generating random numbers</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="16_Simulation.html"><a href="16_Simulation.html#random-numbers-among-some-values"><i class="fa fa-check"></i><b>16.1.1</b> Random numbers among some values</a></li>
+<li class="chapter" data-level="16.1.2" data-path="16_Simulation.html"><a href="16_Simulation.html#random-numbers-from-a-probability-distribution"><i class="fa fa-check"></i><b>16.1.2</b> Random numbers from a probability distribution</a></li>
+<li class="chapter" data-level="16.1.3" data-path="16_Simulation.html"><a href="16_Simulation.html#group-practice-14"><i class="fa fa-check"></i><b>16.1.3</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="16_Simulation.html"><a href="16_Simulation.html#some-applications-of-simulations"><i class="fa fa-check"></i><b>16.2</b> Some applications of simulations</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="16_Simulation.html"><a href="16_Simulation.html#rolling-dice"><i class="fa fa-check"></i><b>16.2.1</b> Rolling dice</a></li>
+<li class="chapter" data-level="16.2.2" data-path="16_Simulation.html"><a href="16_Simulation.html#birthday-problem"><i class="fa fa-check"></i><b>16.2.2</b> Birthday problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html"><i class="fa fa-check"></i><b>17</b> Shiny Basics</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#shiny-app-gallery"><i class="fa fa-check"></i><b>17.1</b> Shiny App Gallery</a></li>
+<li class="chapter" data-level="17.2" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#basic-structure-of-a-shiny-app"><i class="fa fa-check"></i><b>17.2</b> Basic Structure of a Shiny App</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#components"><i class="fa fa-check"></i><b>17.2.1</b> Components</a></li>
+<li class="chapter" data-level="17.2.2" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#group-practice-15"><i class="fa fa-check"></i><b>17.2.2</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.3" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#reactive-output"><i class="fa fa-check"></i><b>17.2.3</b> Reactive output</a></li>
+<li class="chapter" data-level="17.2.4" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#group-practice-16"><i class="fa fa-check"></i><b>17.2.4</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.5" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#project-3"><i class="fa fa-check"></i><b>17.2.5</b> Project 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html"><i class="fa fa-check"></i><b>18</b> Shiny with Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#more-on-the-shiny-structure"><i class="fa fa-check"></i><b>18.1</b> More on the Shiny structure</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#user-interface"><i class="fa fa-check"></i><b>18.1.1</b> User interface</a></li>
+<li class="chapter" data-level="18.1.2" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#server"><i class="fa fa-check"></i><b>18.1.2</b> Server</a></li>
+<li class="chapter" data-level="18.1.3" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#run-the-app"><i class="fa fa-check"></i><b>18.1.3</b> Run the app</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#interact-with-a-dataset"><i class="fa fa-check"></i><b>18.2</b> Interact with a dataset</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#group-practice-17"><i class="fa fa-check"></i><b>18.2.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#adding-a-choice-for-selecting-variables"><i class="fa fa-check"></i><b>18.3</b> Adding a choice for selecting variables</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#group-practice-18"><i class="fa fa-check"></i><b>18.3.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#hosting-your-app-on-the-web"><i class="fa fa-check"></i><b>18.4</b> Hosting your app on the web</a></li>
+<li class="chapter" data-level="18.5" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#summary"><i class="fa fa-check"></i><b>18.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="Bookdown.html"><a href="Bookdown.html"><i class="fa fa-check"></i><b>19</b> Bookdown</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="Bookdown.html"><a href="Bookdown.html#set-up-bookdown"><i class="fa fa-check"></i><b>19.1</b> Set up bookdown</a></li>
+<li class="chapter" data-level="19.2" data-path="Bookdown.html"><a href="Bookdown.html#organize-your-files"><i class="fa fa-check"></i><b>19.2</b> Organize your files</a></li>
+<li class="chapter" data-level="19.3" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-index"><i class="fa fa-check"></i><b>19.3</b> Edit the index</a></li>
+<li class="chapter" data-level="19.4" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-bookdown"><i class="fa fa-check"></i><b>19.4</b> Edit the bookdown</a></li>
+<li class="chapter" data-level="19.5" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-output"><i class="fa fa-check"></i><b>19.5</b> Edit the output</a></li>
+<li class="chapter" data-level="19.6" data-path="Bookdown.html"><a href="Bookdown.html#build-the-book"><i class="fa fa-check"></i><b>19.6</b> Build the book!</a></li>
+<li class="chapter" data-level="19.7" data-path="Bookdown.html"><a href="Bookdown.html#resources"><i class="fa fa-check"></i><b>19.7</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fall 2024 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="strings-and-regular-expressions" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">13</span> Strings and Regular expressions<a href="13_StringsRegEx.html#strings-and-regular-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this worksheet, we will:</p>
+<ul>
+<li>Manipulate and analyze string data using functions from the <code>stringr</code> package</li>
+<li>Apply regular expressions (RegEx) to identify patterns within strings</li>
+</ul>
+<div id="set-up" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Set up<a href="13_StringsRegEx.html#set-up" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s load <code>tidyverse</code> which contains the <code>stringr</code> package:</p>
+<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="13_StringsRegEx.html#cb313-1" tabindex="-1"></a><span class="co"># Load package </span></span>
+<span id="cb313-2"><a href="13_StringsRegEx.html#cb313-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<p>We will refer to some string objects and also manipulate strings within a dataframe containing information about the MetroBike trips taken on Halloween night 2023 (Oct 31, 6pm until Nov 1, 6am):</p>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="13_StringsRegEx.html#cb314-1" tabindex="-1"></a><span class="co"># Get the dataset from the data portal directly</span></span>
+<span id="cb314-2"><a href="13_StringsRegEx.html#cb314-2" tabindex="-1"></a>metrobike <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.austintexas.gov/resource/tyfh-5r8s.csv?$query=SELECT%0A%20%20%60trip_id%60%2C%0A%20%20%60membership_type%60%2C%0A%20%20%60bicycle_id%60%2C%0A%20%20%60bike_type%60%2C%0A%20%20%60checkout_datetime%60%2C%0A%20%20%60checkout_date%60%2C%0A%20%20%60checkout_time%60%2C%0A%20%20%60checkout_kiosk_id%60%2C%0A%20%20%60checkout_kiosk%60%2C%0A%20%20%60return_kiosk_id%60%2C%0A%20%20%60return_kiosk%60%2C%0A%20%20%60trip_duration_minutes%60%2C%0A%20%20%60month%60%2C%0A%20%20%60year%60%0AWHERE%0A%20%20%60checkout_datetime%60%0A%20%20%20%20BETWEEN%20%222023-10-31T18%3A00%3A00%22%20%3A%3A%20floating_timestamp%0A%20%20%20%20AND%20%222023-11-01T06%3A00%3A00%22%20%3A%3A%20floating_timestamp&quot;</span>)</span></code></pre></div>
+<p>Take a look at the dataset. Which variables are what we call strings?</p>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="13_StringsRegEx.html#cb315-1" tabindex="-1"></a><span class="fu">head</span>(metrobike)</span></code></pre></div>
+<p><strong>Examples: membership, kiosk.</strong></p>
+<p>Let’s manipulate strings with functions from the <code>stringr</code> package: the name of these functions start with <code>str_</code>.</p>
+</div>
+<div id="strings" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Strings<a href="13_StringsRegEx.html#strings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Strings are defined with either single quotes <code>'</code> or double quotes <code>"</code>:</p>
+<div id="calculating-length" class="section level3 hasAnchor" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Calculating length<a href="13_StringsRegEx.html#calculating-length" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>str_length()</code> function can help us find the length of a string:</p>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="13_StringsRegEx.html#cb316-1" tabindex="-1"></a><span class="co"># String length</span></span>
+<span id="cb316-2"><a href="13_StringsRegEx.html#cb316-2" tabindex="-1"></a><span class="fu">str_length</span>(<span class="st">&quot;abc&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="13_StringsRegEx.html#cb318-1" tabindex="-1"></a><span class="co"># How is that different?</span></span>
+<span id="cb318-2"><a href="13_StringsRegEx.html#cb318-2" tabindex="-1"></a><span class="fu">str_length</span>(<span class="st">&quot;a b c&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<p>We can apply this function to many strings contained in a vector!</p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="13_StringsRegEx.html#cb320-1" tabindex="-1"></a><span class="co"># String length of a vector</span></span>
+<span id="cb320-2"><a href="13_StringsRegEx.html#cb320-2" tabindex="-1"></a><span class="fu">str_length</span>(metrobike<span class="sc">$</span>membership_type)</span></code></pre></div>
+<pre><code>##  [1] 18 18 18  7 18 18  7  8 18  8  7 18  7 15 18 15  7 18 18 15 18 18
+## [23] 18 18 18 18 18 18 18 18  7 18 18  7 18 18 18 18 18 18 18 18 18 18
+## [45]  8  8 18 18  7 18
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 307 entries ]</code></pre>
+<p>We can also apply this function to create a new variable in a dataframe:</p>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="13_StringsRegEx.html#cb322-1" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb322-2"><a href="13_StringsRegEx.html#cb322-2" tabindex="-1"></a>  <span class="co"># for distinct values</span></span>
+<span id="cb322-3"><a href="13_StringsRegEx.html#cb322-3" tabindex="-1"></a>  <span class="fu">distinct</span>(membership_type) <span class="sc">|&gt;</span></span>
+<span id="cb322-4"><a href="13_StringsRegEx.html#cb322-4" tabindex="-1"></a>  <span class="co"># Find the length and create a new variable</span></span>
+<span id="cb322-5"><a href="13_StringsRegEx.html#cb322-5" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">length_value =</span> <span class="fu">str_length</span>(membership_type))</span></code></pre></div>
+</div>
+<div id="combining-strings" class="section level3 hasAnchor" number="13.2.2">
+<h3><span class="header-section-number">13.2.2</span> Combining strings<a href="13_StringsRegEx.html#combining-strings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use <code>str_c()</code> to combine two or more strings:</p>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="13_StringsRegEx.html#cb323-1" tabindex="-1"></a><span class="co"># Combine strings</span></span>
+<span id="cb323-2"><a href="13_StringsRegEx.html#cb323-2" tabindex="-1"></a><span class="fu">str_c</span>(<span class="st">&quot;Happy&quot;</span>, <span class="st">&quot;Halloween&quot;</span>, <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;HappyHalloween!&quot;</code></pre>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="13_StringsRegEx.html#cb325-1" tabindex="-1"></a><span class="co"># By default, no space but we can add the argument sep = </span></span>
+<span id="cb325-2"><a href="13_StringsRegEx.html#cb325-2" tabindex="-1"></a><span class="fu">str_c</span>(<span class="st">&quot;Happy&quot;</span>, <span class="st">&quot;Halloween&quot;</span>, <span class="st">&quot;!&quot;</span>, <span class="at">sep =</span> <span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Happy Halloween !&quot;</code></pre>
+<hr />
+<div id="try-it-combine-checkout_kiosk-with-return_kiosk-this-information-represents-the-route-of-a-trip-what-were-the-top-5-routes-on-that-halloween-night" class="section level4 hasAnchor" number="13.2.2.1">
+<h4><span class="header-section-number">13.2.2.1</span> <strong>Try it! Combine <code>checkout_kiosk</code> with <code>return_kiosk</code>: this information represents the route of a trip! What were the top 5 routes on that Halloween night?</strong><a href="13_StringsRegEx.html#try-it-combine-checkout_kiosk-with-return_kiosk-this-information-represents-the-route-of-a-trip-what-were-the-top-5-routes-on-that-halloween-night" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="13_StringsRegEx.html#cb327-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb327-2"><a href="13_StringsRegEx.html#cb327-2" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb327-3"><a href="13_StringsRegEx.html#cb327-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">route =</span> <span class="fu">str_c</span>(checkout_kiosk, return_kiosk, <span class="at">sep =</span> <span class="st">&quot; &quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb327-4"><a href="13_StringsRegEx.html#cb327-4" tabindex="-1"></a>  <span class="fu">select</span>(route) <span class="sc">|&gt;</span></span>
+<span id="cb327-5"><a href="13_StringsRegEx.html#cb327-5" tabindex="-1"></a>  <span class="fu">count</span>(route) <span class="sc">|&gt;</span></span>
+<span id="cb327-6"><a href="13_StringsRegEx.html#cb327-6" tabindex="-1"></a>  <span class="fu">slice_max</span>(n, <span class="at">n =</span> <span class="dv">5</span>)</span></code></pre></div>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+<p>What if we want to combine all the values of one vector/variable together in one object?</p>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="13_StringsRegEx.html#cb328-1" tabindex="-1"></a><span class="co"># Use the argument collapse =</span></span>
+<span id="cb328-2"><a href="13_StringsRegEx.html#cb328-2" tabindex="-1"></a><span class="fu">str_c</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>), <span class="at">collapse =</span> <span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;abc&quot;</code></pre>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="13_StringsRegEx.html#cb330-1" tabindex="-1"></a><span class="co"># Or separate by a comma and a space</span></span>
+<span id="cb330-2"><a href="13_StringsRegEx.html#cb330-2" tabindex="-1"></a><span class="fu">str_c</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>), <span class="at">collapse =</span> <span class="st">&quot;, &quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;a, b, c&quot;</code></pre>
+<p>We can get all distinct memberships in one object!</p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="13_StringsRegEx.html#cb332-1" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb332-2"><a href="13_StringsRegEx.html#cb332-2" tabindex="-1"></a>  <span class="co"># for distinct values</span></span>
+<span id="cb332-3"><a href="13_StringsRegEx.html#cb332-3" tabindex="-1"></a>  <span class="fu">distinct</span>(membership_type) <span class="sc">|&gt;</span> </span>
+<span id="cb332-4"><a href="13_StringsRegEx.html#cb332-4" tabindex="-1"></a>  <span class="co"># Pull the city as a vector</span></span>
+<span id="cb332-5"><a href="13_StringsRegEx.html#cb332-5" tabindex="-1"></a>  <span class="fu">pull</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb332-6"><a href="13_StringsRegEx.html#cb332-6" tabindex="-1"></a>  <span class="co"># Collapse all cities together, separated by a comma and a space</span></span>
+<span id="cb332-7"><a href="13_StringsRegEx.html#cb332-7" tabindex="-1"></a>  <span class="fu">str_c</span>(<span class="at">collapse =</span> <span class="st">&quot;, &quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Student Membership, Local31, Local365, Pay-as-you-ride, Explorer&quot;</code></pre>
+</div>
+</div>
+<div id="changing-cases" class="section level3 hasAnchor" number="13.2.3">
+<h3><span class="header-section-number">13.2.3</span> Changing cases<a href="13_StringsRegEx.html#changing-cases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can change the strings from lower to uppercase and vice-versa (also use sentence case):</p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="13_StringsRegEx.html#cb334-1" tabindex="-1"></a><span class="co"># To lower case</span></span>
+<span id="cb334-2"><a href="13_StringsRegEx.html#cb334-2" tabindex="-1"></a><span class="fu">str_to_lower</span>(<span class="st">&quot;Happy Halloween!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;happy halloween!&quot;</code></pre>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="13_StringsRegEx.html#cb336-1" tabindex="-1"></a><span class="co"># To upper case</span></span>
+<span id="cb336-2"><a href="13_StringsRegEx.html#cb336-2" tabindex="-1"></a><span class="fu">str_to_upper</span>(<span class="st">&quot;Happy Halloween!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;HAPPY HALLOWEEN!&quot;</code></pre>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="13_StringsRegEx.html#cb338-1" tabindex="-1"></a><span class="co"># To sentence case</span></span>
+<span id="cb338-2"><a href="13_StringsRegEx.html#cb338-2" tabindex="-1"></a><span class="fu">str_to_sentence</span>(<span class="st">&quot;Happy Halloween!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Happy halloween!&quot;</code></pre>
+<p>Especially useful if there are some inconsistencies in the categories of a variable!</p>
+</div>
+<div id="subsetting-strings" class="section level3 hasAnchor" number="13.2.4">
+<h3><span class="header-section-number">13.2.4</span> Subsetting strings<a href="13_StringsRegEx.html#subsetting-strings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can focus on a subset of a string with <code>str_sub()</code> (only works with indexing positions though):</p>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="13_StringsRegEx.html#cb340-1" tabindex="-1"></a><span class="co"># Select a position in the string</span></span>
+<span id="cb340-2"><a href="13_StringsRegEx.html#cb340-2" tabindex="-1"></a><span class="fu">str_sub</span>(<span class="st">&quot;Happy Halloween!&quot;</span>, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">end =</span> <span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Happy&quot;</code></pre>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="13_StringsRegEx.html#cb342-1" tabindex="-1"></a><span class="co"># Or count backwards with -</span></span>
+<span id="cb342-2"><a href="13_StringsRegEx.html#cb342-2" tabindex="-1"></a><span class="fu">str_sub</span>(<span class="st">&quot;Happy Halloween!&quot;</span>, <span class="at">start =</span> <span class="sc">-</span><span class="dv">10</span>, <span class="at">end =</span> <span class="sc">-</span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Halloween&quot;</code></pre>
+<p>We can also split a string by finding a separator:</p>
+<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="13_StringsRegEx.html#cb344-1" tabindex="-1"></a><span class="co"># Split given a pattern</span></span>
+<span id="cb344-2"><a href="13_StringsRegEx.html#cb344-2" tabindex="-1"></a><span class="fu">str_split</span>(<span class="st">&quot;Happy Halloween!&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<pre><code>## [[1]]
+## [1] &quot;Happy&quot;      &quot;Halloween!&quot;</code></pre>
+<p>Note that the resulting object is called a list and is difficult to manipulate within dataframes.</p>
+</div>
+<div id="finding-exact-matches-in-strings" class="section level3 hasAnchor" number="13.2.5">
+<h3><span class="header-section-number">13.2.5</span> Finding (exact) matches in strings<a href="13_StringsRegEx.html#finding-exact-matches-in-strings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s start finding patterns in strings! We can find if a pattern occurs in our data with <code>str_detect()</code>:</p>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="13_StringsRegEx.html#cb346-1" tabindex="-1"></a><span class="co"># Detect the matches</span></span>
+<span id="cb346-2"><a href="13_StringsRegEx.html#cb346-2" tabindex="-1"></a><span class="fu">str_detect</span>(<span class="st">&quot;Halloween&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot;Ha&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<hr />
+<div id="try-it-find-how-many-trips-in-metrobike-were-done-with-a-local-membership." class="section level4 hasAnchor" number="13.2.5.1">
+<h4><span class="header-section-number">13.2.5.1</span> <strong>Try it! Find how many trips in <code>metrobike</code> were done with a local membership.</strong><a href="13_StringsRegEx.html#try-it-find-how-many-trips-in-metrobike-were-done-with-a-local-membership." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="13_StringsRegEx.html#cb348-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb348-2"><a href="13_StringsRegEx.html#cb348-2" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb348-3"><a href="13_StringsRegEx.html#cb348-3" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(membership_type, <span class="st">&quot;Local&quot;</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb348-4"><a href="13_StringsRegEx.html#cb348-4" tabindex="-1"></a>  <span class="fu">count</span>()</span></code></pre></div>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+<p>What if we want to replace a pattern with <code>str_replace()</code>:</p>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="13_StringsRegEx.html#cb349-1" tabindex="-1"></a><span class="co"># Replace the matches</span></span>
+<span id="cb349-2"><a href="13_StringsRegEx.html#cb349-2" tabindex="-1"></a><span class="fu">str_replace</span>(<span class="st">&quot;Happy Halloween&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot;Happy&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Spooky&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Spooky Halloween&quot;</code></pre>
+</div>
+</div>
+</div>
+<div id="regular-expressions-regex" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Regular expressions (Regex)<a href="13_StringsRegEx.html#regular-expressions-regex" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Regular expressions are used to describe patterns in strings. They’re a little weird at first but they can be very useful, especially when we are looking for patterns with some flexibility.</p>
+<div id="wildcards" class="section level3 hasAnchor" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> Wildcards<a href="13_StringsRegEx.html#wildcards" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Use <code>.</code> to match any character (except a new line):</p>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="13_StringsRegEx.html#cb351-1" tabindex="-1"></a><span class="fu">str_detect</span>(<span class="fu">c</span>(<span class="st">&quot;Street&quot;</span>, <span class="st">&quot;street&quot;</span>), <span class="at">pattern =</span> <span class="st">&quot;.treet&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE TRUE</code></pre>
+</div>
+<div id="anchors" class="section level3 hasAnchor" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> Anchors<a href="13_StringsRegEx.html#anchors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s find a match at the beginning of a string with <code>^</code> or at the end of a string with <code>$</code> :</p>
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb353-1"><a href="13_StringsRegEx.html#cb353-1" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb353-2"><a href="13_StringsRegEx.html#cb353-2" tabindex="-1"></a>  <span class="co"># for distinct values</span></span>
+<span id="cb353-3"><a href="13_StringsRegEx.html#cb353-3" tabindex="-1"></a>  <span class="fu">distinct</span>(membership_type) <span class="sc">|&gt;</span></span>
+<span id="cb353-4"><a href="13_StringsRegEx.html#cb353-4" tabindex="-1"></a>  <span class="co"># Filter membership starting with Local</span></span>
+<span id="cb353-5"><a href="13_StringsRegEx.html#cb353-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(membership_type, <span class="st">&quot;^Local&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="13_StringsRegEx.html#cb354-1" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb354-2"><a href="13_StringsRegEx.html#cb354-2" tabindex="-1"></a>  <span class="co"># for distinct values</span></span>
+<span id="cb354-3"><a href="13_StringsRegEx.html#cb354-3" tabindex="-1"></a>  <span class="fu">distinct</span>(checkout_kiosk) <span class="sc">|&gt;</span></span>
+<span id="cb354-4"><a href="13_StringsRegEx.html#cb354-4" tabindex="-1"></a>  <span class="co"># Filter membership starting with Local</span></span>
+<span id="cb354-5"><a href="13_StringsRegEx.html#cb354-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(checkout_kiosk, <span class="st">&quot;st$&quot;</span>))</span></code></pre></div>
+</div>
+<div id="flexible-patterns" class="section level3 hasAnchor" number="13.3.3">
+<h3><span class="header-section-number">13.3.3</span> Flexible patterns<a href="13_StringsRegEx.html#flexible-patterns" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To look for certain patterns, we will use <code>[]</code>. Here are a few useful patterns:</p>
+<ul>
+<li><p><code>[0-9]</code> matches any digit</p></li>
+<li><p><code>[ ]</code> matches any single space</p></li>
+<li><p><code>[abc]</code> matches a, b, or c</p></li>
+<li><p><code>[a-zA-Z]</code> matches any letter, lower case or upper case</p></li>
+<li><p><code>[a-zA-Z0-9]</code> matches any alphanumeric character</p></li>
+</ul>
+<p>Let’s find any checkout kiosk with a vowel:</p>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="13_StringsRegEx.html#cb355-1" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb355-2"><a href="13_StringsRegEx.html#cb355-2" tabindex="-1"></a>  <span class="co"># for distinct values</span></span>
+<span id="cb355-3"><a href="13_StringsRegEx.html#cb355-3" tabindex="-1"></a>  <span class="fu">distinct</span>(checkout_kiosk) <span class="sc">|&gt;</span></span>
+<span id="cb355-4"><a href="13_StringsRegEx.html#cb355-4" tabindex="-1"></a>  <span class="co"># Filter cities starting with A or B</span></span>
+<span id="cb355-5"><a href="13_StringsRegEx.html#cb355-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(checkout_kiosk, <span class="st">&quot;[aeiou]$&quot;</span>))</span></code></pre></div>
+<hr />
+<div id="try-it-find-how-many-checkout-kiosk-start-with-a-number." class="section level4 hasAnchor" number="13.3.3.1">
+<h4><span class="header-section-number">13.3.3.1</span> <strong>Try it! Find how many checkout kiosk start with a number.</strong><a href="13_StringsRegEx.html#try-it-find-how-many-checkout-kiosk-start-with-a-number." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="13_StringsRegEx.html#cb356-1" tabindex="-1"></a>metrobike <span class="sc">|&gt;</span></span>
+<span id="cb356-2"><a href="13_StringsRegEx.html#cb356-2" tabindex="-1"></a>  <span class="co"># for distinct values</span></span>
+<span id="cb356-3"><a href="13_StringsRegEx.html#cb356-3" tabindex="-1"></a>  <span class="fu">distinct</span>(checkout_kiosk) <span class="sc">|&gt;</span></span>
+<span id="cb356-4"><a href="13_StringsRegEx.html#cb356-4" tabindex="-1"></a>  <span class="co"># Filter cities starting with A or B</span></span>
+<span id="cb356-5"><a href="13_StringsRegEx.html#cb356-5" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(checkout_kiosk, <span class="st">&quot;^[0-9]&quot;</span>))</span></code></pre></div>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+</div>
+</div>
+<div id="special-characters" class="section level3 hasAnchor" number="13.3.4">
+<h3><span class="header-section-number">13.3.4</span> Special characters<a href="13_StringsRegEx.html#special-characters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In regular expressions, some characters have special meanings (e.g., <code>.</code> matches any character, <code>^</code> indicates the start of a string, etc.). Sometimes, we may want to search for these special characters themselves rather than their functionality.</p>
+<p>To do this, we can “escape” them using a backslash (<code>\</code>).</p>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="13_StringsRegEx.html#cb357-1" tabindex="-1"></a><span class="co"># Actually referring to a quote for a string</span></span>
+<span id="cb357-2"><a href="13_StringsRegEx.html#cb357-2" tabindex="-1"></a><span class="st">&#39;</span><span class="sc">\&#39;</span><span class="st">&#39;</span></span></code></pre></div>
+<pre><code>## [1] &quot;&#39;&quot;</code></pre>
+<p>The trick is that <code>\</code> is a special character itself so we sometimes have to use a few of those <code>\\</code>:</p>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="13_StringsRegEx.html#cb359-1" tabindex="-1"></a><span class="co"># Compare these two pieces of code:</span></span>
+<span id="cb359-2"><a href="13_StringsRegEx.html#cb359-2" tabindex="-1"></a><span class="fu">str_replace_all</span>(<span class="st">&quot;Happy Halloween.&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot;.&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;!!!!!!!!!!!!!!!!&quot;</code></pre>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="13_StringsRegEx.html#cb361-1" tabindex="-1"></a><span class="fu">str_replace_all</span>(<span class="st">&quot;Happy Halloween.&quot;</span>, <span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;Happy Halloween!&quot;</code></pre>
+<hr />
+</div>
+</div>
+<div id="group-practice-10" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Group practice<a href="13_StringsRegEx.html#group-practice-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In a group of 3-4 students, investigate the following stories hidden in the <code>metrobike</code> dataset for Halloween night in 2023.</p>
+<ol style="list-style-type: decimal">
+<li>The Haunted Hour! A rumor says the busiest checkout hour on Halloween night is exactly at the spookiest time: midnight (00:00). Is this true?</li>
+</ol>
+<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="13_StringsRegEx.html#cb363-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>The Phantom’s Route! Some ghostly cyclists seem to haunt kiosks, returning the bike to the same kiosk. Can you find which kiosks are haunted?</li>
+</ol>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="13_StringsRegEx.html#cb364-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Follow the Spooky Places! Check the article <a href="https://do512.com/p/where-to-get-scared-in-austin" class="uri">https://do512.com/p/where-to-get-scared-in-austin</a> and retrieve the names of some places to get scared in Austin. Are there any kiosks near one of these places? Hint: one of these hotels is haunted!</li>
+</ol>
+<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="13_StringsRegEx.html#cb365-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>The Longest Ride! Legend has it that one cyclist took an incredibly long trip across town. Can you find at what time was the bicycle that had the longest ride checked out and specify the route?</li>
+</ol>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="13_StringsRegEx.html#cb366-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>The Curse of the 13th Ride! A chilling tale says that one bike was cursed after completing exactly 13 trips on Halloween night. Riders mysteriously vanished after using this bike. Can you uncover if the curse is real?</li>
+</ol>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="13_StringsRegEx.html#cb367-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<ol start="6" style="list-style-type: decimal">
+<li>The Haunted Path of 6th Street! 6th Street, known for its lively (and perhaps otherworldly) nightlife, may have seen eerie bike trips on Halloween. How many spirits rode the bikes down this ghostly path?</li>
+</ol>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="13_StringsRegEx.html#cb368-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<ol start="7" style="list-style-type: decimal">
+<li>Unravel your own spooky story!</li>
+</ol>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="13_StringsRegEx.html#cb369-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span></code></pre></div>
+<p>Share your favorite story on your [group’s slide] (<a href="https://docs.google.com/presentation/d/1Jknm_4urUcZmychWMq4u0dd0kpaytJGqqLF8OuqUtBI/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1Jknm_4urUcZmychWMq4u0dd0kpaytJGqqLF8OuqUtBI/edit?usp=sharing</a>)</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="12_OnlineData.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="14_LoopsFunctions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 R Markdown | Fall 2024 Semester</title>
+  <meta name="description" content="4 R Markdown | Fall 2024 Semester" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 R Markdown | Fall 2024 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 R Markdown | Fall 2024 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr Layla Guyot" />
+
+
+<meta name="date" content="2024-12-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="more-visualizing-and-describing-data.html"/>
+<link rel="next" href="more-r-markdown.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 313 Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to SDS 313</a></li>
+<li class="chapter" data-level="2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html"><i class="fa fa-check"></i><b>2</b> Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#import-dataset"><i class="fa fa-check"></i><b>2.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="2.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#summarizing-one-variable"><i class="fa fa-check"></i><b>2.2</b> Summarizing one variable</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#one-categorical-variable"><i class="fa fa-check"></i><b>2.2.1</b> One Categorical Variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#one-numeric-variable"><i class="fa fa-check"></i><b>2.2.2</b> One Numeric Variable</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#group-practice"><i class="fa fa-check"></i><b>2.3</b> Group Practice</a></li>
+<li class="chapter" data-level="2.4" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#summarizing-two-variables-bivariate-relationship"><i class="fa fa-check"></i><b>2.4</b> Summarizing two variables (bivariate relationship)</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#two-numeric-variables"><i class="fa fa-check"></i><b>2.4.1</b> Two Numeric Variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#one-numeric-and-one-categorical-variable"><i class="fa fa-check"></i><b>2.4.2</b> One Numeric and One Categorical Variable</a></li>
+<li class="chapter" data-level="2.4.3" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#two-categorical-variables"><i class="fa fa-check"></i><b>2.4.3</b> Two Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#group-practice-1"><i class="fa fa-check"></i><b>2.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html"><i class="fa fa-check"></i><b>3</b> More Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#import-dataset-1"><i class="fa fa-check"></i><b>3.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="3.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#creating-plots-with-ggplot"><i class="fa fa-check"></i><b>3.2</b> Creating plots with <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#define-a-plot"><i class="fa fa-check"></i><b>3.2.1</b> Define a plot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#more-on-histograms"><i class="fa fa-check"></i><b>3.2.2</b> More on histograms</a></li>
+<li class="chapter" data-level="3.2.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#map-to-color-shape-size"><i class="fa fa-check"></i><b>3.2.3</b> Map to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#group-practice-2"><i class="fa fa-check"></i><b>3.3</b> Group Practice</a></li>
+<li class="chapter" data-level="3.4" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#layering"><i class="fa fa-check"></i><b>3.4</b> Layering</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#adding-labels"><i class="fa fa-check"></i><b>3.4.1</b> Adding labels</a></li>
+<li class="chapter" data-level="3.4.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#controlling-scales"><i class="fa fa-check"></i><b>3.4.2</b> Controlling scales</a></li>
+<li class="chapter" data-level="3.4.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#faceting"><i class="fa fa-check"></i><b>3.4.3</b> Faceting</a></li>
+<li class="chapter" data-level="3.4.4" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#looking-for-trends"><i class="fa fa-check"></i><b>3.4.4</b> Looking for trends</a></li>
+<li class="chapter" data-level="3.4.5" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#palettes-and-themes"><i class="fa fa-check"></i><b>3.4.5</b> Palettes and themes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#group-practice-3"><i class="fa fa-check"></i><b>3.5</b> Group Practice</a></li>
+<li class="chapter" data-level="3.6" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#exporting-a-graph"><i class="fa fa-check"></i><b>3.6</b> Exporting a graph</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="r-markdown.html"><a href="r-markdown.html#yaml-metadata"><i class="fa fa-check"></i><b>4.1</b> YAML metadata</a></li>
+<li class="chapter" data-level="4.2" data-path="r-markdown.html"><a href="r-markdown.html#text-editing"><i class="fa fa-check"></i><b>4.2</b> Text editing</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="r-markdown.html"><a href="r-markdown.html#a.-headers"><i class="fa fa-check"></i><b>4.2.1</b> a. Headers</a></li>
+<li class="chapter" data-level="4.2.2" data-path="r-markdown.html"><a href="r-markdown.html#for"><i class="fa fa-check"></i><b>4.2.2</b> For</a></li>
+<li class="chapter" data-level="4.2.3" data-path="r-markdown.html"><a href="r-markdown.html#example"><i class="fa fa-check"></i><b>4.2.3</b> Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="r-markdown.html"><a href="r-markdown.html#these"><i class="fa fa-check"></i><b>4.2.4</b> These</a></li>
+<li class="chapter" data-level="4.2.5" data-path="r-markdown.html"><a href="r-markdown.html#text-formatting"><i class="fa fa-check"></i><b>4.2.5</b> Text formatting</a></li>
+<li class="chapter" data-level="4.2.6" data-path="r-markdown.html"><a href="r-markdown.html#lists-and-bullet-points"><i class="fa fa-check"></i><b>4.2.6</b> Lists and bullet points</a></li>
+<li class="chapter" data-level="4.2.7" data-path="r-markdown.html"><a href="r-markdown.html#html-hyperlinks-images-tables-formulas-etc."><i class="fa fa-check"></i><b>4.2.7</b> HTML hyperlinks, images, tables, formulas, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="r-markdown.html"><a href="r-markdown.html#embedded-r-code"><i class="fa fa-check"></i><b>4.3</b> Embedded R code</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="r-markdown.html"><a href="r-markdown.html#packages-and-r-objects"><i class="fa fa-check"></i><b>4.3.1</b> Packages and R objects</a></li>
+<li class="chapter" data-level="4.3.2" data-path="r-markdown.html"><a href="r-markdown.html#options-for-code-chunks"><i class="fa fa-check"></i><b>4.3.2</b> Options for code chunks</a></li>
+<li class="chapter" data-level="4.3.3" data-path="r-markdown.html"><a href="r-markdown.html#inline-code"><i class="fa fa-check"></i><b>4.3.3</b> Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="r-markdown.html"><a href="r-markdown.html#group-practice-4"><i class="fa fa-check"></i><b>4.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="more-r-markdown.html"><a href="more-r-markdown.html"><i class="fa fa-check"></i><b>5</b> More R Markdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="more-r-markdown.html"><a href="more-r-markdown.html#more-yaml-metadata"><i class="fa fa-check"></i><b>5.1</b> More YAML metadata</a></li>
+<li class="chapter" data-level="5.2" data-path="more-r-markdown.html"><a href="more-r-markdown.html#more-code-chunk-options"><i class="fa fa-check"></i><b>5.2</b> More code chunk options</a></li>
+<li class="chapter" data-level="5.3" data-path="more-r-markdown.html"><a href="more-r-markdown.html#format-tables"><i class="fa fa-check"></i><b>5.3</b> Format tables</a></li>
+<li class="chapter" data-level="5.4" data-path="more-r-markdown.html"><a href="more-r-markdown.html#knitting-into-different-formats"><i class="fa fa-check"></i><b>5.4</b> Knitting into different formats</a></li>
+<li class="chapter" data-level="5.5" data-path="more-r-markdown.html"><a href="more-r-markdown.html#group-practice-5"><i class="fa fa-check"></i><b>5.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-wrangling.html"><a href="data-wrangling.html#dataset-and-library"><i class="fa fa-check"></i><b>6.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="6.2" data-path="data-wrangling.html"><a href="data-wrangling.html#the-pipe"><i class="fa fa-check"></i><b>6.2</b> The pipe</a></li>
+<li class="chapter" data-level="6.3" data-path="data-wrangling.html"><a href="data-wrangling.html#operations-on-rowsobservations"><i class="fa fa-check"></i><b>6.3</b> Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="data-wrangling.html"><a href="data-wrangling.html#filter"><i class="fa fa-check"></i><b>6.3.1</b> Filter</a></li>
+<li class="chapter" data-level="6.3.2" data-path="data-wrangling.html"><a href="data-wrangling.html#arrange"><i class="fa fa-check"></i><b>6.3.2</b> Arrange</a></li>
+<li class="chapter" data-level="6.3.3" data-path="data-wrangling.html"><a href="data-wrangling.html#minimummaximum-values"><i class="fa fa-check"></i><b>6.3.3</b> Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="data-wrangling.html"><a href="data-wrangling.html#operations-on-columns"><i class="fa fa-check"></i><b>6.4</b> Operations on columns</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="data-wrangling.html"><a href="data-wrangling.html#select"><i class="fa fa-check"></i><b>6.4.1</b> Select</a></li>
+<li class="chapter" data-level="6.4.2" data-path="data-wrangling.html"><a href="data-wrangling.html#mutate"><i class="fa fa-check"></i><b>6.4.2</b> Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="data-wrangling.html"><a href="data-wrangling.html#create-summaries"><i class="fa fa-check"></i><b>6.5</b> Create summaries</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="data-wrangling.html"><a href="data-wrangling.html#summarize"><i class="fa fa-check"></i><b>6.5.1</b> Summarize</a></li>
+<li class="chapter" data-level="6.5.2" data-path="data-wrangling.html"><a href="data-wrangling.html#group-by"><i class="fa fa-check"></i><b>6.5.2</b> Group by</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html"><i class="fa fa-check"></i><b>7</b> More Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#dataset-and-library-1"><i class="fa fa-check"></i><b>7.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="7.2" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#recoding-variables"><i class="fa fa-check"></i><b>7.2</b> Recoding variables</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#log-transformation"><i class="fa fa-check"></i><b>7.2.1</b> Log-transformation</a></li>
+<li class="chapter" data-level="7.2.2" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#numeric-variable-considered-as-a-categorical-variable"><i class="fa fa-check"></i><b>7.2.2</b> Numeric variable considered as a categorical variable</a></li>
+<li class="chapter" data-level="7.2.3" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#recoding-values-based-on-conditions"><i class="fa fa-check"></i><b>7.2.3</b> Recoding values based on conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#handling-missing-values"><i class="fa fa-check"></i><b>7.3</b> Handling missing values</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#missing-values-never-go-unnoticed"><i class="fa fa-check"></i><b>7.3.1</b> Missing values never go unnoticed</a></li>
+<li class="chapter" data-level="7.3.2" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#values-that-were-omitted"><i class="fa fa-check"></i><b>7.3.2</b> Values that were omitted</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="relational-data.html"><a href="relational-data.html"><i class="fa fa-check"></i><b>8</b> Relational Data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="relational-data.html"><a href="relational-data.html#datasets-and-library"><i class="fa fa-check"></i><b>8.1</b> Datasets and Library</a></li>
+<li class="chapter" data-level="8.2" data-path="relational-data.html"><a href="relational-data.html#different-types-of-joining-functions"><i class="fa fa-check"></i><b>8.2</b> Different types of joining functions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="relational-data.html"><a href="relational-data.html#inner-join"><i class="fa fa-check"></i><b>8.2.1</b> Inner join</a></li>
+<li class="chapter" data-level="8.2.2" data-path="relational-data.html"><a href="relational-data.html#left-join"><i class="fa fa-check"></i><b>8.2.2</b> Left join</a></li>
+<li class="chapter" data-level="8.2.3" data-path="relational-data.html"><a href="relational-data.html#right-join"><i class="fa fa-check"></i><b>8.2.3</b> Right join</a></li>
+<li class="chapter" data-level="8.2.4" data-path="relational-data.html"><a href="relational-data.html#full-join"><i class="fa fa-check"></i><b>8.2.4</b> Full join</a></li>
+<li class="chapter" data-level="8.2.5" data-path="relational-data.html"><a href="relational-data.html#anti-join"><i class="fa fa-check"></i><b>8.2.5</b> Anti join</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="relational-data.html"><a href="relational-data.html#common-issues-with-joining"><i class="fa fa-check"></i><b>8.3</b> Common issues with joining</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="relational-data.html"><a href="relational-data.html#no-matching-key"><i class="fa fa-check"></i><b>8.3.1</b> No matching key</a></li>
+<li class="chapter" data-level="8.3.2" data-path="relational-data.html"><a href="relational-data.html#auto-suffixing"><i class="fa fa-check"></i><b>8.3.2</b> Auto-suffixing</a></li>
+<li class="chapter" data-level="8.3.3" data-path="relational-data.html"><a href="relational-data.html#duplicates"><i class="fa fa-check"></i><b>8.3.3</b> Duplicates</a></li>
+<li class="chapter" data-level="8.3.4" data-path="relational-data.html"><a href="relational-data.html#several-key-variables"><i class="fa fa-check"></i><b>8.3.4</b> Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="relational-data.html"><a href="relational-data.html#group-practice-6"><i class="fa fa-check"></i><b>8.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="dates-and-times.html"><a href="dates-and-times.html"><i class="fa fa-check"></i><b>9</b> Dates and Times</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="dates-and-times.html"><a href="dates-and-times.html#datasets-and-libraries"><i class="fa fa-check"></i><b>9.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="dates-and-times.html"><a href="dates-and-times.html#parsing-dates-and-times"><i class="fa fa-check"></i><b>9.2</b> Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="dates-and-times.html"><a href="dates-and-times.html#r-formats"><i class="fa fa-check"></i><b>9.2.1</b> R formats</a></li>
+<li class="chapter" data-level="9.2.2" data-path="dates-and-times.html"><a href="dates-and-times.html#combining-datetime-components"><i class="fa fa-check"></i><b>9.2.2</b> Combining date/time components</a></li>
+<li class="chapter" data-level="9.2.3" data-path="dates-and-times.html"><a href="dates-and-times.html#extracting-parts-of-the-date"><i class="fa fa-check"></i><b>9.2.3</b> Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="dates-and-times.html"><a href="dates-and-times.html#manipulating-dates-and-times"><i class="fa fa-check"></i><b>9.3</b> Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="dates-and-times.html"><a href="dates-and-times.html#finding-differences-between-dates-and-times"><i class="fa fa-check"></i><b>9.3.1</b> Finding differences between dates and times</a></li>
+<li class="chapter" data-level="9.3.2" data-path="dates-and-times.html"><a href="dates-and-times.html#summarizing-datetime-data"><i class="fa fa-check"></i><b>9.3.2</b> Summarizing date/time data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="dates-and-times.html"><a href="dates-and-times.html#a-few-remarks"><i class="fa fa-check"></i><b>9.3.3</b> A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="dates-and-times.html"><a href="dates-and-times.html#group-practice-7"><i class="fa fa-check"></i><b>9.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reshaping-data.html"><a href="reshaping-data.html"><i class="fa fa-check"></i><b>10</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="reshaping-data.html"><a href="reshaping-data.html#datasets-and-libraries-1"><i class="fa fa-check"></i><b>10.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="reshaping-data.html"><a href="reshaping-data.html#pivoting"><i class="fa fa-check"></i><b>10.2</b> Pivoting</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="reshaping-data.html"><a href="reshaping-data.html#wide-to-long"><i class="fa fa-check"></i><b>10.2.1</b> Wide to long</a></li>
+<li class="chapter" data-level="10.2.2" data-path="reshaping-data.html"><a href="reshaping-data.html#long-to-wide"><i class="fa fa-check"></i><b>10.2.2</b> Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="reshaping-data.html"><a href="reshaping-data.html#separating-and-uniting"><i class="fa fa-check"></i><b>10.3</b> Separating and uniting</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="reshaping-data.html"><a href="reshaping-data.html#separate"><i class="fa fa-check"></i><b>10.3.1</b> Separate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="reshaping-data.html"><a href="reshaping-data.html#unite"><i class="fa fa-check"></i><b>10.3.2</b> Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="reshaping-data.html"><a href="reshaping-data.html#group-practice-8"><i class="fa fa-check"></i><b>10.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>11</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="reproducibility.html"><a href="reproducibility.html#coding-practices"><i class="fa fa-check"></i><b>11.1</b> Coding practices</a></li>
+<li class="chapter" data-level="11.2" data-path="reproducibility.html"><a href="reproducibility.html#reproducibility-1"><i class="fa fa-check"></i><b>11.2</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="reproducibility.html"><a href="reproducibility.html#group-practice-9"><i class="fa fa-check"></i><b>11.2.1</b> Group Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="online-data.html"><a href="online-data.html"><i class="fa fa-check"></i><b>12</b> Online Data</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="online-data.html"><a href="online-data.html#online-data-resource"><i class="fa fa-check"></i><b>12.1</b> Online data resource</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="online-data.html"><a href="online-data.html#data-portal"><i class="fa fa-check"></i><b>12.1.1</b> Data portal</a></li>
+<li class="chapter" data-level="12.1.2" data-path="online-data.html"><a href="online-data.html#downloading-datasets"><i class="fa fa-check"></i><b>12.1.2</b> Downloading datasets</a></li>
+<li class="chapter" data-level="12.1.3" data-path="online-data.html"><a href="online-data.html#websites-with-special-permissions"><i class="fa fa-check"></i><b>12.1.3</b> Websites with special permissions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="online-data.html"><a href="online-data.html#web-scraping"><i class="fa fa-check"></i><b>12.2</b> Web scraping</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="online-data.html"><a href="online-data.html#manually-from-the-web"><i class="fa fa-check"></i><b>12.2.1</b> Manually from the web</a></li>
+<li class="chapter" data-level="12.2.2" data-path="online-data.html"><a href="online-data.html#with-code"><i class="fa fa-check"></i><b>12.2.2</b> With code</a></li>
+<li class="chapter" data-level="12.2.3" data-path="online-data.html"><a href="online-data.html#more-examples-of-scraping"><i class="fa fa-check"></i><b>12.2.3</b> More examples of scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="online-data.html"><a href="online-data.html#datasets-formats"><i class="fa fa-check"></i><b>12.3</b> Datasets formats</a></li>
+<li class="chapter" data-level="12.4" data-path="online-data.html"><a href="online-data.html#export-into-csv"><i class="fa fa-check"></i><b>12.4</b> Export into csv</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Strings and Regular expressions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#set-up"><i class="fa fa-check"></i><b>13.1</b> Set up</a></li>
+<li class="chapter" data-level="13.2" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#strings"><i class="fa fa-check"></i><b>13.2</b> Strings</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#calculating-length"><i class="fa fa-check"></i><b>13.2.1</b> Calculating length</a></li>
+<li class="chapter" data-level="13.2.2" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#combining-strings"><i class="fa fa-check"></i><b>13.2.2</b> Combining strings</a></li>
+<li class="chapter" data-level="13.2.3" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#changing-cases"><i class="fa fa-check"></i><b>13.2.3</b> Changing cases</a></li>
+<li class="chapter" data-level="13.2.4" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#subsetting-strings"><i class="fa fa-check"></i><b>13.2.4</b> Subsetting strings</a></li>
+<li class="chapter" data-level="13.2.5" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#finding-exact-matches-in-strings"><i class="fa fa-check"></i><b>13.2.5</b> Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#regular-expressions-regex"><i class="fa fa-check"></i><b>13.3</b> Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#wildcards"><i class="fa fa-check"></i><b>13.3.1</b> Wildcards</a></li>
+<li class="chapter" data-level="13.3.2" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#anchors"><i class="fa fa-check"></i><b>13.3.2</b> Anchors</a></li>
+<li class="chapter" data-level="13.3.3" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#flexible-patterns"><i class="fa fa-check"></i><b>13.3.3</b> Flexible patterns</a></li>
+<li class="chapter" data-level="13.3.4" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#special-characters"><i class="fa fa-check"></i><b>13.3.4</b> Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#group-practice-10"><i class="fa fa-check"></i><b>13.4</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="loops-and-functions.html"><a href="loops-and-functions.html"><i class="fa fa-check"></i><b>14</b> Loops and Functions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="loops-and-functions.html"><a href="loops-and-functions.html#loops"><i class="fa fa-check"></i><b>14.1</b> Loops</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="loops-and-functions.html"><a href="loops-and-functions.html#basic-for-loops"><i class="fa fa-check"></i><b>14.1.1</b> Basic for-loops</a></li>
+<li class="chapter" data-level="14.1.2" data-path="loops-and-functions.html"><a href="loops-and-functions.html#conditional-statements"><i class="fa fa-check"></i><b>14.1.2</b> Conditional Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="loops-and-functions.html"><a href="loops-and-functions.html#group-practice-11"><i class="fa fa-check"></i><b>14.2</b> Group Practice</a></li>
+<li class="chapter" data-level="14.3" data-path="loops-and-functions.html"><a href="loops-and-functions.html#functions"><i class="fa fa-check"></i><b>14.3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="loops-and-functions.html"><a href="loops-and-functions.html#r-functions"><i class="fa fa-check"></i><b>14.3.1</b> R functions</a></li>
+<li class="chapter" data-level="14.3.2" data-path="loops-and-functions.html"><a href="loops-and-functions.html#our-own-functions"><i class="fa fa-check"></i><b>14.3.2</b> Our own functions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="loops-and-functions.html"><a href="loops-and-functions.html#dont-reinvent-the-wheel"><i class="fa fa-check"></i><b>14.4</b> Don’t reinvent the wheel</a></li>
+<li class="chapter" data-level="14.5" data-path="loops-and-functions.html"><a href="loops-and-functions.html#group-practice-12"><i class="fa fa-check"></i><b>14.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="halloween-candy.html"><a href="halloween-candy.html"><i class="fa fa-check"></i><b>15</b> Halloween candy</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="halloween-candy.html"><a href="halloween-candy.html#set-up-1"><i class="fa fa-check"></i><b>15.1</b> Set up</a></li>
+<li class="chapter" data-level="15.2" data-path="halloween-candy.html"><a href="halloween-candy.html#exploring-relationships"><i class="fa fa-check"></i><b>15.2</b> Exploring relationships</a></li>
+<li class="chapter" data-level="15.3" data-path="halloween-candy.html"><a href="halloween-candy.html#group-practice-13"><i class="fa fa-check"></i><b>15.3</b> Group Practice</a></li>
+<li class="chapter" data-level="15.4" data-path="halloween-candy.html"><a href="halloween-candy.html#machine-learning"><i class="fa fa-check"></i><b>15.4</b> Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="simulations.html"><a href="simulations.html"><i class="fa fa-check"></i><b>16</b> Simulations</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="simulations.html"><a href="simulations.html#generating-random-numbers"><i class="fa fa-check"></i><b>16.1</b> Generating random numbers</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="simulations.html"><a href="simulations.html#random-numbers-among-some-values"><i class="fa fa-check"></i><b>16.1.1</b> Random numbers among some values</a></li>
+<li class="chapter" data-level="16.1.2" data-path="simulations.html"><a href="simulations.html#random-numbers-from-a-probability-distribution"><i class="fa fa-check"></i><b>16.1.2</b> Random numbers from a probability distribution</a></li>
+<li class="chapter" data-level="16.1.3" data-path="simulations.html"><a href="simulations.html#group-practice-14"><i class="fa fa-check"></i><b>16.1.3</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="simulations.html"><a href="simulations.html#some-applications-of-simulations"><i class="fa fa-check"></i><b>16.2</b> Some applications of simulations</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="simulations.html"><a href="simulations.html#rolling-dice"><i class="fa fa-check"></i><b>16.2.1</b> Rolling dice</a></li>
+<li class="chapter" data-level="16.2.2" data-path="simulations.html"><a href="simulations.html#birthday-problem"><i class="fa fa-check"></i><b>16.2.2</b> Birthday problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="shiny-basics.html"><a href="shiny-basics.html"><i class="fa fa-check"></i><b>17</b> Shiny Basics</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="shiny-basics.html"><a href="shiny-basics.html#shiny-app-gallery"><i class="fa fa-check"></i><b>17.1</b> Shiny App Gallery</a></li>
+<li class="chapter" data-level="17.2" data-path="shiny-basics.html"><a href="shiny-basics.html#basic-structure-of-a-shiny-app"><i class="fa fa-check"></i><b>17.2</b> Basic Structure of a Shiny App</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="shiny-basics.html"><a href="shiny-basics.html#components"><i class="fa fa-check"></i><b>17.2.1</b> Components</a></li>
+<li class="chapter" data-level="17.2.2" data-path="shiny-basics.html"><a href="shiny-basics.html#group-practice-15"><i class="fa fa-check"></i><b>17.2.2</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.3" data-path="shiny-basics.html"><a href="shiny-basics.html#reactive-output"><i class="fa fa-check"></i><b>17.2.3</b> Reactive output</a></li>
+<li class="chapter" data-level="17.2.4" data-path="shiny-basics.html"><a href="shiny-basics.html#group-practice-16"><i class="fa fa-check"></i><b>17.2.4</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.5" data-path="shiny-basics.html"><a href="shiny-basics.html#project-3"><i class="fa fa-check"></i><b>17.2.5</b> Project 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="shiny-with-data.html"><a href="shiny-with-data.html"><i class="fa fa-check"></i><b>18</b> Shiny with Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#more-on-the-shiny-structure"><i class="fa fa-check"></i><b>18.1</b> More on the Shiny structure</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#user-interface"><i class="fa fa-check"></i><b>18.1.1</b> User interface</a></li>
+<li class="chapter" data-level="18.1.2" data-path="shiny-with-data.html"><a href="shiny-with-data.html#server"><i class="fa fa-check"></i><b>18.1.2</b> Server</a></li>
+<li class="chapter" data-level="18.1.3" data-path="shiny-with-data.html"><a href="shiny-with-data.html#run-the-app"><i class="fa fa-check"></i><b>18.1.3</b> Run the app</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="shiny-with-data.html"><a href="shiny-with-data.html#interact-with-a-dataset"><i class="fa fa-check"></i><b>18.2</b> Interact with a dataset</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#group-practice-17"><i class="fa fa-check"></i><b>18.2.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="shiny-with-data.html"><a href="shiny-with-data.html#adding-a-choice-for-selecting-variables"><i class="fa fa-check"></i><b>18.3</b> Adding a choice for selecting variables</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#group-practice-18"><i class="fa fa-check"></i><b>18.3.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="shiny-with-data.html"><a href="shiny-with-data.html#hosting-your-app-on-the-web"><i class="fa fa-check"></i><b>18.4</b> Hosting your app on the web</a></li>
+<li class="chapter" data-level="18.5" data-path="shiny-with-data.html"><a href="shiny-with-data.html#summary"><i class="fa fa-check"></i><b>18.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>19</b> Bookdown</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="bookdown.html"><a href="bookdown.html#set-up-bookdown"><i class="fa fa-check"></i><b>19.1</b> Set up bookdown</a></li>
+<li class="chapter" data-level="19.2" data-path="bookdown.html"><a href="bookdown.html#organize-your-files"><i class="fa fa-check"></i><b>19.2</b> Organize your files</a></li>
+<li class="chapter" data-level="19.3" data-path="bookdown.html"><a href="bookdown.html#edit-the-index"><i class="fa fa-check"></i><b>19.3</b> Edit the index</a></li>
+<li class="chapter" data-level="19.4" data-path="bookdown.html"><a href="bookdown.html#edit-the-bookdown"><i class="fa fa-check"></i><b>19.4</b> Edit the bookdown</a></li>
+<li class="chapter" data-level="19.5" data-path="bookdown.html"><a href="bookdown.html#edit-the-output"><i class="fa fa-check"></i><b>19.5</b> Edit the output</a></li>
+<li class="chapter" data-level="19.6" data-path="bookdown.html"><a href="bookdown.html#build-the-book"><i class="fa fa-check"></i><b>19.6</b> Build the book!</a></li>
+<li class="chapter" data-level="19.7" data-path="bookdown.html"><a href="bookdown.html#resources"><i class="fa fa-check"></i><b>19.7</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fall 2024 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-markdown" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> R Markdown<a href="r-markdown.html#r-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this worksheet, we will:</p>
+<ul>
+<li>Understand the <em>source</em> of .Rmd files</li>
+<li>Play around with advanced markdown edits</li>
+<li>Include code to investigate a dataset</li>
+<li>Knit .html reports</li>
+</ul>
+<p>Here are some examples of knitted R Markdown files:</p>
+<ul>
+<li><a href="https://r4ds.had.co.nz/">Our textbook, using “bookdown”</a></li>
+<li>The “handouts” from the second week of class</li>
+<li><a href="https://github.com/svmiller/svm-r-markdown-templates/blob/master/article-example/svm-rmarkdown-article-example.pdf">.pdf articles</a></li>
+</ul>
+<p>We will discuss the structure of the R Markdown file with YAML metadata, text editing, and embedded code.</p>
+<div id="yaml-metadata" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> YAML metadata<a href="r-markdown.html#yaml-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The settings and parameters controlling the appearance and structure of the document are defined at the top of the file, enclosed by triple dashes <code>---</code>. This metadata provides key information about the document, such as the <code>title</code>, <code>author</code>, <code>output</code> format, with sometimes other settings like table of contents, theme, and code chunk options.</p>
+</div>
+<div id="text-editing" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Text editing<a href="r-markdown.html#text-editing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s try out basic Markdown features with different headers, numbered or bulleted lists, bold or italic text, …</p>
+<div id="a.-headers" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> a. Headers<a href="r-markdown.html#a.-headers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="for" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> For<a href="r-markdown.html#for" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="example" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Example<a href="r-markdown.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="these" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> These<a href="r-markdown.html#these" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="are" class="section level4 hasAnchor" number="4.2.4.1">
+<h4><span class="header-section-number">4.2.4.1</span> Are<a href="r-markdown.html#are" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="different" class="section level5 hasAnchor" number="4.2.4.1.1">
+<h5><span class="header-section-number">4.2.4.1.1</span> Different<a href="r-markdown.html#different" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div id="headers" class="section level6 hasAnchor" number="4.2.4.1.1.1">
+<h6><span class="header-section-number">4.2.4.1.1.1</span> Headers<a href="r-markdown.html#headers" class="anchor-section" aria-label="Anchor link to header"></a></h6>
+<p>######Does not knit as a header</p>
+<p>Make sure to leave a space after #’s so that they are interpreted as headers. Similarly, leave a blank line between sections.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="text-formatting" class="section level3 hasAnchor" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> Text formatting<a href="r-markdown.html#text-formatting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can use some basic formatting to highlight some part of the text:</p>
+<p><strong>bold</strong>, <em>italic</em>, or <strong><em>bold and italic</em></strong></p>
+<p><del>strikethrough text</del></p>
+<blockquote>
+<p>Create a blockquote</p>
+</blockquote>
+<p>To refer to R objects (variables, datasets, functions, …) within the text, we usually use the slanted quotes. Remember the <code>ggplot()</code> function?</p>
+</div>
+<div id="lists-and-bullet-points" class="section level3 hasAnchor" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> Lists and bullet points<a href="r-markdown.html#lists-and-bullet-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create a list:</p>
+<ol style="list-style-type: decimal">
+<li>Here</li>
+<li>Are</li>
+<li>Four</li>
+<li>Things</li>
+</ol>
+<p>Or some bullet points:</p>
+<ul>
+<li><p>bullet 1</p>
+<ul>
+<li>sub-bullet 1</li>
+</ul></li>
+<li><p>bullet 2</p>
+<ul>
+<li>sub-bullet 2</li>
+</ul></li>
+<li><p>bullet 3</p>
+<ul>
+<li>sub-bullet 3</li>
+</ul></li>
+</ul>
+</div>
+<div id="html-hyperlinks-images-tables-formulas-etc." class="section level3 hasAnchor" number="4.2.7">
+<h3><span class="header-section-number">4.2.7</span> HTML hyperlinks, images, tables, formulas, etc.<a href="r-markdown.html#html-hyperlinks-images-tables-formulas-etc." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can include external links and images:</p>
+<p><a href="https://canvas.utexas.edu">Here is a hyperlink to Canvas</a></p>
+<p>Below is an image from a URL (for local images, just specify the file path in place of the URL):</p>
+<p><img src="https://news.utexas.edu/wp-content/uploads/2021/10/bevo-9841-2100x1398-e2000d2b-a7a1-448c-83d5-281310430e66-1024x682.jpg" /></p>
+<p>We can format tables:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tuesday</th>
+<th>Thursday</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Introduce R Markdown</td>
+<td>Create your own R Markdown</td>
+</tr>
+</tbody>
+</table>
+<p>And here is a math formula:</p>
+<p><span class="math display">\[mean(X) = \frac{\sum x_i}{n}\]</span></p>
+<blockquote>
+<p>Note: text editing is fairly easy to do with the <code>Visual</code> mode: it works more like a standard text editor.</p>
+</blockquote>
+</div>
+</div>
+<div id="embedded-r-code" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Embedded R code<a href="r-markdown.html#embedded-r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The advantage of a R Markdown document is that it incorporates R code in chunks within the text.</p>
+<p>Code chunks will be executed when knitting and the output will be shown in the output file (usually a <em>html</em> output in this course).</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="r-markdown.html#cb101-1" tabindex="-1"></a><span class="co"># We already tried this!</span></span>
+<span id="cb101-2"><a href="r-markdown.html#cb101-2" tabindex="-1"></a><span class="dv">5</span><span class="sc">+</span><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<div id="packages-and-r-objects" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Packages and R objects<a href="r-markdown.html#packages-and-r-objects" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R Markdown is designed to be independent of the R workspace and each time you knit, it acts like it starts with a clean R session. All packages should be loaded and all objects used in the code should be created <strong>within the document</strong>.</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="r-markdown.html#cb103-1" tabindex="-1"></a><span class="co"># Load functions from the ggplot2 package</span></span>
+<span id="cb103-2"><a href="r-markdown.html#cb103-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<p>When importing a dataset, make sure it is in the same folder as the R Markdown file so you do not have to worry about specifying a path:</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="r-markdown.html#cb104-1" tabindex="-1"></a><span class="co"># Import a dataset</span></span>
+<span id="cb104-2"><a href="r-markdown.html#cb104-2" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code></pre></div>
+<pre><code>## Warning: package &#39;readr&#39; was built under R version 4.3.3</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="r-markdown.html#cb106-1" tabindex="-1"></a>films <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;films.csv&quot;</span>)</span></code></pre></div>
+<pre><code>## Rows: 151 Columns: 11
+## ── Column specification ──────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (4): Title, Studio, Genre, Rating
+## dbl (7): Year, Gross, PercentDomestic, Rotten, IMDB, Days, Budget
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>Take a quick look at the dataset:</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="r-markdown.html#cb108-1" tabindex="-1"></a><span class="fu">head</span>(films)</span></code></pre></div>
+</div>
+<div id="options-for-code-chunks" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Options for code chunks<a href="r-markdown.html#options-for-code-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can choose to evaluate, or not, a code chunk when knitting with <code>eval =</code>:</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="r-markdown.html#cb109-1" tabindex="-1"></a><span class="co"># There is an error in this code, can you fix it? </span></span>
+<span id="cb109-2"><a href="r-markdown.html#cb109-2" tabindex="-1"></a><span class="fu">hist</span>(films<span class="sc">$</span>Rotten)</span></code></pre></div>
+<p><em>Note: R Markdown does not knit if there is an error in any code chunk.</em></p>
+<p>We can also choose to hide, or not, a code chunk when knitting with <code>echo =</code>:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
+</div>
+<div id="inline-code" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Inline code<a href="r-markdown.html#inline-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can also execute code within text! For example, in the <code>films</code> dataset, the mean value of IMDB is 7.0350993 or 7.04 when rounded by 2 decimals.</p>
+<hr />
+</div>
+</div>
+<div id="group-practice-4" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Group Practice<a href="r-markdown.html#group-practice-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Within your group, pick one of the following question to investigate:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Is there a difference in review ratings across the different genres?</p></li>
+<li><p>Is there a relationship between the two types of review ratings?</p></li>
+<li><p>Is there a difference in review ratings across the different studios?</p></li>
+<li><p><em>Come up with your own!</em></p></li>
+</ol>
+<p>Then investigate the question by:</p>
+<ol style="list-style-type: decimal">
+<li>Making an appropriate plot</li>
+<li>Reporting appropriate statistics formatted in a table</li>
+<li>Writing a sentence in bold to interpret your findings</li>
+</ol>
+<p>Finally, knit this R Markdown file and take a screenshot including the plot, table, and sentence to post it on your group’s slide <a href="https://docs.google.com/presentation/d/1Ty6tcYxFG_iABj5zfzZQ65gLuVL3wiloD52QVS7XPG0/edit?usp=sharing">here</a>.</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="r-markdown.html#cb110-1" tabindex="-1"></a><span class="co"># Group practice code:</span></span></code></pre></div>
+<hr />
+<p>Check out the <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">RMarkdown Cheat sheet</a> for more practice!</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="more-visualizing-and-describing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="more-r-markdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04_RMarkdown.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

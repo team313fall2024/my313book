@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>16 Simulations | Fall 2024 Semester</title>
+  <meta name="description" content="16 Simulations | Fall 2024 Semester" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="16 Simulations | Fall 2024 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="16 Simulations | Fall 2024 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr Layla Guyot" />
+
+
+<meta name="date" content="2024-12-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="15_Halloween.html"/>
+<link rel="next" href="17_ShinyBasics.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 313 Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to SDS 313</a></li>
+<li class="chapter" data-level="2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html"><i class="fa fa-check"></i><b>2</b> Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#import-dataset"><i class="fa fa-check"></i><b>2.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="2.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#summarizing-one-variable"><i class="fa fa-check"></i><b>2.2</b> Summarizing one variable</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-categorical-variable"><i class="fa fa-check"></i><b>2.2.1</b> One Categorical Variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-numeric-variable"><i class="fa fa-check"></i><b>2.2.2</b> One Numeric Variable</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#group-practice"><i class="fa fa-check"></i><b>2.3</b> Group Practice</a></li>
+<li class="chapter" data-level="2.4" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#summarizing-two-variables-bivariate-relationship"><i class="fa fa-check"></i><b>2.4</b> Summarizing two variables (bivariate relationship)</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#two-numeric-variables"><i class="fa fa-check"></i><b>2.4.1</b> Two Numeric Variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#one-numeric-and-one-categorical-variable"><i class="fa fa-check"></i><b>2.4.2</b> One Numeric and One Categorical Variable</a></li>
+<li class="chapter" data-level="2.4.3" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#two-categorical-variables"><i class="fa fa-check"></i><b>2.4.3</b> Two Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="02_VisualizingData.html"><a href="02_VisualizingData.html#group-practice-1"><i class="fa fa-check"></i><b>2.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html"><i class="fa fa-check"></i><b>3</b> More Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#import-dataset-1"><i class="fa fa-check"></i><b>3.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="3.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#creating-plots-with-ggplot"><i class="fa fa-check"></i><b>3.2</b> Creating plots with <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#define-a-plot"><i class="fa fa-check"></i><b>3.2.1</b> Define a plot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#more-on-histograms"><i class="fa fa-check"></i><b>3.2.2</b> More on histograms</a></li>
+<li class="chapter" data-level="3.2.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#map-to-color-shape-size"><i class="fa fa-check"></i><b>3.2.3</b> Map to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#group-practice-2"><i class="fa fa-check"></i><b>3.3</b> Group Practice</a></li>
+<li class="chapter" data-level="3.4" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#layering"><i class="fa fa-check"></i><b>3.4</b> Layering</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#adding-labels"><i class="fa fa-check"></i><b>3.4.1</b> Adding labels</a></li>
+<li class="chapter" data-level="3.4.2" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#controlling-scales"><i class="fa fa-check"></i><b>3.4.2</b> Controlling scales</a></li>
+<li class="chapter" data-level="3.4.3" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#faceting"><i class="fa fa-check"></i><b>3.4.3</b> Faceting</a></li>
+<li class="chapter" data-level="3.4.4" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#looking-for-trends"><i class="fa fa-check"></i><b>3.4.4</b> Looking for trends</a></li>
+<li class="chapter" data-level="3.4.5" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#palettes-and-themes"><i class="fa fa-check"></i><b>3.4.5</b> Palettes and themes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#group-practice-3"><i class="fa fa-check"></i><b>3.5</b> Group Practice</a></li>
+<li class="chapter" data-level="3.6" data-path="03_MoreVisualization.html"><a href="03_MoreVisualization.html#exporting-a-graph"><i class="fa fa-check"></i><b>3.6</b> Exporting a graph</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#yaml-metadata"><i class="fa fa-check"></i><b>4.1</b> YAML metadata</a></li>
+<li class="chapter" data-level="4.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#text-editing"><i class="fa fa-check"></i><b>4.2</b> Text editing</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#a.-headers"><i class="fa fa-check"></i><b>4.2.1</b> a. Headers</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#for"><i class="fa fa-check"></i><b>4.2.2</b> For</a></li>
+<li class="chapter" data-level="4.2.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#example"><i class="fa fa-check"></i><b>4.2.3</b> Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#these"><i class="fa fa-check"></i><b>4.2.4</b> These</a></li>
+<li class="chapter" data-level="4.2.5" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#text-formatting"><i class="fa fa-check"></i><b>4.2.5</b> Text formatting</a></li>
+<li class="chapter" data-level="4.2.6" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#lists-and-bullet-points"><i class="fa fa-check"></i><b>4.2.6</b> Lists and bullet points</a></li>
+<li class="chapter" data-level="4.2.7" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#html-hyperlinks-images-tables-formulas-etc."><i class="fa fa-check"></i><b>4.2.7</b> HTML hyperlinks, images, tables, formulas, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#embedded-r-code"><i class="fa fa-check"></i><b>4.3</b> Embedded R code</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#packages-and-r-objects"><i class="fa fa-check"></i><b>4.3.1</b> Packages and R objects</a></li>
+<li class="chapter" data-level="4.3.2" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#options-for-code-chunks"><i class="fa fa-check"></i><b>4.3.2</b> Options for code chunks</a></li>
+<li class="chapter" data-level="4.3.3" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#inline-code"><i class="fa fa-check"></i><b>4.3.3</b> Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="04_RMarkdown.html"><a href="04_RMarkdown.html#group-practice-4"><i class="fa fa-check"></i><b>4.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html"><i class="fa fa-check"></i><b>5</b> More R Markdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#more-yaml-metadata"><i class="fa fa-check"></i><b>5.1</b> More YAML metadata</a></li>
+<li class="chapter" data-level="5.2" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#more-code-chunk-options"><i class="fa fa-check"></i><b>5.2</b> More code chunk options</a></li>
+<li class="chapter" data-level="5.3" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#format-tables"><i class="fa fa-check"></i><b>5.3</b> Format tables</a></li>
+<li class="chapter" data-level="5.4" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#knitting-into-different-formats"><i class="fa fa-check"></i><b>5.4</b> Knitting into different formats</a></li>
+<li class="chapter" data-level="5.5" data-path="05_MoreRMarkdown.html"><a href="05_MoreRMarkdown.html#group-practice-5"><i class="fa fa-check"></i><b>5.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html"><i class="fa fa-check"></i><b>6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#dataset-and-library"><i class="fa fa-check"></i><b>6.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="6.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#the-pipe"><i class="fa fa-check"></i><b>6.2</b> The pipe</a></li>
+<li class="chapter" data-level="6.3" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#operations-on-rowsobservations"><i class="fa fa-check"></i><b>6.3</b> Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#filter"><i class="fa fa-check"></i><b>6.3.1</b> Filter</a></li>
+<li class="chapter" data-level="6.3.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#arrange"><i class="fa fa-check"></i><b>6.3.2</b> Arrange</a></li>
+<li class="chapter" data-level="6.3.3" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#minimummaximum-values"><i class="fa fa-check"></i><b>6.3.3</b> Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#operations-on-columns"><i class="fa fa-check"></i><b>6.4</b> Operations on columns</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#select"><i class="fa fa-check"></i><b>6.4.1</b> Select</a></li>
+<li class="chapter" data-level="6.4.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#mutate"><i class="fa fa-check"></i><b>6.4.2</b> Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#create-summaries"><i class="fa fa-check"></i><b>6.5</b> Create summaries</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#summarize"><i class="fa fa-check"></i><b>6.5.1</b> Summarize</a></li>
+<li class="chapter" data-level="6.5.2" data-path="06_DataWrangling.html"><a href="06_DataWrangling.html#group-by"><i class="fa fa-check"></i><b>6.5.2</b> Group by</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html"><i class="fa fa-check"></i><b>7</b> More Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#dataset-and-library-1"><i class="fa fa-check"></i><b>7.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="7.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#recoding-variables"><i class="fa fa-check"></i><b>7.2</b> Recoding variables</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#log-transformation"><i class="fa fa-check"></i><b>7.2.1</b> Log-transformation</a></li>
+<li class="chapter" data-level="7.2.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#numeric-variable-considered-as-a-categorical-variable"><i class="fa fa-check"></i><b>7.2.2</b> Numeric variable considered as a categorical variable</a></li>
+<li class="chapter" data-level="7.2.3" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#recoding-values-based-on-conditions"><i class="fa fa-check"></i><b>7.2.3</b> Recoding values based on conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#handling-missing-values"><i class="fa fa-check"></i><b>7.3</b> Handling missing values</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#missing-values-never-go-unnoticed"><i class="fa fa-check"></i><b>7.3.1</b> Missing values never go unnoticed</a></li>
+<li class="chapter" data-level="7.3.2" data-path="07_MoreDataWrangling.html"><a href="07_MoreDataWrangling.html#values-that-were-omitted"><i class="fa fa-check"></i><b>7.3.2</b> Values that were omitted</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08_RelationalData.html"><a href="08_RelationalData.html"><i class="fa fa-check"></i><b>8</b> Relational Data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#datasets-and-library"><i class="fa fa-check"></i><b>8.1</b> Datasets and Library</a></li>
+<li class="chapter" data-level="8.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#different-types-of-joining-functions"><i class="fa fa-check"></i><b>8.2</b> Different types of joining functions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#inner-join"><i class="fa fa-check"></i><b>8.2.1</b> Inner join</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#left-join"><i class="fa fa-check"></i><b>8.2.2</b> Left join</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#right-join"><i class="fa fa-check"></i><b>8.2.3</b> Right join</a></li>
+<li class="chapter" data-level="8.2.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#full-join"><i class="fa fa-check"></i><b>8.2.4</b> Full join</a></li>
+<li class="chapter" data-level="8.2.5" data-path="08_RelationalData.html"><a href="08_RelationalData.html#anti-join"><i class="fa fa-check"></i><b>8.2.5</b> Anti join</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#common-issues-with-joining"><i class="fa fa-check"></i><b>8.3</b> Common issues with joining</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="08_RelationalData.html"><a href="08_RelationalData.html#no-matching-key"><i class="fa fa-check"></i><b>8.3.1</b> No matching key</a></li>
+<li class="chapter" data-level="8.3.2" data-path="08_RelationalData.html"><a href="08_RelationalData.html#auto-suffixing"><i class="fa fa-check"></i><b>8.3.2</b> Auto-suffixing</a></li>
+<li class="chapter" data-level="8.3.3" data-path="08_RelationalData.html"><a href="08_RelationalData.html#duplicates"><i class="fa fa-check"></i><b>8.3.3</b> Duplicates</a></li>
+<li class="chapter" data-level="8.3.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#several-key-variables"><i class="fa fa-check"></i><b>8.3.4</b> Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="08_RelationalData.html"><a href="08_RelationalData.html#group-practice-6"><i class="fa fa-check"></i><b>8.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html"><i class="fa fa-check"></i><b>9</b> Dates and Times</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#datasets-and-libraries"><i class="fa fa-check"></i><b>9.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#parsing-dates-and-times"><i class="fa fa-check"></i><b>9.2</b> Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#r-formats"><i class="fa fa-check"></i><b>9.2.1</b> R formats</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#combining-datetime-components"><i class="fa fa-check"></i><b>9.2.2</b> Combining date/time components</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#extracting-parts-of-the-date"><i class="fa fa-check"></i><b>9.2.3</b> Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#manipulating-dates-and-times"><i class="fa fa-check"></i><b>9.3</b> Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#finding-differences-between-dates-and-times"><i class="fa fa-check"></i><b>9.3.1</b> Finding differences between dates and times</a></li>
+<li class="chapter" data-level="9.3.2" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#summarizing-datetime-data"><i class="fa fa-check"></i><b>9.3.2</b> Summarizing date/time data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#a-few-remarks"><i class="fa fa-check"></i><b>9.3.3</b> A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="09_DatesTimes.html"><a href="09_DatesTimes.html#group-practice-7"><i class="fa fa-check"></i><b>9.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html"><i class="fa fa-check"></i><b>10</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#datasets-and-libraries-1"><i class="fa fa-check"></i><b>10.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#pivoting"><i class="fa fa-check"></i><b>10.2</b> Pivoting</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#wide-to-long"><i class="fa fa-check"></i><b>10.2.1</b> Wide to long</a></li>
+<li class="chapter" data-level="10.2.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#long-to-wide"><i class="fa fa-check"></i><b>10.2.2</b> Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#separating-and-uniting"><i class="fa fa-check"></i><b>10.3</b> Separating and uniting</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#separate"><i class="fa fa-check"></i><b>10.3.1</b> Separate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#unite"><i class="fa fa-check"></i><b>10.3.2</b> Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="10_ReshapingData.html"><a href="10_ReshapingData.html#group-practice-8"><i class="fa fa-check"></i><b>10.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html"><i class="fa fa-check"></i><b>11</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#coding-practices"><i class="fa fa-check"></i><b>11.1</b> Coding practices</a></li>
+<li class="chapter" data-level="11.2" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#reproducibility-1"><i class="fa fa-check"></i><b>11.2</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="11_Reproducibility.html"><a href="11_Reproducibility.html#group-practice-9"><i class="fa fa-check"></i><b>11.2.1</b> Group Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12_OnlineData.html"><a href="12_OnlineData.html"><i class="fa fa-check"></i><b>12</b> Online Data</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#online-data-resource"><i class="fa fa-check"></i><b>12.1</b> Online data resource</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#data-portal"><i class="fa fa-check"></i><b>12.1.1</b> Data portal</a></li>
+<li class="chapter" data-level="12.1.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#downloading-datasets"><i class="fa fa-check"></i><b>12.1.2</b> Downloading datasets</a></li>
+<li class="chapter" data-level="12.1.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#websites-with-special-permissions"><i class="fa fa-check"></i><b>12.1.3</b> Websites with special permissions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#web-scraping"><i class="fa fa-check"></i><b>12.2</b> Web scraping</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="12_OnlineData.html"><a href="12_OnlineData.html#manually-from-the-web"><i class="fa fa-check"></i><b>12.2.1</b> Manually from the web</a></li>
+<li class="chapter" data-level="12.2.2" data-path="12_OnlineData.html"><a href="12_OnlineData.html#with-code"><i class="fa fa-check"></i><b>12.2.2</b> With code</a></li>
+<li class="chapter" data-level="12.2.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#more-examples-of-scraping"><i class="fa fa-check"></i><b>12.2.3</b> More examples of scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="12_OnlineData.html"><a href="12_OnlineData.html#datasets-formats"><i class="fa fa-check"></i><b>12.3</b> Datasets formats</a></li>
+<li class="chapter" data-level="12.4" data-path="12_OnlineData.html"><a href="12_OnlineData.html#export-into-csv"><i class="fa fa-check"></i><b>12.4</b> Export into csv</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html"><i class="fa fa-check"></i><b>13</b> Strings and Regular expressions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#set-up"><i class="fa fa-check"></i><b>13.1</b> Set up</a></li>
+<li class="chapter" data-level="13.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#strings"><i class="fa fa-check"></i><b>13.2</b> Strings</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#calculating-length"><i class="fa fa-check"></i><b>13.2.1</b> Calculating length</a></li>
+<li class="chapter" data-level="13.2.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#combining-strings"><i class="fa fa-check"></i><b>13.2.2</b> Combining strings</a></li>
+<li class="chapter" data-level="13.2.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#changing-cases"><i class="fa fa-check"></i><b>13.2.3</b> Changing cases</a></li>
+<li class="chapter" data-level="13.2.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#subsetting-strings"><i class="fa fa-check"></i><b>13.2.4</b> Subsetting strings</a></li>
+<li class="chapter" data-level="13.2.5" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#finding-exact-matches-in-strings"><i class="fa fa-check"></i><b>13.2.5</b> Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#regular-expressions-regex"><i class="fa fa-check"></i><b>13.3</b> Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#wildcards"><i class="fa fa-check"></i><b>13.3.1</b> Wildcards</a></li>
+<li class="chapter" data-level="13.3.2" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#anchors"><i class="fa fa-check"></i><b>13.3.2</b> Anchors</a></li>
+<li class="chapter" data-level="13.3.3" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#flexible-patterns"><i class="fa fa-check"></i><b>13.3.3</b> Flexible patterns</a></li>
+<li class="chapter" data-level="13.3.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#special-characters"><i class="fa fa-check"></i><b>13.3.4</b> Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="13_StringsRegEx.html"><a href="13_StringsRegEx.html#group-practice-10"><i class="fa fa-check"></i><b>13.4</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html"><i class="fa fa-check"></i><b>14</b> Loops and Functions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#loops"><i class="fa fa-check"></i><b>14.1</b> Loops</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#basic-for-loops"><i class="fa fa-check"></i><b>14.1.1</b> Basic for-loops</a></li>
+<li class="chapter" data-level="14.1.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#conditional-statements"><i class="fa fa-check"></i><b>14.1.2</b> Conditional Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#group-practice-11"><i class="fa fa-check"></i><b>14.2</b> Group Practice</a></li>
+<li class="chapter" data-level="14.3" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#functions"><i class="fa fa-check"></i><b>14.3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#r-functions"><i class="fa fa-check"></i><b>14.3.1</b> R functions</a></li>
+<li class="chapter" data-level="14.3.2" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#our-own-functions"><i class="fa fa-check"></i><b>14.3.2</b> Our own functions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#dont-reinvent-the-wheel"><i class="fa fa-check"></i><b>14.4</b> Don’t reinvent the wheel</a></li>
+<li class="chapter" data-level="14.5" data-path="14_LoopsFunctions.html"><a href="14_LoopsFunctions.html#group-practice-12"><i class="fa fa-check"></i><b>14.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="15_Halloween.html"><a href="15_Halloween.html"><i class="fa fa-check"></i><b>15</b> Halloween candy</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15_Halloween.html"><a href="15_Halloween.html#set-up-1"><i class="fa fa-check"></i><b>15.1</b> Set up</a></li>
+<li class="chapter" data-level="15.2" data-path="15_Halloween.html"><a href="15_Halloween.html#exploring-relationships"><i class="fa fa-check"></i><b>15.2</b> Exploring relationships</a></li>
+<li class="chapter" data-level="15.3" data-path="15_Halloween.html"><a href="15_Halloween.html#group-practice-13"><i class="fa fa-check"></i><b>15.3</b> Group Practice</a></li>
+<li class="chapter" data-level="15.4" data-path="15_Halloween.html"><a href="15_Halloween.html#machine-learning"><i class="fa fa-check"></i><b>15.4</b> Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="16_Simulation.html"><a href="16_Simulation.html"><i class="fa fa-check"></i><b>16</b> Simulations</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="16_Simulation.html"><a href="16_Simulation.html#generating-random-numbers"><i class="fa fa-check"></i><b>16.1</b> Generating random numbers</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="16_Simulation.html"><a href="16_Simulation.html#random-numbers-among-some-values"><i class="fa fa-check"></i><b>16.1.1</b> Random numbers among some values</a></li>
+<li class="chapter" data-level="16.1.2" data-path="16_Simulation.html"><a href="16_Simulation.html#random-numbers-from-a-probability-distribution"><i class="fa fa-check"></i><b>16.1.2</b> Random numbers from a probability distribution</a></li>
+<li class="chapter" data-level="16.1.3" data-path="16_Simulation.html"><a href="16_Simulation.html#group-practice-14"><i class="fa fa-check"></i><b>16.1.3</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="16_Simulation.html"><a href="16_Simulation.html#some-applications-of-simulations"><i class="fa fa-check"></i><b>16.2</b> Some applications of simulations</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="16_Simulation.html"><a href="16_Simulation.html#rolling-dice"><i class="fa fa-check"></i><b>16.2.1</b> Rolling dice</a></li>
+<li class="chapter" data-level="16.2.2" data-path="16_Simulation.html"><a href="16_Simulation.html#birthday-problem"><i class="fa fa-check"></i><b>16.2.2</b> Birthday problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html"><i class="fa fa-check"></i><b>17</b> Shiny Basics</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#shiny-app-gallery"><i class="fa fa-check"></i><b>17.1</b> Shiny App Gallery</a></li>
+<li class="chapter" data-level="17.2" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#basic-structure-of-a-shiny-app"><i class="fa fa-check"></i><b>17.2</b> Basic Structure of a Shiny App</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#components"><i class="fa fa-check"></i><b>17.2.1</b> Components</a></li>
+<li class="chapter" data-level="17.2.2" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#group-practice-15"><i class="fa fa-check"></i><b>17.2.2</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.3" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#reactive-output"><i class="fa fa-check"></i><b>17.2.3</b> Reactive output</a></li>
+<li class="chapter" data-level="17.2.4" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#group-practice-16"><i class="fa fa-check"></i><b>17.2.4</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.5" data-path="17_ShinyBasics.html"><a href="17_ShinyBasics.html#project-3"><i class="fa fa-check"></i><b>17.2.5</b> Project 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html"><i class="fa fa-check"></i><b>18</b> Shiny with Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#more-on-the-shiny-structure"><i class="fa fa-check"></i><b>18.1</b> More on the Shiny structure</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#user-interface"><i class="fa fa-check"></i><b>18.1.1</b> User interface</a></li>
+<li class="chapter" data-level="18.1.2" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#server"><i class="fa fa-check"></i><b>18.1.2</b> Server</a></li>
+<li class="chapter" data-level="18.1.3" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#run-the-app"><i class="fa fa-check"></i><b>18.1.3</b> Run the app</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#interact-with-a-dataset"><i class="fa fa-check"></i><b>18.2</b> Interact with a dataset</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#group-practice-17"><i class="fa fa-check"></i><b>18.2.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#adding-a-choice-for-selecting-variables"><i class="fa fa-check"></i><b>18.3</b> Adding a choice for selecting variables</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#group-practice-18"><i class="fa fa-check"></i><b>18.3.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#hosting-your-app-on-the-web"><i class="fa fa-check"></i><b>18.4</b> Hosting your app on the web</a></li>
+<li class="chapter" data-level="18.5" data-path="18_ShinyWithData.html"><a href="18_ShinyWithData.html#summary"><i class="fa fa-check"></i><b>18.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="Bookdown.html"><a href="Bookdown.html"><i class="fa fa-check"></i><b>19</b> Bookdown</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="Bookdown.html"><a href="Bookdown.html#set-up-bookdown"><i class="fa fa-check"></i><b>19.1</b> Set up bookdown</a></li>
+<li class="chapter" data-level="19.2" data-path="Bookdown.html"><a href="Bookdown.html#organize-your-files"><i class="fa fa-check"></i><b>19.2</b> Organize your files</a></li>
+<li class="chapter" data-level="19.3" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-index"><i class="fa fa-check"></i><b>19.3</b> Edit the index</a></li>
+<li class="chapter" data-level="19.4" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-bookdown"><i class="fa fa-check"></i><b>19.4</b> Edit the bookdown</a></li>
+<li class="chapter" data-level="19.5" data-path="Bookdown.html"><a href="Bookdown.html#edit-the-output"><i class="fa fa-check"></i><b>19.5</b> Edit the output</a></li>
+<li class="chapter" data-level="19.6" data-path="Bookdown.html"><a href="Bookdown.html#build-the-book"><i class="fa fa-check"></i><b>19.6</b> Build the book!</a></li>
+<li class="chapter" data-level="19.7" data-path="Bookdown.html"><a href="Bookdown.html#resources"><i class="fa fa-check"></i><b>19.7</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fall 2024 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="simulations" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">16</span> Simulations<a href="16_Simulation.html#simulations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this worksheet, we will:</p>
+<ul>
+<li>Discuss R’s random number generating capabilities.</li>
+<li>Build some common probability distributions.</li>
+<li>Use loops and random number generation to simulate random events.</li>
+</ul>
+<p>Because we always come back to <code>tidyverse</code> at some point:</p>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="16_Simulation.html#cb421-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<div id="generating-random-numbers" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Generating random numbers<a href="16_Simulation.html#generating-random-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Any software that can produce a “random” process typically relies on a <strong>pseudo-random number generator.</strong> In R, it is called the <em>Mersenne-Twister</em>, which is considered very good, repeating only once every <span class="math inline">\(2^{19,937} - 1\)</span> iterations.</p>
+<div id="random-numbers-among-some-values" class="section level3 hasAnchor" number="16.1.1">
+<h3><span class="header-section-number">16.1.1</span> Random numbers among some values<a href="16_Simulation.html#random-numbers-among-some-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can use this generator to sample from a given list of values:</p>
+<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="16_Simulation.html#cb422-1" tabindex="-1"></a><span class="co"># Define a list of values</span></span>
+<span id="cb422-2"><a href="16_Simulation.html#cb422-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb422-3"><a href="16_Simulation.html#cb422-3" tabindex="-1"></a></span>
+<span id="cb422-4"><a href="16_Simulation.html#cb422-4" tabindex="-1"></a><span class="co"># Take 1 sample value</span></span>
+<span id="cb422-5"><a href="16_Simulation.html#cb422-5" tabindex="-1"></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>Did we all get the same thing? Why/Why not?</p>
+<p><strong>It’s random!</strong></p>
+<p>We can also get a sample of more than 1 value:</p>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="16_Simulation.html#cb424-1" tabindex="-1"></a><span class="co"># What&#39;s the difference between these two pieces of code?</span></span>
+<span id="cb424-2"><a href="16_Simulation.html#cb424-2" tabindex="-1"></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 9 1 6 1 7</code></pre>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="16_Simulation.html#cb426-1" tabindex="-1"></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 4 7 1 2 8</code></pre>
+<p><strong>Replace = TRUE can have duplicates.</strong></p>
+<p>Note that we can make sure that we all have the same “random sample”. Let’s use <code>set.seed</code>:</p>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="16_Simulation.html#cb428-1" tabindex="-1"></a><span class="co"># Set a unique seed</span></span>
+<span id="cb428-2"><a href="16_Simulation.html#cb428-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">7</span>)</span>
+<span id="cb428-3"><a href="16_Simulation.html#cb428-3" tabindex="-1"></a></span>
+<span id="cb428-4"><a href="16_Simulation.html#cb428-4" tabindex="-1"></a><span class="co"># Then run the random process</span></span>
+<span id="cb428-5"><a href="16_Simulation.html#cb428-5" tabindex="-1"></a><span class="fu">sample</span>(x, <span class="at">size =</span> <span class="dv">3</span>,<span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 10  3  7</code></pre>
+<p>We would have to set the seed each time we want to use a random process.</p>
+</div>
+<div id="random-numbers-from-a-probability-distribution" class="section level3 hasAnchor" number="16.1.2">
+<h3><span class="header-section-number">16.1.2</span> Random numbers from a probability distribution<a href="16_Simulation.html#random-numbers-from-a-probability-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You will come across common probability distributions (uniform, normal, etc.) throughout the SDS curriculum. Here are some examples:</p>
+<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb430-1"><a href="16_Simulation.html#cb430-1" tabindex="-1"></a><span class="co"># Uniform distribution of values between 0 and 1</span></span>
+<span id="cb430-2"><a href="16_Simulation.html#cb430-2" tabindex="-1"></a><span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##  [1] 0.79201043 0.34006235 0.97206250 0.16585548 0.45910367 0.17174808
+##  [7] 0.23147710 0.77281195 0.09630154 0.45344777</code></pre>
+<p>What if we sampled many values and plotted these values with a histogram:</p>
+<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb432-1"><a href="16_Simulation.html#cb432-1" tabindex="-1"></a><span class="co"># Make a vector of one million values between 0 and 1</span></span>
+<span id="cb432-2"><a href="16_Simulation.html#cb432-2" tabindex="-1"></a>x_unif <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="at">n =</span> <span class="dv">1000000</span>, <span class="at">min =</span> <span class="dv">0</span>, <span class="at">max =</span> <span class="dv">1</span>)</span>
+<span id="cb432-3"><a href="16_Simulation.html#cb432-3" tabindex="-1"></a><span class="fu">hist</span>(x_unif, <span class="at">main =</span> <span class="st">&#39;Uniform (0,1) Distribution&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-253-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Why does it make sense to see what we see?</p>
+<p><strong>All values equally likely.</strong></p>
+<p>Another common distribution is the normal distribution that is defined by a mean value and a standard deviation with a symmetric shape (bell-shaped).</p>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb433-1"><a href="16_Simulation.html#cb433-1" tabindex="-1"></a><span class="co"># Normal distribution of mean 0 and standard deviation 1</span></span>
+<span id="cb433-2"><a href="16_Simulation.html#cb433-2" tabindex="-1"></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>##  [1]  1.2472739 -1.2330278 -0.8378650  0.8116156  0.4344979  0.9063994
+##  [7]  0.6062468  0.4520080  0.3909159 -0.3648308</code></pre>
+<p>Representing many values:</p>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="16_Simulation.html#cb435-1" tabindex="-1"></a><span class="co"># Make a vector of one million values between 0 and 1</span></span>
+<span id="cb435-2"><a href="16_Simulation.html#cb435-2" tabindex="-1"></a>x_norm <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">1000000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb435-3"><a href="16_Simulation.html#cb435-3" tabindex="-1"></a><span class="fu">hist</span>(x_norm, <span class="at">main =</span> <span class="st">&#39;Normal (0,1) Distribution&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-255-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>You can find all of the probability distributions R can sample from <a href="https://www.statmethods.net/advgraphs/probability.html">here</a>.</p>
+<hr />
+</div>
+<div id="group-practice-14" class="section level3 hasAnchor" number="16.1.3">
+<h3><span class="header-section-number">16.1.3</span> Group practice<a href="16_Simulation.html#group-practice-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s consider the following dataset:</p>
+<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb436-1"><a href="16_Simulation.html#cb436-1" tabindex="-1"></a><span class="co"># Upload data from GitHub</span></span>
+<span id="cb436-2"><a href="16_Simulation.html#cb436-2" tabindex="-1"></a>pokemon <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/laylaguyot/datasets/main//pokemon.csv&quot;</span>)</span>
+<span id="cb436-3"><a href="16_Simulation.html#cb436-3" tabindex="-1"></a></span>
+<span id="cb436-4"><a href="16_Simulation.html#cb436-4" tabindex="-1"></a><span class="co"># Take a look </span></span>
+<span id="cb436-5"><a href="16_Simulation.html#cb436-5" tabindex="-1"></a><span class="fu">head</span>(pokemon)</span></code></pre></div>
+<p>In your group, you will:</p>
+<ol style="list-style-type: decimal">
+<li>Pick one numeric variable (<code>Total</code>, <code>HP</code>, …, or <code>Speed</code>). Take a look at the distribution of this variable with a histogram and find the value of the mean and standard deviation.</li>
+</ol>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="16_Simulation.html#cb437-1" tabindex="-1"></a><span class="co"># Write code here</span></span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Take a sample of 30 values of this variable and find the mean. Do all group members get the same mean? How does this mean compare with the overall mean from above?</li>
+</ol>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb438-1"><a href="16_Simulation.html#cb438-1" tabindex="-1"></a><span class="co"># Write code here</span></span></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li>Now, repeat the sampling process 100 times: each time, take a sample of 30 values and find the mean. You should get 100 (different) mean values overall! Represent the distribution of these means with an histogram and find then find the mean (of the means!). How does this mean compare with the overall mean from way above?</li>
+</ol>
+<div class="sourceCode" id="cb439"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb439-1"><a href="16_Simulation.html#cb439-1" tabindex="-1"></a><span class="co"># Write code here</span></span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Share both histograms (of the entire variable and of the means) along with the values of the means on your [group’s slide] (<a href="https://docs.google.com/presentation/d/1v_0h8w1YspWKaKt5K1CYiewiokwMyjETLVJBTm0AUEw/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/1v_0h8w1YspWKaKt5K1CYiewiokwMyjETLVJBTm0AUEw/edit?usp=sharing</a>)</li>
+</ol>
+<p>You just demonstrated an important theorem in probability, called the Central Limit Theorem!</p>
+<hr />
+</div>
+</div>
+<div id="some-applications-of-simulations" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> Some applications of simulations<a href="16_Simulation.html#some-applications-of-simulations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can use simulations to help us investigate probabilities.</p>
+<div id="rolling-dice" class="section level3 hasAnchor" number="16.2.1">
+<h3><span class="header-section-number">16.2.1</span> Rolling dice<a href="16_Simulation.html#rolling-dice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s start with an intuitive example, like rolling dice:</p>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb440-1"><a href="16_Simulation.html#cb440-1" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">313</span>)</span>
+<span id="cb440-2"><a href="16_Simulation.html#cb440-2" tabindex="-1"></a><span class="co"># This is a roll</span></span>
+<span id="cb440-3"><a href="16_Simulation.html#cb440-3" tabindex="-1"></a><span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">size =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<p>What was the probability of rolling a 4?</p>
+<p><strong>1/6</strong></p>
+<p>What if we roll the dice 10 times:</p>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb442-1"><a href="16_Simulation.html#cb442-1" tabindex="-1"></a><span class="co"># Roll the dice and check how many times it happened</span></span>
+<span id="cb442-2"><a href="16_Simulation.html#cb442-2" tabindex="-1"></a>myrolls <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb442-3"><a href="16_Simulation.html#cb442-3" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(myrolls))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-261-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>What appears to be the probability of rolling a 4 given these results?</p>
+<p><strong>2/10</strong></p>
+<p>What if we roll the dice 5,000 times:</p>
+<div class="sourceCode" id="cb443"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb443-1"><a href="16_Simulation.html#cb443-1" tabindex="-1"></a><span class="co"># Roll the dice and check how many times it happened</span></span>
+<span id="cb443-2"><a href="16_Simulation.html#cb443-2" tabindex="-1"></a>myrolls <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">size =</span> <span class="dv">5000</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb443-3"><a href="16_Simulation.html#cb443-3" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(myrolls))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-262-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb444"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb444-1"><a href="16_Simulation.html#cb444-1" tabindex="-1"></a><span class="fu">table</span>(myrolls)</span></code></pre></div>
+<pre><code>## myrolls
+##   1   2   3   4   5   6 
+## 826 809 852 843 831 839</code></pre>
+<div class="sourceCode" id="cb446"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb446-1"><a href="16_Simulation.html#cb446-1" tabindex="-1"></a><span class="dv">843</span><span class="sc">/</span><span class="dv">5000</span></span></code></pre></div>
+<pre><code>## [1] 0.1686</code></pre>
+<p>What appears to be the probability of rolling a 4 given these results?</p>
+<p><strong>800/5000</strong></p>
+<p>Let’s keep track of the probability of rolling a 4 as we roll the dice many times (using a loop!):</p>
+<div class="sourceCode" id="cb448"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb448-1"><a href="16_Simulation.html#cb448-1" tabindex="-1"></a><span class="co"># Initialize values for rolls and probabilities</span></span>
+<span id="cb448-2"><a href="16_Simulation.html#cb448-2" tabindex="-1"></a>myrolls <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb448-3"><a href="16_Simulation.html#cb448-3" tabindex="-1"></a>myprob <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb448-4"><a href="16_Simulation.html#cb448-4" tabindex="-1"></a></span>
+<span id="cb448-5"><a href="16_Simulation.html#cb448-5" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5000</span>) {</span>
+<span id="cb448-6"><a href="16_Simulation.html#cb448-6" tabindex="-1"></a>  myrolls[i] <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="co"># roll 1 die</span></span>
+<span id="cb448-7"><a href="16_Simulation.html#cb448-7" tabindex="-1"></a>  myprob[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(myrolls <span class="sc">==</span> <span class="dv">4</span>)<span class="sc">/</span>i <span class="co"># divide how many times we rolled a 4 by how many times we rolled</span></span>
+<span id="cb448-8"><a href="16_Simulation.html#cb448-8" tabindex="-1"></a>}</span>
+<span id="cb448-9"><a href="16_Simulation.html#cb448-9" tabindex="-1"></a></span>
+<span id="cb448-10"><a href="16_Simulation.html#cb448-10" tabindex="-1"></a><span class="fu">plot</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5000</span>, myprob, <span class="at">type =</span> <span class="st">&#39;l&#39;</span>, <span class="at">xlab =</span> <span class="st">&quot;Number of rolls&quot;</span>)</span>
+<span id="cb448-11"><a href="16_Simulation.html#cb448-11" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">&#39;red&#39;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-263-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>What do you notice about the probability of rolling a 4 as the number of rolls increases?</p>
+<p><strong>Write sentences here.</strong></p>
+<p>You just demonstrated an important theorem in probability, called the Law of Large Numbers! It is especially useful when the probability itself is not easy to determine but we could repeat an experiment a large number of times.</p>
+</div>
+<div id="birthday-problem" class="section level3 hasAnchor" number="16.2.2">
+<h3><span class="header-section-number">16.2.2</span> Birthday problem<a href="16_Simulation.html#birthday-problem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>What is the probability that at least 2 people in the room today share the same birthday?</em></p>
+<p>This question does not have an easy answer. But let’s use a simulation to explore:</p>
+<div class="sourceCode" id="cb449"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb449-1"><a href="16_Simulation.html#cb449-1" tabindex="-1"></a><span class="co"># Create a vector representing all possible birthdays</span></span>
+<span id="cb449-2"><a href="16_Simulation.html#cb449-2" tabindex="-1"></a>birthdays <span class="ot">=</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">365</span></span>
+<span id="cb449-3"><a href="16_Simulation.html#cb449-3" tabindex="-1"></a></span>
+<span id="cb449-4"><a href="16_Simulation.html#cb449-4" tabindex="-1"></a><span class="co"># Pick 40 birthdays (uniformly = with an equal chance and with replacement), at random</span></span>
+<span id="cb449-5"><a href="16_Simulation.html#cb449-5" tabindex="-1"></a>mybirthdays <span class="ot">&lt;-</span> <span class="fu">sample</span>(birthdays, <span class="at">size =</span> <span class="dv">40</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb449-6"><a href="16_Simulation.html#cb449-6" tabindex="-1"></a></span>
+<span id="cb449-7"><a href="16_Simulation.html#cb449-7" tabindex="-1"></a><span class="co"># Are there any doubles? </span></span>
+<span id="cb449-8"><a href="16_Simulation.html#cb449-8" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">table</span>(mybirthdays) <span class="sc">&gt;</span> <span class="dv">1</span>) <span class="co"># If TRUE, then at least two students have the same birthday</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Do we just get that result by chance?</p>
+<hr />
+<div id="try-it-repeat-the-process-above-5000-times-and-find-out-how-many-times-2-out-of-40-students-did-share-a-birthday." class="section level4 hasAnchor" number="16.2.2.1">
+<h4><span class="header-section-number">16.2.2.1</span> <strong>Try it! Repeat the process above 5,000 times and find out how many times 2 out of 40 students did share a birthday.</strong><a href="16_Simulation.html#try-it-repeat-the-process-above-5000-times-and-find-out-how-many-times-2-out-of-40-students-did-share-a-birthday." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb451"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb451-1"><a href="16_Simulation.html#cb451-1" tabindex="-1"></a><span class="co"># Initiate</span></span>
+<span id="cb451-2"><a href="16_Simulation.html#cb451-2" tabindex="-1"></a>shared_birthday <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb451-3"><a href="16_Simulation.html#cb451-3" tabindex="-1"></a></span>
+<span id="cb451-4"><a href="16_Simulation.html#cb451-4" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5000</span>){</span>
+<span id="cb451-5"><a href="16_Simulation.html#cb451-5" tabindex="-1"></a>  mybirthdays <span class="ot">&lt;-</span> <span class="fu">sample</span>(birthdays, <span class="at">size =</span> <span class="dv">42</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb451-6"><a href="16_Simulation.html#cb451-6" tabindex="-1"></a>  <span class="co"># Are there any doubles? </span></span>
+<span id="cb451-7"><a href="16_Simulation.html#cb451-7" tabindex="-1"></a>  shared_birthday[i] <span class="ot">&lt;-</span> <span class="fu">any</span>(<span class="fu">table</span>(mybirthdays) <span class="sc">&gt;</span> <span class="dv">1</span>)</span>
+<span id="cb451-8"><a href="16_Simulation.html#cb451-8" tabindex="-1"></a>}</span>
+<span id="cb451-9"><a href="16_Simulation.html#cb451-9" tabindex="-1"></a></span>
+<span id="cb451-10"><a href="16_Simulation.html#cb451-10" tabindex="-1"></a><span class="fu">table</span>(shared_birthday)</span></code></pre></div>
+<pre><code>## shared_birthday
+## FALSE  TRUE 
+##   444  4556</code></pre>
+<div class="sourceCode" id="cb453"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb453-1"><a href="16_Simulation.html#cb453-1" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(shared_birthday))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-265-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb454"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb454-1"><a href="16_Simulation.html#cb454-1" tabindex="-1"></a><span class="fu">mean</span>(shared_birthday)</span></code></pre></div>
+<pre><code>## [1] 0.9112</code></pre>
+<hr />
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="15_Halloween.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="17_ShinyBasics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

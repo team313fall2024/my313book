@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Dates and Times | Fall 2024 Semester</title>
+  <meta name="description" content="9 Dates and Times | Fall 2024 Semester" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 Dates and Times | Fall 2024 Semester" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 Dates and Times | Fall 2024 Semester" />
+  
+  
+  
+
+<meta name="author" content="Dr Layla Guyot" />
+
+
+<meta name="date" content="2024-12-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="relational-data.html"/>
+<link rel="next" href="reshaping-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">My SDS 313 Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome to SDS 313</a></li>
+<li class="chapter" data-level="2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html"><i class="fa fa-check"></i><b>2</b> Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#import-dataset"><i class="fa fa-check"></i><b>2.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="2.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#summarizing-one-variable"><i class="fa fa-check"></i><b>2.2</b> Summarizing one variable</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#one-categorical-variable"><i class="fa fa-check"></i><b>2.2.1</b> One Categorical Variable</a></li>
+<li class="chapter" data-level="2.2.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#one-numeric-variable"><i class="fa fa-check"></i><b>2.2.2</b> One Numeric Variable</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#group-practice"><i class="fa fa-check"></i><b>2.3</b> Group Practice</a></li>
+<li class="chapter" data-level="2.4" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#summarizing-two-variables-bivariate-relationship"><i class="fa fa-check"></i><b>2.4</b> Summarizing two variables (bivariate relationship)</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#two-numeric-variables"><i class="fa fa-check"></i><b>2.4.1</b> Two Numeric Variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#one-numeric-and-one-categorical-variable"><i class="fa fa-check"></i><b>2.4.2</b> One Numeric and One Categorical Variable</a></li>
+<li class="chapter" data-level="2.4.3" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#two-categorical-variables"><i class="fa fa-check"></i><b>2.4.3</b> Two Categorical Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="visualizing-and-describing-data.html"><a href="visualizing-and-describing-data.html#group-practice-1"><i class="fa fa-check"></i><b>2.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html"><i class="fa fa-check"></i><b>3</b> More Visualizing and Describing Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#import-dataset-1"><i class="fa fa-check"></i><b>3.1</b> Import Dataset</a></li>
+<li class="chapter" data-level="3.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#creating-plots-with-ggplot"><i class="fa fa-check"></i><b>3.2</b> Creating plots with <code>ggplot</code></a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#define-a-plot"><i class="fa fa-check"></i><b>3.2.1</b> Define a plot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#more-on-histograms"><i class="fa fa-check"></i><b>3.2.2</b> More on histograms</a></li>
+<li class="chapter" data-level="3.2.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#map-to-color-shape-size"><i class="fa fa-check"></i><b>3.2.3</b> Map to color, shape, size</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#group-practice-2"><i class="fa fa-check"></i><b>3.3</b> Group Practice</a></li>
+<li class="chapter" data-level="3.4" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#layering"><i class="fa fa-check"></i><b>3.4</b> Layering</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#adding-labels"><i class="fa fa-check"></i><b>3.4.1</b> Adding labels</a></li>
+<li class="chapter" data-level="3.4.2" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#controlling-scales"><i class="fa fa-check"></i><b>3.4.2</b> Controlling scales</a></li>
+<li class="chapter" data-level="3.4.3" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#faceting"><i class="fa fa-check"></i><b>3.4.3</b> Faceting</a></li>
+<li class="chapter" data-level="3.4.4" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#looking-for-trends"><i class="fa fa-check"></i><b>3.4.4</b> Looking for trends</a></li>
+<li class="chapter" data-level="3.4.5" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#palettes-and-themes"><i class="fa fa-check"></i><b>3.4.5</b> Palettes and themes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#group-practice-3"><i class="fa fa-check"></i><b>3.5</b> Group Practice</a></li>
+<li class="chapter" data-level="3.6" data-path="more-visualizing-and-describing-data.html"><a href="more-visualizing-and-describing-data.html#exporting-a-graph"><i class="fa fa-check"></i><b>3.6</b> Exporting a graph</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="r-markdown.html"><a href="r-markdown.html#yaml-metadata"><i class="fa fa-check"></i><b>4.1</b> YAML metadata</a></li>
+<li class="chapter" data-level="4.2" data-path="r-markdown.html"><a href="r-markdown.html#text-editing"><i class="fa fa-check"></i><b>4.2</b> Text editing</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="r-markdown.html"><a href="r-markdown.html#a.-headers"><i class="fa fa-check"></i><b>4.2.1</b> a. Headers</a></li>
+<li class="chapter" data-level="4.2.2" data-path="r-markdown.html"><a href="r-markdown.html#for"><i class="fa fa-check"></i><b>4.2.2</b> For</a></li>
+<li class="chapter" data-level="4.2.3" data-path="r-markdown.html"><a href="r-markdown.html#example"><i class="fa fa-check"></i><b>4.2.3</b> Example</a></li>
+<li class="chapter" data-level="4.2.4" data-path="r-markdown.html"><a href="r-markdown.html#these"><i class="fa fa-check"></i><b>4.2.4</b> These</a></li>
+<li class="chapter" data-level="4.2.5" data-path="r-markdown.html"><a href="r-markdown.html#text-formatting"><i class="fa fa-check"></i><b>4.2.5</b> Text formatting</a></li>
+<li class="chapter" data-level="4.2.6" data-path="r-markdown.html"><a href="r-markdown.html#lists-and-bullet-points"><i class="fa fa-check"></i><b>4.2.6</b> Lists and bullet points</a></li>
+<li class="chapter" data-level="4.2.7" data-path="r-markdown.html"><a href="r-markdown.html#html-hyperlinks-images-tables-formulas-etc."><i class="fa fa-check"></i><b>4.2.7</b> HTML hyperlinks, images, tables, formulas, etc.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="r-markdown.html"><a href="r-markdown.html#embedded-r-code"><i class="fa fa-check"></i><b>4.3</b> Embedded R code</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="r-markdown.html"><a href="r-markdown.html#packages-and-r-objects"><i class="fa fa-check"></i><b>4.3.1</b> Packages and R objects</a></li>
+<li class="chapter" data-level="4.3.2" data-path="r-markdown.html"><a href="r-markdown.html#options-for-code-chunks"><i class="fa fa-check"></i><b>4.3.2</b> Options for code chunks</a></li>
+<li class="chapter" data-level="4.3.3" data-path="r-markdown.html"><a href="r-markdown.html#inline-code"><i class="fa fa-check"></i><b>4.3.3</b> Inline code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="r-markdown.html"><a href="r-markdown.html#group-practice-4"><i class="fa fa-check"></i><b>4.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="more-r-markdown.html"><a href="more-r-markdown.html"><i class="fa fa-check"></i><b>5</b> More R Markdown</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="more-r-markdown.html"><a href="more-r-markdown.html#more-yaml-metadata"><i class="fa fa-check"></i><b>5.1</b> More YAML metadata</a></li>
+<li class="chapter" data-level="5.2" data-path="more-r-markdown.html"><a href="more-r-markdown.html#more-code-chunk-options"><i class="fa fa-check"></i><b>5.2</b> More code chunk options</a></li>
+<li class="chapter" data-level="5.3" data-path="more-r-markdown.html"><a href="more-r-markdown.html#format-tables"><i class="fa fa-check"></i><b>5.3</b> Format tables</a></li>
+<li class="chapter" data-level="5.4" data-path="more-r-markdown.html"><a href="more-r-markdown.html#knitting-into-different-formats"><i class="fa fa-check"></i><b>5.4</b> Knitting into different formats</a></li>
+<li class="chapter" data-level="5.5" data-path="more-r-markdown.html"><a href="more-r-markdown.html#group-practice-5"><i class="fa fa-check"></i><b>5.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-wrangling.html"><a href="data-wrangling.html"><i class="fa fa-check"></i><b>6</b> Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-wrangling.html"><a href="data-wrangling.html#dataset-and-library"><i class="fa fa-check"></i><b>6.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="6.2" data-path="data-wrangling.html"><a href="data-wrangling.html#the-pipe"><i class="fa fa-check"></i><b>6.2</b> The pipe</a></li>
+<li class="chapter" data-level="6.3" data-path="data-wrangling.html"><a href="data-wrangling.html#operations-on-rowsobservations"><i class="fa fa-check"></i><b>6.3</b> Operations on rows/observations</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="data-wrangling.html"><a href="data-wrangling.html#filter"><i class="fa fa-check"></i><b>6.3.1</b> Filter</a></li>
+<li class="chapter" data-level="6.3.2" data-path="data-wrangling.html"><a href="data-wrangling.html#arrange"><i class="fa fa-check"></i><b>6.3.2</b> Arrange</a></li>
+<li class="chapter" data-level="6.3.3" data-path="data-wrangling.html"><a href="data-wrangling.html#minimummaximum-values"><i class="fa fa-check"></i><b>6.3.3</b> Minimum/Maximum values</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="data-wrangling.html"><a href="data-wrangling.html#operations-on-columns"><i class="fa fa-check"></i><b>6.4</b> Operations on columns</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="data-wrangling.html"><a href="data-wrangling.html#select"><i class="fa fa-check"></i><b>6.4.1</b> Select</a></li>
+<li class="chapter" data-level="6.4.2" data-path="data-wrangling.html"><a href="data-wrangling.html#mutate"><i class="fa fa-check"></i><b>6.4.2</b> Mutate</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="data-wrangling.html"><a href="data-wrangling.html#create-summaries"><i class="fa fa-check"></i><b>6.5</b> Create summaries</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="data-wrangling.html"><a href="data-wrangling.html#summarize"><i class="fa fa-check"></i><b>6.5.1</b> Summarize</a></li>
+<li class="chapter" data-level="6.5.2" data-path="data-wrangling.html"><a href="data-wrangling.html#group-by"><i class="fa fa-check"></i><b>6.5.2</b> Group by</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html"><i class="fa fa-check"></i><b>7</b> More Data Wrangling</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#dataset-and-library-1"><i class="fa fa-check"></i><b>7.1</b> Dataset and Library</a></li>
+<li class="chapter" data-level="7.2" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#recoding-variables"><i class="fa fa-check"></i><b>7.2</b> Recoding variables</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#log-transformation"><i class="fa fa-check"></i><b>7.2.1</b> Log-transformation</a></li>
+<li class="chapter" data-level="7.2.2" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#numeric-variable-considered-as-a-categorical-variable"><i class="fa fa-check"></i><b>7.2.2</b> Numeric variable considered as a categorical variable</a></li>
+<li class="chapter" data-level="7.2.3" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#recoding-values-based-on-conditions"><i class="fa fa-check"></i><b>7.2.3</b> Recoding values based on conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#handling-missing-values"><i class="fa fa-check"></i><b>7.3</b> Handling missing values</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#missing-values-never-go-unnoticed"><i class="fa fa-check"></i><b>7.3.1</b> Missing values never go unnoticed</a></li>
+<li class="chapter" data-level="7.3.2" data-path="more-data-wrangling.html"><a href="more-data-wrangling.html#values-that-were-omitted"><i class="fa fa-check"></i><b>7.3.2</b> Values that were omitted</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="relational-data.html"><a href="relational-data.html"><i class="fa fa-check"></i><b>8</b> Relational Data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="relational-data.html"><a href="relational-data.html#datasets-and-library"><i class="fa fa-check"></i><b>8.1</b> Datasets and Library</a></li>
+<li class="chapter" data-level="8.2" data-path="relational-data.html"><a href="relational-data.html#different-types-of-joining-functions"><i class="fa fa-check"></i><b>8.2</b> Different types of joining functions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="relational-data.html"><a href="relational-data.html#inner-join"><i class="fa fa-check"></i><b>8.2.1</b> Inner join</a></li>
+<li class="chapter" data-level="8.2.2" data-path="relational-data.html"><a href="relational-data.html#left-join"><i class="fa fa-check"></i><b>8.2.2</b> Left join</a></li>
+<li class="chapter" data-level="8.2.3" data-path="relational-data.html"><a href="relational-data.html#right-join"><i class="fa fa-check"></i><b>8.2.3</b> Right join</a></li>
+<li class="chapter" data-level="8.2.4" data-path="relational-data.html"><a href="relational-data.html#full-join"><i class="fa fa-check"></i><b>8.2.4</b> Full join</a></li>
+<li class="chapter" data-level="8.2.5" data-path="relational-data.html"><a href="relational-data.html#anti-join"><i class="fa fa-check"></i><b>8.2.5</b> Anti join</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="relational-data.html"><a href="relational-data.html#common-issues-with-joining"><i class="fa fa-check"></i><b>8.3</b> Common issues with joining</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="relational-data.html"><a href="relational-data.html#no-matching-key"><i class="fa fa-check"></i><b>8.3.1</b> No matching key</a></li>
+<li class="chapter" data-level="8.3.2" data-path="relational-data.html"><a href="relational-data.html#auto-suffixing"><i class="fa fa-check"></i><b>8.3.2</b> Auto-suffixing</a></li>
+<li class="chapter" data-level="8.3.3" data-path="relational-data.html"><a href="relational-data.html#duplicates"><i class="fa fa-check"></i><b>8.3.3</b> Duplicates</a></li>
+<li class="chapter" data-level="8.3.4" data-path="relational-data.html"><a href="relational-data.html#several-key-variables"><i class="fa fa-check"></i><b>8.3.4</b> Several key variables</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="relational-data.html"><a href="relational-data.html#group-practice-6"><i class="fa fa-check"></i><b>8.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="dates-and-times.html"><a href="dates-and-times.html"><i class="fa fa-check"></i><b>9</b> Dates and Times</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="dates-and-times.html"><a href="dates-and-times.html#datasets-and-libraries"><i class="fa fa-check"></i><b>9.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="dates-and-times.html"><a href="dates-and-times.html#parsing-dates-and-times"><i class="fa fa-check"></i><b>9.2</b> Parsing dates and times</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="dates-and-times.html"><a href="dates-and-times.html#r-formats"><i class="fa fa-check"></i><b>9.2.1</b> R formats</a></li>
+<li class="chapter" data-level="9.2.2" data-path="dates-and-times.html"><a href="dates-and-times.html#combining-datetime-components"><i class="fa fa-check"></i><b>9.2.2</b> Combining date/time components</a></li>
+<li class="chapter" data-level="9.2.3" data-path="dates-and-times.html"><a href="dates-and-times.html#extracting-parts-of-the-date"><i class="fa fa-check"></i><b>9.2.3</b> Extracting part(s) of the date</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="dates-and-times.html"><a href="dates-and-times.html#manipulating-dates-and-times"><i class="fa fa-check"></i><b>9.3</b> Manipulating dates and times</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="dates-and-times.html"><a href="dates-and-times.html#finding-differences-between-dates-and-times"><i class="fa fa-check"></i><b>9.3.1</b> Finding differences between dates and times</a></li>
+<li class="chapter" data-level="9.3.2" data-path="dates-and-times.html"><a href="dates-and-times.html#summarizing-datetime-data"><i class="fa fa-check"></i><b>9.3.2</b> Summarizing date/time data</a></li>
+<li class="chapter" data-level="9.3.3" data-path="dates-and-times.html"><a href="dates-and-times.html#a-few-remarks"><i class="fa fa-check"></i><b>9.3.3</b> A few remarks</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="dates-and-times.html"><a href="dates-and-times.html#group-practice-7"><i class="fa fa-check"></i><b>9.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reshaping-data.html"><a href="reshaping-data.html"><i class="fa fa-check"></i><b>10</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="reshaping-data.html"><a href="reshaping-data.html#datasets-and-libraries-1"><i class="fa fa-check"></i><b>10.1</b> Datasets and Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="reshaping-data.html"><a href="reshaping-data.html#pivoting"><i class="fa fa-check"></i><b>10.2</b> Pivoting</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="reshaping-data.html"><a href="reshaping-data.html#wide-to-long"><i class="fa fa-check"></i><b>10.2.1</b> Wide to long</a></li>
+<li class="chapter" data-level="10.2.2" data-path="reshaping-data.html"><a href="reshaping-data.html#long-to-wide"><i class="fa fa-check"></i><b>10.2.2</b> Long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="reshaping-data.html"><a href="reshaping-data.html#separating-and-uniting"><i class="fa fa-check"></i><b>10.3</b> Separating and uniting</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="reshaping-data.html"><a href="reshaping-data.html#separate"><i class="fa fa-check"></i><b>10.3.1</b> Separate</a></li>
+<li class="chapter" data-level="10.3.2" data-path="reshaping-data.html"><a href="reshaping-data.html#unite"><i class="fa fa-check"></i><b>10.3.2</b> Unite</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="reshaping-data.html"><a href="reshaping-data.html#group-practice-8"><i class="fa fa-check"></i><b>10.4</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>11</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="reproducibility.html"><a href="reproducibility.html#coding-practices"><i class="fa fa-check"></i><b>11.1</b> Coding practices</a></li>
+<li class="chapter" data-level="11.2" data-path="reproducibility.html"><a href="reproducibility.html#reproducibility-1"><i class="fa fa-check"></i><b>11.2</b> Reproducibility</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="reproducibility.html"><a href="reproducibility.html#group-practice-9"><i class="fa fa-check"></i><b>11.2.1</b> Group Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="online-data.html"><a href="online-data.html"><i class="fa fa-check"></i><b>12</b> Online Data</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="online-data.html"><a href="online-data.html#online-data-resource"><i class="fa fa-check"></i><b>12.1</b> Online data resource</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="online-data.html"><a href="online-data.html#data-portal"><i class="fa fa-check"></i><b>12.1.1</b> Data portal</a></li>
+<li class="chapter" data-level="12.1.2" data-path="online-data.html"><a href="online-data.html#downloading-datasets"><i class="fa fa-check"></i><b>12.1.2</b> Downloading datasets</a></li>
+<li class="chapter" data-level="12.1.3" data-path="online-data.html"><a href="online-data.html#websites-with-special-permissions"><i class="fa fa-check"></i><b>12.1.3</b> Websites with special permissions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="online-data.html"><a href="online-data.html#web-scraping"><i class="fa fa-check"></i><b>12.2</b> Web scraping</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="online-data.html"><a href="online-data.html#manually-from-the-web"><i class="fa fa-check"></i><b>12.2.1</b> Manually from the web</a></li>
+<li class="chapter" data-level="12.2.2" data-path="online-data.html"><a href="online-data.html#with-code"><i class="fa fa-check"></i><b>12.2.2</b> With code</a></li>
+<li class="chapter" data-level="12.2.3" data-path="online-data.html"><a href="online-data.html#more-examples-of-scraping"><i class="fa fa-check"></i><b>12.2.3</b> More examples of scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="online-data.html"><a href="online-data.html#datasets-formats"><i class="fa fa-check"></i><b>12.3</b> Datasets formats</a></li>
+<li class="chapter" data-level="12.4" data-path="online-data.html"><a href="online-data.html#export-into-csv"><i class="fa fa-check"></i><b>12.4</b> Export into csv</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Strings and Regular expressions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#set-up"><i class="fa fa-check"></i><b>13.1</b> Set up</a></li>
+<li class="chapter" data-level="13.2" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#strings"><i class="fa fa-check"></i><b>13.2</b> Strings</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#calculating-length"><i class="fa fa-check"></i><b>13.2.1</b> Calculating length</a></li>
+<li class="chapter" data-level="13.2.2" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#combining-strings"><i class="fa fa-check"></i><b>13.2.2</b> Combining strings</a></li>
+<li class="chapter" data-level="13.2.3" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#changing-cases"><i class="fa fa-check"></i><b>13.2.3</b> Changing cases</a></li>
+<li class="chapter" data-level="13.2.4" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#subsetting-strings"><i class="fa fa-check"></i><b>13.2.4</b> Subsetting strings</a></li>
+<li class="chapter" data-level="13.2.5" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#finding-exact-matches-in-strings"><i class="fa fa-check"></i><b>13.2.5</b> Finding (exact) matches in strings</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#regular-expressions-regex"><i class="fa fa-check"></i><b>13.3</b> Regular expressions (Regex)</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#wildcards"><i class="fa fa-check"></i><b>13.3.1</b> Wildcards</a></li>
+<li class="chapter" data-level="13.3.2" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#anchors"><i class="fa fa-check"></i><b>13.3.2</b> Anchors</a></li>
+<li class="chapter" data-level="13.3.3" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#flexible-patterns"><i class="fa fa-check"></i><b>13.3.3</b> Flexible patterns</a></li>
+<li class="chapter" data-level="13.3.4" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#special-characters"><i class="fa fa-check"></i><b>13.3.4</b> Special characters</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="strings-and-regular-expressions.html"><a href="strings-and-regular-expressions.html#group-practice-10"><i class="fa fa-check"></i><b>13.4</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="loops-and-functions.html"><a href="loops-and-functions.html"><i class="fa fa-check"></i><b>14</b> Loops and Functions</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="loops-and-functions.html"><a href="loops-and-functions.html#loops"><i class="fa fa-check"></i><b>14.1</b> Loops</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="loops-and-functions.html"><a href="loops-and-functions.html#basic-for-loops"><i class="fa fa-check"></i><b>14.1.1</b> Basic for-loops</a></li>
+<li class="chapter" data-level="14.1.2" data-path="loops-and-functions.html"><a href="loops-and-functions.html#conditional-statements"><i class="fa fa-check"></i><b>14.1.2</b> Conditional Statements</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="loops-and-functions.html"><a href="loops-and-functions.html#group-practice-11"><i class="fa fa-check"></i><b>14.2</b> Group Practice</a></li>
+<li class="chapter" data-level="14.3" data-path="loops-and-functions.html"><a href="loops-and-functions.html#functions"><i class="fa fa-check"></i><b>14.3</b> Functions</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="loops-and-functions.html"><a href="loops-and-functions.html#r-functions"><i class="fa fa-check"></i><b>14.3.1</b> R functions</a></li>
+<li class="chapter" data-level="14.3.2" data-path="loops-and-functions.html"><a href="loops-and-functions.html#our-own-functions"><i class="fa fa-check"></i><b>14.3.2</b> Our own functions</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="loops-and-functions.html"><a href="loops-and-functions.html#dont-reinvent-the-wheel"><i class="fa fa-check"></i><b>14.4</b> Don’t reinvent the wheel</a></li>
+<li class="chapter" data-level="14.5" data-path="loops-and-functions.html"><a href="loops-and-functions.html#group-practice-12"><i class="fa fa-check"></i><b>14.5</b> Group Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="halloween-candy.html"><a href="halloween-candy.html"><i class="fa fa-check"></i><b>15</b> Halloween candy</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="halloween-candy.html"><a href="halloween-candy.html#set-up-1"><i class="fa fa-check"></i><b>15.1</b> Set up</a></li>
+<li class="chapter" data-level="15.2" data-path="halloween-candy.html"><a href="halloween-candy.html#exploring-relationships"><i class="fa fa-check"></i><b>15.2</b> Exploring relationships</a></li>
+<li class="chapter" data-level="15.3" data-path="halloween-candy.html"><a href="halloween-candy.html#group-practice-13"><i class="fa fa-check"></i><b>15.3</b> Group Practice</a></li>
+<li class="chapter" data-level="15.4" data-path="halloween-candy.html"><a href="halloween-candy.html#machine-learning"><i class="fa fa-check"></i><b>15.4</b> Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="simulations.html"><a href="simulations.html"><i class="fa fa-check"></i><b>16</b> Simulations</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="simulations.html"><a href="simulations.html#generating-random-numbers"><i class="fa fa-check"></i><b>16.1</b> Generating random numbers</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="simulations.html"><a href="simulations.html#random-numbers-among-some-values"><i class="fa fa-check"></i><b>16.1.1</b> Random numbers among some values</a></li>
+<li class="chapter" data-level="16.1.2" data-path="simulations.html"><a href="simulations.html#random-numbers-from-a-probability-distribution"><i class="fa fa-check"></i><b>16.1.2</b> Random numbers from a probability distribution</a></li>
+<li class="chapter" data-level="16.1.3" data-path="simulations.html"><a href="simulations.html#group-practice-14"><i class="fa fa-check"></i><b>16.1.3</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="simulations.html"><a href="simulations.html#some-applications-of-simulations"><i class="fa fa-check"></i><b>16.2</b> Some applications of simulations</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="simulations.html"><a href="simulations.html#rolling-dice"><i class="fa fa-check"></i><b>16.2.1</b> Rolling dice</a></li>
+<li class="chapter" data-level="16.2.2" data-path="simulations.html"><a href="simulations.html#birthday-problem"><i class="fa fa-check"></i><b>16.2.2</b> Birthday problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="shiny-basics.html"><a href="shiny-basics.html"><i class="fa fa-check"></i><b>17</b> Shiny Basics</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="shiny-basics.html"><a href="shiny-basics.html#shiny-app-gallery"><i class="fa fa-check"></i><b>17.1</b> Shiny App Gallery</a></li>
+<li class="chapter" data-level="17.2" data-path="shiny-basics.html"><a href="shiny-basics.html#basic-structure-of-a-shiny-app"><i class="fa fa-check"></i><b>17.2</b> Basic Structure of a Shiny App</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="shiny-basics.html"><a href="shiny-basics.html#components"><i class="fa fa-check"></i><b>17.2.1</b> Components</a></li>
+<li class="chapter" data-level="17.2.2" data-path="shiny-basics.html"><a href="shiny-basics.html#group-practice-15"><i class="fa fa-check"></i><b>17.2.2</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.3" data-path="shiny-basics.html"><a href="shiny-basics.html#reactive-output"><i class="fa fa-check"></i><b>17.2.3</b> Reactive output</a></li>
+<li class="chapter" data-level="17.2.4" data-path="shiny-basics.html"><a href="shiny-basics.html#group-practice-16"><i class="fa fa-check"></i><b>17.2.4</b> Group practice</a></li>
+<li class="chapter" data-level="17.2.5" data-path="shiny-basics.html"><a href="shiny-basics.html#project-3"><i class="fa fa-check"></i><b>17.2.5</b> Project 3</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="shiny-with-data.html"><a href="shiny-with-data.html"><i class="fa fa-check"></i><b>18</b> Shiny with Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#more-on-the-shiny-structure"><i class="fa fa-check"></i><b>18.1</b> More on the Shiny structure</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#user-interface"><i class="fa fa-check"></i><b>18.1.1</b> User interface</a></li>
+<li class="chapter" data-level="18.1.2" data-path="shiny-with-data.html"><a href="shiny-with-data.html#server"><i class="fa fa-check"></i><b>18.1.2</b> Server</a></li>
+<li class="chapter" data-level="18.1.3" data-path="shiny-with-data.html"><a href="shiny-with-data.html#run-the-app"><i class="fa fa-check"></i><b>18.1.3</b> Run the app</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="shiny-with-data.html"><a href="shiny-with-data.html#interact-with-a-dataset"><i class="fa fa-check"></i><b>18.2</b> Interact with a dataset</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#group-practice-17"><i class="fa fa-check"></i><b>18.2.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="shiny-with-data.html"><a href="shiny-with-data.html#adding-a-choice-for-selecting-variables"><i class="fa fa-check"></i><b>18.3</b> Adding a choice for selecting variables</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="shiny-with-data.html"><a href="shiny-with-data.html#group-practice-18"><i class="fa fa-check"></i><b>18.3.1</b> Group practice</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="shiny-with-data.html"><a href="shiny-with-data.html#hosting-your-app-on-the-web"><i class="fa fa-check"></i><b>18.4</b> Hosting your app on the web</a></li>
+<li class="chapter" data-level="18.5" data-path="shiny-with-data.html"><a href="shiny-with-data.html#summary"><i class="fa fa-check"></i><b>18.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>19</b> Bookdown</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="bookdown.html"><a href="bookdown.html#set-up-bookdown"><i class="fa fa-check"></i><b>19.1</b> Set up bookdown</a></li>
+<li class="chapter" data-level="19.2" data-path="bookdown.html"><a href="bookdown.html#organize-your-files"><i class="fa fa-check"></i><b>19.2</b> Organize your files</a></li>
+<li class="chapter" data-level="19.3" data-path="bookdown.html"><a href="bookdown.html#edit-the-index"><i class="fa fa-check"></i><b>19.3</b> Edit the index</a></li>
+<li class="chapter" data-level="19.4" data-path="bookdown.html"><a href="bookdown.html#edit-the-bookdown"><i class="fa fa-check"></i><b>19.4</b> Edit the bookdown</a></li>
+<li class="chapter" data-level="19.5" data-path="bookdown.html"><a href="bookdown.html#edit-the-output"><i class="fa fa-check"></i><b>19.5</b> Edit the output</a></li>
+<li class="chapter" data-level="19.6" data-path="bookdown.html"><a href="bookdown.html#build-the-book"><i class="fa fa-check"></i><b>19.6</b> Build the book!</a></li>
+<li class="chapter" data-level="19.7" data-path="bookdown.html"><a href="bookdown.html#resources"><i class="fa fa-check"></i><b>19.7</b> Resources</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fall 2024 Semester</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dates-and-times" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Dates and Times<a href="dates-and-times.html#dates-and-times" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this worksheet, we will:</p>
+<ul>
+<li>Parse dates and times from strings into R-compatible formats using <code>lubridate</code></li>
+<li>Manipulate dates and times, including extracting specific components (year, month, day, hour, etc.)</li>
+<li>Calculate differences between two dates/times</li>
+<li>Visualize time-based data trends and summarize data over time units</li>
+</ul>
+<div id="datasets-and-libraries" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Datasets and Libraries<a href="dates-and-times.html#datasets-and-libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s load <code>tidyverse</code> which contains the <code>lubridate</code> package and <code>nycflights13</code> for datasets:</p>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="dates-and-times.html#cb192-1" tabindex="-1"></a><span class="co"># Load packages</span></span>
+<span id="cb192-2"><a href="dates-and-times.html#cb192-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb192-3"><a href="dates-and-times.html#cb192-3" tabindex="-1"></a><span class="fu">library</span>(nycflights13)</span></code></pre></div>
+<p>Here are the main datasets we will manipulate today:</p>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="dates-and-times.html#cb193-1" tabindex="-1"></a><span class="co"># Take a look at txhousing and flights</span></span>
+<span id="cb193-2"><a href="dates-and-times.html#cb193-2" tabindex="-1"></a><span class="fu">head</span>(txhousing)</span>
+<span id="cb193-3"><a href="dates-and-times.html#cb193-3" tabindex="-1"></a><span class="fu">head</span>(flights)</span></code></pre></div>
+<p>In what format are dates/times reported in each dataset?</p>
+<p><strong>Only time_hour is in a date/time format.</strong></p>
+</div>
+<div id="parsing-dates-and-times" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Parsing dates and times<a href="dates-and-times.html#parsing-dates-and-times" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Parsing dates and times means converting a string or numeric representation of a date or time into a proper object that R can understand and work with.</p>
+<div id="r-formats" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> R formats<a href="dates-and-times.html#r-formats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here are two typical date/time formats in R:</p>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="dates-and-times.html#cb194-1" tabindex="-1"></a><span class="co"># Look at what date/time is today/now!</span></span>
+<span id="cb194-2"><a href="dates-and-times.html#cb194-2" tabindex="-1"></a><span class="fu">today</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;2024-12-03&quot;</code></pre>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="dates-and-times.html#cb196-1" tabindex="-1"></a><span class="fu">now</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;2024-12-03 17:54:08 CST&quot;</code></pre>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="dates-and-times.html#cb198-1" tabindex="-1"></a><span class="co"># How R identifies these formats</span></span>
+<span id="cb198-2"><a href="dates-and-times.html#cb198-2" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">today</span>())</span></code></pre></div>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="dates-and-times.html#cb200-1" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</code></pre>
+<p>By default, R considers:</p>
+<ul>
+<li><p><em>dates</em> as “yyyy-mm-dd” (year-month-day)</p></li>
+<li><p><em>times</em> as “hh:mm:ss” (hours:minutes:seconds)</p></li>
+<li><p><em>date/times</em> as “yyyy-mm-dd hh:mm:ss”</p></li>
+</ul>
+<p>Here is an example of a date entered in the year-month-day but does R recognize it as a date?</p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="dates-and-times.html#cb202-1" tabindex="-1"></a><span class="co"># Check the format of the date entered</span></span>
+<span id="cb202-2"><a href="dates-and-times.html#cb202-2" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;2024-10-03&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>We can convert a character/string and convert it as a date in an R format:</p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="dates-and-times.html#cb204-1" tabindex="-1"></a><span class="co"># year, month, day</span></span>
+<span id="cb204-2"><a href="dates-and-times.html#cb204-2" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">&quot;2024-10-03&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="dates-and-times.html#cb206-1" tabindex="-1"></a><span class="co"># Check the format now</span></span>
+<span id="cb206-2"><a href="dates-and-times.html#cb206-2" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">ymd</span>(<span class="st">&quot;2024-10-03&quot;</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
+<p>Here are some examples of other formats of dates than can be converted:</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="dates-and-times.html#cb208-1" tabindex="-1"></a><span class="co"># day, month, year</span></span>
+<span id="cb208-2"><a href="dates-and-times.html#cb208-2" tabindex="-1"></a><span class="fu">dmy</span>(<span class="st">&quot;3.10.2024&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="dates-and-times.html#cb210-1" tabindex="-1"></a><span class="fu">dmy</span>(<span class="st">&quot;3/10/2024&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="dates-and-times.html#cb212-1" tabindex="-1"></a><span class="fu">dmy</span>(<span class="st">&quot;3-10-2024&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="dates-and-times.html#cb214-1" tabindex="-1"></a><span class="fu">dmy</span>(<span class="st">&quot;the 3rd of October 2024&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="dates-and-times.html#cb216-1" tabindex="-1"></a><span class="fu">dmy</span>(<span class="st">&quot;03-octobre-2024&quot;</span>) <span class="co"># this one did not work, why?</span></span></code></pre></div>
+<pre><code>## Warning: All formats failed to parse. No formats found.</code></pre>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="dates-and-times.html#cb219-1" tabindex="-1"></a><span class="co"># month, day, year</span></span>
+<span id="cb219-2"><a href="dates-and-times.html#cb219-2" tabindex="-1"></a><span class="fu">mdy</span>(<span class="st">&quot;10/3/2024&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="dates-and-times.html#cb221-1" tabindex="-1"></a><span class="fu">mdy</span>(<span class="st">&quot;October 3rd, 2024&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03&quot;</code></pre>
+<p>Similarly, we can convert strings into time:</p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="dates-and-times.html#cb223-1" tabindex="-1"></a><span class="co"># date in year, month, day and time</span></span>
+<span id="cb223-2"><a href="dates-and-times.html#cb223-2" tabindex="-1"></a><span class="fu">ymd_hms</span>(<span class="st">&quot;2024-10-03 03:15:00 PM&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-10-03 15:15:00 UTC&quot;</code></pre>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="dates-and-times.html#cb225-1" tabindex="-1"></a><span class="co"># also check other date functions with _hms or _hm, or simply the function hm() and hms()</span></span>
+<span id="cb225-2"><a href="dates-and-times.html#cb225-2" tabindex="-1"></a><span class="fu">hm</span>(<span class="st">&quot;03:15 PM&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;3H 15M 0S&quot;</code></pre>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="dates-and-times.html#cb227-1" tabindex="-1"></a><span class="fu">hms</span>(<span class="st">&quot;03:15:00 AM&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;3H 15M 0S&quot;</code></pre>
+</div>
+<div id="combining-datetime-components" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Combining date/time components<a href="dates-and-times.html#combining-datetime-components" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can combine the different parts of a date with <code>make_date()</code> or also add time with <code>make_datetime()</code>.</p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="dates-and-times.html#cb229-1" tabindex="-1"></a><span class="co"># Combine year and month into a date</span></span>
+<span id="cb229-2"><a href="dates-and-times.html#cb229-2" tabindex="-1"></a>txhousing <span class="sc">|&gt;</span></span>
+<span id="cb229-3"><a href="dates-and-times.html#cb229-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">new_date =</span> <span class="fu">make_date</span>(year, month))</span></code></pre></div>
+<p>By default, the day on the date was set to the first day of the month.</p>
+</div>
+<div id="extracting-parts-of-the-date" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Extracting part(s) of the date<a href="dates-and-times.html#extracting-parts-of-the-date" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>On the contrary, we might want to extract some specific date/time information from a date:</p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="dates-and-times.html#cb230-1" tabindex="-1"></a><span class="co"># Extract year, month, day and time</span></span>
+<span id="cb230-2"><a href="dates-and-times.html#cb230-2" tabindex="-1"></a><span class="fu">year</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 2024</code></pre>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="dates-and-times.html#cb232-1" tabindex="-1"></a><span class="fu">month</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="dates-and-times.html#cb234-1" tabindex="-1"></a><span class="fu">week</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 49</code></pre>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="dates-and-times.html#cb236-1" tabindex="-1"></a><span class="fu">day</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="dates-and-times.html#cb238-1" tabindex="-1"></a><span class="fu">wday</span>(<span class="fu">now</span>()) <span class="co"># what is that?</span></span></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="dates-and-times.html#cb240-1" tabindex="-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 17</code></pre>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="dates-and-times.html#cb242-1" tabindex="-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 54</code></pre>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="dates-and-times.html#cb244-1" tabindex="-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code></pre></div>
+<pre><code>## [1] 9.162541</code></pre>
+<p>Check the <code>label</code> and <code>abbr</code> options for <code>month()</code> and <code>wkday()</code>:</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="dates-and-times.html#cb246-1" tabindex="-1"></a><span class="co"># Convenient options</span></span>
+<span id="cb246-2"><a href="dates-and-times.html#cb246-2" tabindex="-1"></a><span class="fu">month</span>(<span class="fu">now</span>(), <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] December
+## 12 Levels: January &lt; February &lt; March &lt; April &lt; May &lt; ... &lt; December</code></pre>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="dates-and-times.html#cb248-1" tabindex="-1"></a><span class="fu">wday</span>(<span class="fu">now</span>(), , <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] Tue
+## Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat</code></pre>
+<hr />
+<div id="try-it-in-the-flights-dataset-extract-the-information-of-the-weekday-from-the-time_hour-variable.-does-each-day-have-the-same-amount-of-flights" class="section level4 hasAnchor" number="9.2.3.1">
+<h4><span class="header-section-number">9.2.3.1</span> <strong>Try it! In the <code>flights</code> dataset, extract the information of the weekday from the <code>time_hour</code> variable. Does each day have the same amount of flights?</strong><a href="dates-and-times.html#try-it-in-the-flights-dataset-extract-the-information-of-the-weekday-from-the-time_hour-variable.-does-each-day-have-the-same-amount-of-flights" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="dates-and-times.html#cb250-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb250-2"><a href="dates-and-times.html#cb250-2" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
+<span id="cb250-3"><a href="dates-and-times.html#cb250-3" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">day_in_week =</span> <span class="fu">wday</span>(time_hour, , <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb250-4"><a href="dates-and-times.html#cb250-4" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> day_in_week))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-134-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+</div>
+</div>
+</div>
+<div id="manipulating-dates-and-times" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Manipulating dates and times<a href="dates-and-times.html#manipulating-dates-and-times" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-differences-between-dates-and-times" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Finding differences between dates and times<a href="dates-and-times.html#finding-differences-between-dates-and-times" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can find date/time differences with <code>difftime()</code>:</p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="dates-and-times.html#cb251-1" tabindex="-1"></a><span class="co"># How many days between now and the first day of the year?</span></span>
+<span id="cb251-2"><a href="dates-and-times.html#cb251-2" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;days&quot;</span>)</span></code></pre></div>
+<pre><code>## Time difference of 337.996 days</code></pre>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="dates-and-times.html#cb253-1" tabindex="-1"></a><span class="co"># What if we want to find the difference with another unit?</span></span>
+<span id="cb253-2"><a href="dates-and-times.html#cb253-2" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;weeks&quot;</span>)</span></code></pre></div>
+<pre><code>## Time difference of 48.28514 weeks</code></pre>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="dates-and-times.html#cb255-1" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;hours&quot;</span>)</span></code></pre></div>
+<pre><code>## Time difference of 8111.903 hours</code></pre>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="dates-and-times.html#cb257-1" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;mins&quot;</span>)</span></code></pre></div>
+<pre><code>## Time difference of 486714.2 mins</code></pre>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="dates-and-times.html#cb259-1" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;secs&quot;</span>)</span></code></pre></div>
+<pre><code>## Time difference of 29202850 secs</code></pre>
+<p>Note that the output reports the time difference with a unit. If we would like to find the value of the difference, we can use the function <code>as.numeric()</code>:</p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="dates-and-times.html#cb261-1" tabindex="-1"></a><span class="co"># Report only a value</span></span>
+<span id="cb261-2"><a href="dates-and-times.html#cb261-2" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;days&quot;</span>))</span></code></pre></div>
+<pre><code>## [1] 337.996</code></pre>
+</div>
+<div id="summarizing-datetime-data" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Summarizing date/time data<a href="dates-and-times.html#summarizing-datetime-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Depending on the level of detail we would like to focus on, we can aggregate the data by specific time units. For example, we can compare summaries over years, months, days of the week, or by the hour, minute, second.</p>
+<hr />
+<div id="try-it-we-looked-at-the-number-of-flights-per-day-before.-compare-the-number-of-flights-at-another-time-unit.-do-you-notice-any-differences" class="section level4 hasAnchor" number="9.3.2.1">
+<h4><span class="header-section-number">9.3.2.1</span> <strong>Try it! We looked at the number of <code>flights</code> per day before. Compare the number of flights at another time unit. Do you notice any differences?</strong><a href="dates-and-times.html#try-it-we-looked-at-the-number-of-flights-per-day-before.-compare-the-number-of-flights-at-another-time-unit.-do-you-notice-any-differences" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="dates-and-times.html#cb263-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb263-2"><a href="dates-and-times.html#cb263-2" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
+<span id="cb263-3"><a href="dates-and-times.html#cb263-3" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> minute))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-137-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+<p>We can also represent the values of a variable over time:</p>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="dates-and-times.html#cb264-1" tabindex="-1"></a><span class="co"># Comparing sales over time</span></span>
+<span id="cb264-2"><a href="dates-and-times.html#cb264-2" tabindex="-1"></a>txhousing <span class="sc">|&gt;</span></span>
+<span id="cb264-3"><a href="dates-and-times.html#cb264-3" tabindex="-1"></a>  <span class="fu">group_by</span>(date) <span class="sc">|&gt;</span></span>
+<span id="cb264-4"><a href="dates-and-times.html#cb264-4" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_sales =</span> <span class="fu">sum</span>(sales, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb264-5"><a href="dates-and-times.html#cb264-5" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> total_sales))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-138-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>And compare if there is the same pattern over a repeating time unit (for example, months repeat every year):</p>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="dates-and-times.html#cb265-1" tabindex="-1"></a><span class="co"># Comparing monthly sales for each year</span></span>
+<span id="cb265-2"><a href="dates-and-times.html#cb265-2" tabindex="-1"></a>txhousing <span class="sc">|&gt;</span></span>
+<span id="cb265-3"><a href="dates-and-times.html#cb265-3" tabindex="-1"></a>  <span class="fu">group_by</span>(year,month) <span class="sc">|&gt;</span></span>
+<span id="cb265-4"><a href="dates-and-times.html#cb265-4" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total_sales =</span> <span class="fu">sum</span>(sales, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb265-5"><a href="dates-and-times.html#cb265-5" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> month, <span class="at">y =</span> total_sales)) <span class="sc">+</span></span>
+<span id="cb265-6"><a href="dates-and-times.html#cb265-6" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-139-1.png" width="672" style="display: block; margin: auto;" /></p>
+<hr />
+</div>
+<div id="try-it-compare-the-maximum-distance-for-a-flight-per-hour-of-the-day.-when-do-longer-flights-depart-from-nyc-airports" class="section level4 hasAnchor" number="9.3.2.2">
+<h4><span class="header-section-number">9.3.2.2</span> <strong>Try it! Compare the maximum distance for a flight per hour of the day. When do longer flights depart from NYC airports?</strong><a href="dates-and-times.html#try-it-compare-the-maximum-distance-for-a-flight-per-hour-of-the-day.-when-do-longer-flights-depart-from-nyc-airports" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="dates-and-times.html#cb266-1" tabindex="-1"></a><span class="co"># Write and submit code here!</span></span>
+<span id="cb266-2"><a href="dates-and-times.html#cb266-2" tabindex="-1"></a>flights <span class="sc">|&gt;</span></span>
+<span id="cb266-3"><a href="dates-and-times.html#cb266-3" tabindex="-1"></a>  <span class="fu">group_by</span>(hour) <span class="sc">|&gt;</span></span>
+<span id="cb266-4"><a href="dates-and-times.html#cb266-4" tabindex="-1"></a>  <span class="fu">slice_max</span>(distance, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb266-5"><a href="dates-and-times.html#cb266-5" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> hour, <span class="at">y =</span> distance))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-140-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><strong>Write sentences here.</strong></p>
+<hr />
+</div>
+</div>
+<div id="a-few-remarks" class="section level3 hasAnchor" number="9.3.3">
+<h3><span class="header-section-number">9.3.3</span> A few remarks<a href="dates-and-times.html#a-few-remarks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here are some common pitfalls to look out for:</p>
+<ul>
+<li><p>Different date formats (e.g., MM/DD/YYYY vs. DD/MM/YYYY) can lead to incorrect parsing. Always specify the date format explicitly when converting strings to dates.</p></li>
+<li><p>Take into account that not all years are 365 days (leap years), not all days are 24 hours (daylight saving time), and not all months have the same amount of days. Most <code>lubridate</code> functions are designed to take those facts into account when manipulating dates/times.</p></li>
+<li><p>The time is not the same depending on where the data was collected. Convert dates/times between time zones with some <code>lubridate</code> functions such as <code>with_tz()</code>.</p></li>
+</ul>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="dates-and-times.html#cb267-1" tabindex="-1"></a><span class="co"># Time in France</span></span>
+<span id="cb267-2"><a href="dates-and-times.html#cb267-2" tabindex="-1"></a><span class="fu">now</span>(<span class="at">tzone =</span> <span class="st">&quot;Europe/Paris&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-12-04 00:54:12 CET&quot;</code></pre>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="dates-and-times.html#cb269-1" tabindex="-1"></a><span class="co"># Convert to our current time zone</span></span>
+<span id="cb269-2"><a href="dates-and-times.html#cb269-2" tabindex="-1"></a><span class="fu">with_tz</span>(<span class="fu">now</span>(<span class="at">tzone =</span> <span class="st">&quot;Europe/Paris&quot;</span>), <span class="at">tzone =</span> <span class="st">&quot;America/Chicago&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;2024-12-03 17:54:12 CST&quot;</code></pre>
+<hr />
+</div>
+</div>
+<div id="group-practice-7" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Group Practice<a href="dates-and-times.html#group-practice-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s explore birthdays from students in this class!</p>
+<ol style="list-style-type: decimal">
+<li><p>Enter your birthday (including year) on this <a href="https://docs.google.com/spreadsheets/d/1DDB1l_IyVz7yVPKJKt9bQd4pCV3gJnIwU41a19zRd94/edit?usp=sharing">spreadsheet</a>. Once everyone has entered their birthdays, download the spreadsheet as a <code>.csv</code> file and import it in <code>R</code>.</p></li>
+<li><p>Does any birthday need to be recoded? Parse the birthday into a date format that R can work with.</p></li>
+<li><p>Make an analysis of the birthdays and paste any plot or statistics you create <a href="https://docs.google.com/presentation/d/1cDttg4oytMW-S_dhXDSuymQWPsqzzYo1ix9pI8sNH18/edit?usp=sharing">here</a>.</p></li>
+</ol>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="dates-and-times.html#cb271-1" tabindex="-1"></a><span class="co"># Group practice</span></span>
+<span id="cb271-2"><a href="dates-and-times.html#cb271-2" tabindex="-1"></a>Birthdays <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;Birthdays.csv&quot;</span>)</span>
+<span id="cb271-3"><a href="dates-and-times.html#cb271-3" tabindex="-1"></a>Birthdays <span class="sc">|&gt;</span></span>
+<span id="cb271-4"><a href="dates-and-times.html#cb271-4" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">birthdays =</span> <span class="fu">mdy</span>(birthdays),</span>
+<span id="cb271-5"><a href="dates-and-times.html#cb271-5" tabindex="-1"></a>         <span class="at">month =</span> <span class="fu">month</span>(birthdays),</span>
+<span id="cb271-6"><a href="dates-and-times.html#cb271-6" tabindex="-1"></a>         <span class="at">day =</span> <span class="fu">day</span>(birthdays)) <span class="sc">|&gt;</span></span>
+<span id="cb271-7"><a href="dates-and-times.html#cb271-7" tabindex="-1"></a>  <span class="fu">group_by</span>(month, day) <span class="sc">|&gt;</span></span>
+<span id="cb271-8"><a href="dates-and-times.html#cb271-8" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb271-9"><a href="dates-and-times.html#cb271-9" tabindex="-1"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">1</span>)</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="relational-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reshaping-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09_DatesTimes.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
