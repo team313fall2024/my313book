@@ -470,7 +470,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb184-2"><a href="09_DatesTimes.html#cb184-2" tabindex="-1"></a><span class="fu">today</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;2024-12-03&quot;</code></pre>
 <div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="09_DatesTimes.html#cb186-1" tabindex="-1"></a><span class="fu">now</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2024-12-03 18:37:54 CST&quot;</code></pre>
+<pre><code>## [1] &quot;2024-12-03 18:59:37 CST&quot;</code></pre>
 <div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="09_DatesTimes.html#cb188-1" tabindex="-1"></a><span class="co"># How R identifies these formats</span></span>
 <span id="cb188-2"><a href="09_DatesTimes.html#cb188-2" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">today</span>())</span></code></pre></div>
 <pre><code>## [1] &quot;Date&quot;</code></pre>
@@ -546,9 +546,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="09_DatesTimes.html#cb230-1" tabindex="-1"></a><span class="fu">hour</span>(<span class="fu">now</span>())</span></code></pre></div>
 <pre><code>## [1] 18</code></pre>
 <div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="09_DatesTimes.html#cb232-1" tabindex="-1"></a><span class="fu">minute</span>(<span class="fu">now</span>())</span></code></pre></div>
-<pre><code>## [1] 37</code></pre>
+<pre><code>## [1] 59</code></pre>
 <div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="09_DatesTimes.html#cb234-1" tabindex="-1"></a><span class="fu">second</span>(<span class="fu">now</span>())</span></code></pre></div>
-<pre><code>## [1] 54.80454</code></pre>
+<pre><code>## [1] 37.6523</code></pre>
 <p>Check the <code>label</code> and <code>abbr</code> options for <code>month()</code> and <code>wkday()</code>:</p>
 <div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="09_DatesTimes.html#cb236-1" tabindex="-1"></a><span class="co"># Convenient options</span></span>
 <span id="cb236-2"><a href="09_DatesTimes.html#cb236-2" tabindex="-1"></a><span class="fu">month</span>(<span class="fu">now</span>(), <span class="at">label =</span> <span class="cn">TRUE</span>, <span class="at">abbr =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
@@ -577,20 +577,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We can find date/time differences with <code>difftime()</code>:</p>
 <div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="09_DatesTimes.html#cb241-1" tabindex="-1"></a><span class="co"># How many days between now and the first day of the year?</span></span>
 <span id="cb241-2"><a href="09_DatesTimes.html#cb241-2" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;days&quot;</span>)</span></code></pre></div>
-<pre><code>## Time difference of 338.0263 days</code></pre>
+<pre><code>## Time difference of 338.0414 days</code></pre>
 <div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="09_DatesTimes.html#cb243-1" tabindex="-1"></a><span class="co"># What if we want to find the difference with another unit?</span></span>
 <span id="cb243-2"><a href="09_DatesTimes.html#cb243-2" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;weeks&quot;</span>)</span></code></pre></div>
-<pre><code>## Time difference of 48.28948 weeks</code></pre>
+<pre><code>## Time difference of 48.29163 weeks</code></pre>
 <div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="09_DatesTimes.html#cb245-1" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;hours&quot;</span>)</span></code></pre></div>
-<pre><code>## Time difference of 8112.632 hours</code></pre>
+<pre><code>## Time difference of 8112.994 hours</code></pre>
 <div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="09_DatesTimes.html#cb247-1" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;mins&quot;</span>)</span></code></pre></div>
-<pre><code>## Time difference of 486757.9 mins</code></pre>
+<pre><code>## Time difference of 486779.6 mins</code></pre>
 <div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="09_DatesTimes.html#cb249-1" tabindex="-1"></a><span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;secs&quot;</span>)</span></code></pre></div>
-<pre><code>## Time difference of 29205476 secs</code></pre>
+<pre><code>## Time difference of 29206779 secs</code></pre>
 <p>Note that the output reports the time difference with a unit. If we would like to find the value of the difference, we can use the function <code>as.numeric()</code>:</p>
 <div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="09_DatesTimes.html#cb251-1" tabindex="-1"></a><span class="co"># Report only a value</span></span>
 <span id="cb251-2"><a href="09_DatesTimes.html#cb251-2" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">difftime</span>(<span class="fu">now</span>(), <span class="fu">mdy_hms</span>(<span class="st">&quot;1-1-2024 00:00:00 am&quot;</span>), <span class="at">units =</span> <span class="st">&quot;days&quot;</span>))</span></code></pre></div>
-<pre><code>## [1] 338.0263</code></pre>
+<pre><code>## [1] 338.0414</code></pre>
 </div>
 <div id="summarizing-datetime-data" class="section level3 hasAnchor" number="9.3.2">
 <h3><span class="header-section-number">9.3.2</span> Summarizing date/time data<a href="09_DatesTimes.html#summarizing-datetime-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -643,10 +643,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="09_DatesTimes.html#cb257-1" tabindex="-1"></a><span class="co"># Time in France</span></span>
 <span id="cb257-2"><a href="09_DatesTimes.html#cb257-2" tabindex="-1"></a><span class="fu">now</span>(<span class="at">tzone =</span> <span class="st">&quot;Europe/Paris&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2024-12-04 01:37:57 CET&quot;</code></pre>
+<pre><code>## [1] &quot;2024-12-04 01:59:40 CET&quot;</code></pre>
 <div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="09_DatesTimes.html#cb259-1" tabindex="-1"></a><span class="co"># Convert to our current time zone</span></span>
 <span id="cb259-2"><a href="09_DatesTimes.html#cb259-2" tabindex="-1"></a><span class="fu">with_tz</span>(<span class="fu">now</span>(<span class="at">tzone =</span> <span class="st">&quot;Europe/Paris&quot;</span>), <span class="at">tzone =</span> <span class="st">&quot;America/Chicago&quot;</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;2024-12-03 18:37:57 CST&quot;</code></pre>
+<pre><code>## [1] &quot;2024-12-03 18:59:40 CST&quot;</code></pre>
 <hr />
 </div>
 </div>
